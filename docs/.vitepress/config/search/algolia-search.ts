@@ -3,7 +3,7 @@ import type { AlgoliaSearchOptions } from 'vitepress';
 export const algoliaSearchOptions: AlgoliaSearchOptions = {
   appId: 'DBZ0G9HBUY',
   apiKey: '00cef480a543003d05d9808110ea5f65',
-  indexName: 'charles7c',
+  indexName: 'herman',
   locales: {
     root: {
       placeholder: '搜索文档',
