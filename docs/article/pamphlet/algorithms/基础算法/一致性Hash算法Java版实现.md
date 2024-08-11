@@ -1,10 +1,12 @@
 ---
 title: 一致性Hash算法Java版实现
-date: 2021-08-14 13:58:25.82
-updated: 2021-08-15 12:01:51.044
-url: /?p=44
-categories: 算法
-tags: 一致性hash
+author: Herman
+date: 2021/08/14 13:58
+categories:
+- 算法
+tags:
+- 算法
+- 一致性hash
 ---
 
 # 一致性Hash算法Java版实现

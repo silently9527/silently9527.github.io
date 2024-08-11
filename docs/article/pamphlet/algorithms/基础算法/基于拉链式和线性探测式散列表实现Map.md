@@ -1,11 +1,15 @@
 ---
 title: 基于拉链式和线性探测式散列表实现Map
-date: 2021-08-14 14:00:14.474
-updated: 2021-08-15 11:59:09.364
-url: /?p=51
-categories: 算法
-tags: HashMap | 拉链式 | 线性探索式
+author: Herman
+date: 2021/08/14 13:58
+categories:
+- 算法
+tags:
+- HashMap
+- 拉链式
+- 线性探索式
 ---
+
 
 > 程序员必读书单：[https://github.com/silently9527/ProgrammerBooks](https://github.com/silently9527/ProgrammerBooks)
 >
