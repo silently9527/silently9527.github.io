@@ -4,7 +4,7 @@ export const nav: DefaultTheme.Config['nav'] = [
   {
     text: '我的专栏',
     items: [
-      { text: '算法', link: '/article/pamphlet/algorithms/一致性Hash算法Java版实现', activeMatch: '/article/pamphlet/algorithms/' },
+      { text: '算法', link: '/article/pamphlet/algorithms/index', activeMatch: '/article/pamphlet/algorithms/' },
     ],
     activeMatch: '/article/pamphlet/'
   },
