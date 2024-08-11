@@ -46,7 +46,7 @@ jobs:
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: pages  # 部署到 pages 分支
-          folder: docs/.vitepress/dist  # 部署的文件夹路径
-          token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Actions 自动生成的 GITHUB_TOKEN
-          clean: true  # 可选项，清理之前的内容
+          branch: pages
+          folder: docs/.vitepress/dist
+          token: ${{ secrets.BOT_TOKEN }}
+          clean: true
