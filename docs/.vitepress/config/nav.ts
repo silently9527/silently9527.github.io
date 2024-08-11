@@ -4,9 +4,9 @@ export const nav: DefaultTheme.Config['nav'] = [
   {
     text: '我的专栏',
     items: [
-      // { text: 'Java基础快速入门', link: '/courses/java/index', activeMatch: '/courses/java/' },
+      { text: '算法', link: '/article/pamphlet/algorithms/一致性Hash算法Java版实现', activeMatch: '/article/pamphlet/algorithms/' },
     ],
-    activeMatch: '/courses/'
+    activeMatch: '/article/pamphlet/'
   },
   {
     text: 'PDF书籍',
