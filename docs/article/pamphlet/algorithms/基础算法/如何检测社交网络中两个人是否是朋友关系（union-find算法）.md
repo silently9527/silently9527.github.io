@@ -8,15 +8,6 @@ tags:
 ---
 
 
-> 本文已被Github仓库收录 [https://github.com/silently9527/JavaCore](https://github.com/silently9527/JavaCore)
->
-> 程序员常用的IDEA插件：[https://github.com/silently9527/ToolsetIdeaPlugin](https://github.com/silently9527/ToolsetIdeaPlugin)
->
-> 完全开源的淘客项目：[https://github.com/silently9527/mall-coupons-server](https://github.com/silently9527/mall-coupons-server)
->
-> 微信公众号：贝塔学Java
-
-
 ## 前言
 春节放假会了老家，停更了很多天，这是年后连夜肝出来的第一篇文章，先来聊聊春节放假期间发生的事，这次回家遇到了我学生时代的女神，当年她在我心目中那是
 

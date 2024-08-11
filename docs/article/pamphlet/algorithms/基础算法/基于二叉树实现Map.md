@@ -7,10 +7,6 @@ categories: 算法
 tags: 数据结构 | 二叉树
 ---
 
-> 程序员常用的IDEA插件：[https://github.com/silently9527/ToolsetIdeaPlugin](https://github.com/silently9527/ToolsetIdeaPlugin)
->
-> 微信公众号：贝塔学Java
-
 ## 前言
 在上一篇中我们基于数组和链表实现了Map的相关操作，但是对于数据量稍大的情况下，这两种实现方式效率都比较低，为了改进这个问题，本篇我们将来学习二叉树，并通过二叉树来实现上一篇中定义的Map结构
 
