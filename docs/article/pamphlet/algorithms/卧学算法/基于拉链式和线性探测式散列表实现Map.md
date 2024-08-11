@@ -1,15 +1,20 @@
 ---
-title: 图算法系列之无向图的数据结构
+title: 基于拉链式和线性探测式散列表实现Map
 author: Herman
 date: 2021/08/14 13:58
 categories:
 - 算法
 tags:
-- 数据结构
-- 图算法
+- HashMap
+- 拉链式
+- 线性探索式
 ---
 
-# 图算法系列之无向图的数据结构
+# 基于拉链式和线性探测式散列表实现Map
+
+> 程序员必读书单：[https://github.com/silently9527/ProgrammerBooks](https://github.com/silently9527/ProgrammerBooks)
+> 微信公众号：贝塔学Java
+
 
 ## 前言
 前几篇我们一起学习了基于数组、链表、二叉树、红黑树来实现Map的操作，本篇我们将会一起来学习基于散列表来实现Map，这种方式对应着java里面的HashMap，这也是使用最多的一种方式
@@ -106,7 +111,7 @@ public int hashCode() {
 
 这里我们就采用简单的链表来实现拉链式散列表，数据结构使用在前几篇中已经实现的`LinkedMap`，可以参考前面的文章[《基于数组或链表实现Map》](https://juejin.cn/post/6940442429229105183)。
 
-![](https://tva1.sinaimg.cn/large/008eGmZEgy1gpg7i9y3qoj30ct06ra9w.jpg)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff76067884aa4aa78b3221f598104621~tplv-k3u1fbpfcp-zoom-1.image)
 
 ```
 public class SeparateChainingHashMap<K, V> implements Map<K, V> {
@@ -277,3 +282,5 @@ public void delete(K key) {
 
 }
 ```
+
+

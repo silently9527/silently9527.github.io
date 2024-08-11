@@ -11,13 +11,12 @@ tags:
 
 # 如何检测社交网络中两个人是否是朋友关系
 
-
 ## 前言
 春节放假会了老家，停更了很多天，这是年后连夜肝出来的第一篇文章，先来聊聊春节放假期间发生的事，这次回家遇到了我学生时代的女神，当年她在我心目中那是
 
 > "出淤泥而不染、濯清涟而不妖"
 
-没想到这次遇到了她，身体发福，心目中女神的形象瞬间碎了，就像达芬奇再次遇到了蒙娜丽莎
+没想到这次回家遇到了她，身体发福了，心目中女神的形象瞬间碎了，就好像达芬奇再次遇到了蒙娜丽莎
 
 > "菡萏香销翠叶残"
 
@@ -44,7 +43,7 @@ tags:
 #### 连通分量
 将整数对称为连接，将等价类称作连通分量或者简称分量
 
-![](https://tva1.sinaimg.cn/large/008eGmZEgy1gnquyr8nktj30te0o812y.jpg)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51cd832609504204877bdcf3b52e0292~tplv-k3u1fbpfcp-zoom-1.image)
 
 #### 动态连通性
 union-find算法的目标是当程序从输入中读取了整数对p q时，如果已知的所有整数对都不能说明p q是相连的，那么将这一对整数输出，否则忽略掉这对整数；我们需要设计数据结构来保存已知的所有整数对的信息，判断出输入的整数对是否是相连的，这种问题叫做动态连通性问题。
@@ -129,17 +128,17 @@ public class QuickFindImpl extends AbstractUF {
 ```
 
 - 算法分析：
-find()操作显然是很快的，时间复杂度O(1), 但是union的算法是无法处理大型数据的，因为每次都需要变量整个数组，那么union方法的时间复杂度是O(n)
+  find()操作显然是很快的，时间复杂度O(1), 但是union的算法是无法处理大型数据的，因为每次都需要变量整个数组，那么union方法的时间复杂度是O(n)
 
 
 ## quick-union算法
 为了提高union方法的速度，我们需要考虑另外一种算法；使用同样的数据结构，只是重新定义id[]表示的意义，每个触点所对应的id[]值都是在同一分量中的另一个触点的名称
 
-![](https://tva1.sinaimg.cn/large/008eGmZEgy1gnqwakuizxj30p40gotdj.jpg)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8f670253330f40c0a814047c7d5807fb~tplv-k3u1fbpfcp-zoom-1.image)
 
 在数组初始化之后，每个节点的链接都指向自己；id[]数组用`父链接`的形式表示了`森林`，每一次union操作都会找出每个分量的`根节点`进行归并。
 
-![](https://tva1.sinaimg.cn/large/008eGmZEgy1gnqwjdd6gpj30pq0yythe.jpg)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/433b359264384730971733bf2959f22a~tplv-k3u1fbpfcp-zoom-1.image)
 
 
 ```
@@ -173,16 +172,16 @@ public class QuickUnionImpl extends AbstractUF {
 
 
 - 算法分析：
-看起来quick-union算法比quick-find算法更快，因为union不需要为每对输入遍历整个数组，
-考虑最佳情况下，find方法只需要访问一次数组就可以得到根触点，那么union方法的时间复杂度O(n)；
-考虑到最糟糕的输入情况，如下图：
+  看起来quick-union算法比quick-find算法更快，因为union不需要为每对输入遍历整个数组，
+  考虑最佳情况下，find方法只需要访问一次数组就可以得到根触点，那么union方法的时间复杂度O(n)；
+  考虑到最糟糕的输入情况，如下图：
 
-![](https://tva1.sinaimg.cn/large/008eGmZEgy1gnqxeav0cmj30k00k2goc.jpg)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/17496e49c2a94903a42501b0d99e1ba2~tplv-k3u1fbpfcp-zoom-1.image)
 
 find方法需要访问数组n-1次，那么union方法的时间复杂度是O(n²)
 
 
-## 加权quick-union算法 
+## 加权quick-union算法
 为了保证quick-union算法最糟糕的情况不在出现，我需要记录每一个树的大小，在进行分量归并操作时总是把小的树连接到大的树上，这种算法构造出来树的高度会远远小于未加权版本所构造的树高度。
 
 ```
@@ -227,21 +226,28 @@ public class WeightedQuickUnionImpl extends AbstractUF {
 ```
 
 - 算法分析：
-最坏的情况下，每次union归并的树都是大小相等的，他们都包含了2的n次方个节点，高度都是n，合并之后的高度变成了n+1，由此可以得出union方法的时间复杂度是O(lgN)
+  最坏的情况下，每次union归并的树都是大小相等的，他们都包含了2的n次方个节点，高度都是n，合并之后的高度变成了n+1，由此可以得出union方法的时间复杂度是O(lgN)
 
-![](https://tva1.sinaimg.cn/large/008eGmZEgy1gnqy1kcf0pj30uo0nudp9.jpg)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c67501200314cc1855255eff1b2c2c1~tplv-k3u1fbpfcp-zoom-1.image)
 
 
 ## 总结
 
 union-find算法只能判断出给定的两个整数是否是相连的，无法给出具体达到的路径；后期我们聊到图算法可以给出具体的路径
 
-算法 | union() | find()
----|---|---
-quick-find算法 | N | 1
-quick-union算法 | 树的高度 | 树的高度
-加权quick-union算法 | lgN | lgN
+| 算法 | union() | find() | 
+| ---|---|--- |
+| quick-find算法 | N | 1 |
+| quick-union算法 | 树的高度 | 树的高度 |
+| 加权quick-union算法 | lgN | lgN |
 
 ---
+
+## 最后（点关注，不迷路）
+
+文中或许会存在或多或少的不足、错误之处，有建议或者意见也非常欢迎大家在评论交流。
+
+最后，**写作不易，请不要白嫖我哟**，希望朋友们可以**点赞评论关注**三连，因为这些就是我分享的全部动力来源🙏
+
 
 > 参考书籍：算法第四版
