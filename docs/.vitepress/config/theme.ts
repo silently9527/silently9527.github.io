@@ -23,10 +23,10 @@ export const themeConfig: DefaultTheme.Config = {
     next: '下一篇'
   },
   // 编辑链接配置
-  editLink: {
-    pattern: 'https://github.com/Charles7c/charles7c.github.io/edit/main/docs/:path',
-    text: '不妥之处，敬请雅正'
-  },
+  // editLink: {
+  //   pattern: 'https://github.com/Charles7c/charles7c.github.io/edit/main/docs/:path',
+  //   text: '不妥之处，敬请雅正'
+  // },
   // 搜索配置（二选一）
   search: {
     provider: 'algolia',

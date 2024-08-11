@@ -7,6 +7,7 @@ categories: 算法
 tags: 一致性hash
 ---
 
+# 一致性Hash算法Java版实现
 
 ## 前言
 在之前写了两篇关于缓存的文章[《万字长文聊缓存（上）- http缓存》](https://www.toutiao.com/i6913902641764565507/)[《万字长文聊缓存（下）- 应用级缓存》](https://www.toutiao.com/i6913903843189441038/)，谈到缓存不说一下一致性Hash算法那就是在耍流氓。
