@@ -8,11 +8,11 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '/article/pamphlet/'
   },
-  {
-    text: 'PDF书籍',
-    link: '/article/pdf/index',
-    activeMatch: '/article/pdf'
-  },
+  // {
+  //   text: 'PDF书籍',
+  //   link: '/article/pdf/index',
+  //   activeMatch: '/article/pdf'
+  // },
   {
     text: '标签',
     link: '/tags',
