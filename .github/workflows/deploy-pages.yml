@@ -48,5 +48,5 @@ jobs:
         with:
           branch: pages
           folder: docs/.vitepress/dist
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
+          token: ${{ secrets.DEPLOY_KEY }}
           clean: true
