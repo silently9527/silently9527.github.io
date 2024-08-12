@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: Welcome To My Notes
-      link: /categories/issues/index
+      link: /Notes/index
     - theme: alt
       text: GitHub Home
       link: https://github.com/silently9527

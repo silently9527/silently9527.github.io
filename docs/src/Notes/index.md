@@ -3,8 +3,8 @@ layout: page
 sidebar: false
 
 hero:
-  title: "Blogs"
-  subTitle: "想吃榛子巧克力味蛋糕"
+  title: "Notes"
+  subTitle: "“笔记是记录思想的过程，是思维的延伸。” ——刘佳琦"
 
 types:
   - name: "面经分享"

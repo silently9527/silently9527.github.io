@@ -12,49 +12,24 @@ interface Project {
  */
 export const projectsInfo: Project[] = [
   {
-    banner: "/project-img/gpt-feishu.png",
-    title: "Feishu&ChatGPT",
-    description:
-      "将 chatGPT 接入飞书对话机器人，支持上下文对话与人格预设，并使用aircode一键部署",
-    link: "https://github.com/ZbWeR/feishu-chatGPT-plus-aircode",
-    tag: "JavaScript",
-  },
-  {
-    banner: "/project-img/cloudMusic.png",
-    title: "CloudMusic",
-    description: "对移动端网易云音乐的模仿与复现，实现了虚拟列表与无限滚动...",
-    link: "https://github.com/ZbWeR/NeteaseCloudMusic",
-    tag: "Vue",
-  },
-  {
     banner: "/project-img/analyze-tool.png",
-    title: "Npm Analyze-tool",
-    description:
-      "一款用于可视化分析项目依赖关系的命令行工（第六届字节跳动前端青训大项目三等奖）",
-    link: "https://github.com/jonlyes/packageResolution",
-    tag: "TypeScript",
+    title: "coupons",
+    description: "淘宝客项目，从前端到后端完全开源的淘宝客项目，目前项目已经支持打包成App、微信小程序、QQ小程序、Web站点",
+    link: "https://github.com/silently9527/coupons",
+    tag: "Java/vue/uniapp",
   },
   {
     banner: "/project-img/dora-bot.png",
-    title: "Dora-bot",
-    description:
-      "基于 go-cqhttp 框架开发的QQ聊天机器人，接入 mongodb 存储消息记录以实现虚假的学习功能.",
-    link: "https://github.com/ZbWeR/qqbot-Dora",
-    tag: "Python",
+    title: "SmartMvc",
+    description: "理解SpringMVC的原理，在面试或工作中都十分的重要,从手写简易版的SpringMVC框架出发， 理出SpringMVC的主线并深入理解SpringMVC的原理",
+    link: "https://github.com/silently9527/SmartMvc",
+    tag: "Vue",
   },
   {
     banner: "/project-img/ruleMining.png",
-    title: "Rule Mining",
-    description:
-      "采用 Apriori / Fpgrowth / Eclat 算法对超市商品数据集进行关联规则的挖掘.",
-    link: "https://github.com/ZbWeR/Association-rule-mining",
-    tag: "Python",
-  },
-  {
-    banner: "/project-img/dinosaur.png",
-    title: "Dinosaur-Game",
-    description: "基于 EasyX 开发的一款游戏内容更加丰富的谷歌断网小恐龙游戏.",
-    link: "https://github.com/ZbWeR/Dinosaur-Game",
-    tag: "C++",
+    title: "Programmer Toolkit",
+    description: "在开发的过程中经常会使用一些在线的工具，比如：时间戳转日期，JSON格式化等等；考虑想把这些常用的功能都做成IDEA插件，在使用的时候就不用去网上寻找工具，在IDEA中就可以快速完成提升开发人员开发效率；",
+    link: "https://github.com/silently9527/Toolkit",
+    tag: "intellij IDEA plugin",
   },
 ];
