@@ -10,6 +10,7 @@ export { data };
  */
 export default createContentLoader("src/Notes/**/*.md", {
   transform(rawData): Post[] {
+      console.log('=========='+rawData)
     return rawData
       .map(({ url, frontmatter }) => ({
         url,

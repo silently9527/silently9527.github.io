@@ -26,13 +26,14 @@ export default defineConfig({
       { text: "👋 About", link: "/AboutMe.md" },
       { text: "💭 Blogs", link: "/Notes/index" },
       { text: "🦄 Projects", link: "Projects.md" },
+      { text: "🦄 Tags", link: "Tags.md" },
       { text: "👫 Friends", link: "Friends.md" },
     ],
     // 顶部导航栏左侧的社交平台跳转
     socialLinks: [{ icon: "github", link: "https://github.com/ZbWeR" }],
     // 首页底部版权声明
     footer: {
-      copyright: "Copyright © 2023-present zbwer",
+      copyright: "Copyright © 2023-present Herman",
     },
     // 【文章页面左侧导航】
     sidebar: {
@@ -43,6 +44,12 @@ export default defineConfig({
     // 是否启动搜索功能
     search: {
       provider: "local",
+    },
+    // 自定义扩展: 文章元数据配置
+    // @ts-ignore
+    articleMetadataConfig: {
+      author: 'Herman', // 文章全局默认作者名称
+      authorLink: '/about/index', // 点击作者名时默认跳转的链接
     },
   },
   // 数学公式支持

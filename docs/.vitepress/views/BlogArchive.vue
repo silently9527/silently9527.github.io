@@ -49,6 +49,8 @@ import { data as posts } from "../utils/article.data.js";
 import PostCard from "./BlogArchivePostCard.vue";
 import Sidebar from "./BlogArchiveSidebar.vue";
 
+console.log(posts)
+
 // 获取标题 / 分类 / 推荐阅读
 const { frontmatter: pageData, theme } = useData();
 const { hero, types, features, flow } = pageData.value;
