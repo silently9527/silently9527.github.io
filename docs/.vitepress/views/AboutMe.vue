@@ -27,14 +27,6 @@
           style="top: 50%"
           class="tag-bounce hidden sm:block sm:left-[69%] md:left-[66%] lg:left-[63%] xl:left-[60%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
         >
-          <a href="https://www.zhihu.com/people/huaan9527-57/posts" target="_blank" style="display: inline-block;">
-            <img alt="知乎个人主页" src="https://img.shields.io/badge/zhihu-知乎-purplen" />
-          </a>&nbsp;
-        </p>
-        <p
-          style="top: 70%"
-          class="tag-bounce hidden sm:block sm:left-[69%] md:left-[66%] lg:left-[63%] xl:left-[60%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
-        >
           <a href="https://my.oschina.net/u/3230120" target="_blank" style="display: inline-block;">
             <img alt="开源中国个人主页" src="https://img.shields.io/badge/oschina-Herman-green" />
           </a>&nbsp;
