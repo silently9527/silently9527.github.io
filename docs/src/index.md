@@ -1,33 +1,35 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+title: Herman's Notes
+titleTemplate: 个人技术知识库，记录和分享个人碎片化、结构化、体系化的技术知识内容
+
 hero:
-  name: "Easy VitePress Blog"
-  text: "轻松构建你的个人博客"
-  tagline: "🚀Simple, robust and swift.Experience the enhanced VitePress for your blogging needs"
+  name: Herman's Notes
+  text: 专注 & 洞察 & 分享
+  tagline: 个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。
   image:
     src: /logo.png
-    alt: VitePress
+    alt: Logo
   actions:
     - theme: brand
-      text: Get Start
-      link: /Notes/0tutorial/quickstart
+      text: Welcome To My Notes
+      link: /categories/issues/index
     - theme: alt
-      text: View Document
-      link: /Notes/
+      text: GitHub Home
+      link: https://github.com/silently9527
 
 features:
-  - icon: 📝
-    title: 专注于你的内容
-    details: 只需使用 Markdown 即可轻松创建精美的文档网站。
-  - icon: <svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 256 220.8"><path fill="#41B883" d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0h47.36Z"/><path fill="#41B883" d="m0 0 128 220.8L256 0h-51.2L128 132.48 50.56 0H0Z"/><path fill="#35495E" d="M50.56 0 128 133.12 204.8 0h-47.36L128 51.2 97.92 0H50.56Z"/></svg>
-    title: 使用 Vue 进行定制
-    details: 在 Markdown 中使用 Vue 语法和组件，或使用 Vue 构建自定义主题。.
-  - icon: 🚀
-    title: 快速发布网站
-    details: 使用静态 HTML 快速初始加载，客户端路由进行快速加载后导航。
-  - icon: 🦄
-    title: 更加丰富的功能
-    details: 提供定制化模板轻松展示友情链接与开源项目介绍，并支持导出更加美观的 PDF 文件。
+  - icon:
+      src: svg/focus.svg
+    title: 保持专注
+    details: “简单比复杂更难，你必须努力让你的想法变得清晰明了，让它变得简单。一旦你做到了简单，你就能搬动大山。” -- 乔布斯
+  - icon:
+      src: svg/insight.svg
+    title: 善于洞察
+    details: “我既没有突出的理解力，也没有过人的机智。只在觉察那些稍纵即逝的事物并对其进行精细观察的能力上，我可能在普通人之上。” -- 达尔文
+  - icon:
+      src: svg/knowledge.svg
+    title: 乐于分享
+    details: 关于分享，有形的物品越分越少，无形的知识越分越多。在记录与分享的过程中, 梳理所学, 交流所得, 必有所获。
 ---

@@ -1,13 +1,12 @@
 ---
-aside: false
+layout: page
 ---
 
-# 👋 Hi, 很高兴见到你
+<script setup>
 
-你可以在这里填写关于自己的一些自我介绍！
+import AboutMe from '../.vitepress/views/AboutMe.vue'
 
-（当然你也可以删掉这个页面，记得在配置文件的 `nav` 中删掉对应的字段）
 
-放一张**格温小姐**丰富页面！
+</script>
 
-![](/hi.jpg)
+<AboutMe/>

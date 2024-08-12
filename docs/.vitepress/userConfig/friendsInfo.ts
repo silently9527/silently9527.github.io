@@ -53,7 +53,7 @@ export const friendsInfo: Friend[] = [
     color: "orange",
   },
   {
-    avatar: "https://4ever-xxxl.github.io/image/avatar.jpg",
+    avatar: "https://4ever-xxxl.github.io/image/avatar.png",
     name: "xxxl",
     title: "羡慕浙爷每一天😋",
     link: "https://4ever-xxxl.github.io/",
@@ -61,7 +61,7 @@ export const friendsInfo: Friend[] = [
     color: "indigo",
   },
   {
-    avatar: "https://sakee.cn/image/friends/Timlzh.jpg",
+    avatar: "https://avatars.githubusercontent.com/u/25294996?v=4",
     name: "Timlzh",
     title: "🥳全体起立!!!",
     link: "https://www.cnblogs.com/timlzh",
@@ -88,12 +88,12 @@ export const friendsInfo: Friend[] = [
     avatar: "https://avatars.githubusercontent.com/u/102564564?v=4",
     name: "Annmy",
     title: "光电の神",
-    link: "https://yhblogs.cn/about/",
+    link: "https://yhblogs.cn",
     tag: "UESTCer",
     color: "orange",
   },
   {
-    avatar: "https://mrcai.dev/_astro/avatar.a5e28833.webp",
+    avatar: "https://avatars.githubusercontent.com/u/78269445?v=4",
     name: "mrcaidev",
     title: "为什么这么强好羡慕啊😭",
     link: "https://mrcai.dev/",
@@ -123,5 +123,13 @@ export const friendsInfo: Friend[] = [
     link: "https://blog.hareta.ren/blog",
     tag: "CNSS / SA",
     color: "indigo",
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/108560334?v=4",
+    name: "ma5hr00m",
+    title: "炒鸡厉害的前端学弟🏆",
+    link: "https://ma5hr00m.top/",
+    tag: "Web Develop",
+    color: "orange",
   },
 ];

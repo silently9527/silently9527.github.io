@@ -10,7 +10,7 @@
           ></div>
           <img
             class="block w-48 h-48 mx-auto rounded-full"
-            src="./img/avatar.jpg"
+            src="./img/avatar.png"
             alt="avatar"
           />
         </div>
@@ -49,31 +49,26 @@
             class="dark:from-sky-700 dark:to-teal-600 dark:border-slate-900 w-full flex flex-col justify-center rounded-xl border py-4 px-8 text-white md:w-[59%] bg-gradient-to-r from-sky-400 to-teal-400"
           >
             <p class="text-lg text-slate-50">你好，很高兴认识你 👋</p>
-            <h1 class="text-2xl font-bold xl:text-3xl lg:break-normal lg:break-words">
-              A Chinese undergraduate From UESTC
+            <h1 class="text-2xl font-bold xl:text-1xl lg:break-normal lg:break-words">
+              I'm currently working on backend development
             </h1>
-            <p class="text-slate-100">前端开发 / 产品设计 / 足球 🔥</p>
+            <p class="text-slate-100"> Java Developer / Games 🔥</p>
           </div>
           <!-- 箴言 -->
           <div
             class="bg-stripe dark:border-slate-900 dark:bg-slate-800 md:w-[39%] w-full rounded-xl border p-4 bg-slate-50"
           >
             <p class="text-[12px]">箴言</p>
-            <div>
-              <h1 class="text-3xl leading-9">
+            <div style="padding-top: 15px">
+              <h1 class="text-3xl leading-9 md:inline-block">
                 <span class="hidden font-bold text-teal-400 md:inline-block"
-                  >Miracle&nbsp;
+                  >论道者
                 </span>
-                <span class="hidden lg:inline-block"> Is Everywhere</span>
+                <span class="hidden lg:inline-block"> 甚繁</span>
               </h1>
-              <h1 class="font-serif text-3xl tracking-widest md:text-2xl lg:text-3xl">
-                纵有<span class="font-bold text-sky-500">狂风</span>拔地起
-              </h1>
-              <h1 class="text-2xl leading-9 md:text-3xl">
-                <span class="inline-block font-bold text-teal-400 md:hidden"
-                  >Miracle&nbsp;
-                </span>
-                <span class="inline-block lg:hidden">Is Everywhere</span>
+              <h1 class="text-3xl leading-9 md:inline-block" style="padding-left: 10px;">
+                <span class="hidden font-bold text-teal-400 md:inline-block">行之者</span>
+                <span class="hidden lg:inline-block">盖寡</span>
               </h1>
             </div>
           </div>
@@ -85,11 +80,11 @@
         <div
           class="bg-stripe w-full md:w-[35%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
         >
-          <p class="text-[12px]">简介</p>
+          <p class="text-[15px]">简介</p>
           <div class="mt-2">
-            <h1 class="text-xl">主修计算机科学与技术</h1>
-            <h1 class="text-xl">辅修<span class="text-pink-500">猫娘行为学</span></h1>
-            <h1 class="text-xl lg:text-xl md:text-base">梦想是做程序员烧烤领袖</h1>
+            <h1 class="text-xl">主修 window、macos、centos 开关机</h1>
+            <h1 class="text-xl">辅修<span class="text-pink-500">`rm -rf *` `delete from`</span></h1>
+            <h1 class="text-xl lg:text-1xl md:text-base">梦想删库跑路</h1>
             <p></p>
           </div>
         </div>
@@ -101,87 +96,86 @@
           <div class="mt-2 overflow-hidden">
             <!-- TODO:封装ICON组件,抽离背景颜色与svg地址 -->
             <div class="flex gap-4 w-fit icon-scroll">
-              <div
-                class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-emerald-200"
-              >
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-emerald-200">
                 <img src="./img/vue.svg" alt="vue.js" />
+              </div>
+              <div class="flex-shrink-0 w-20 h-20 p-4 bg-gray-200 rounded-lg">
+                <img src="./img/java.svg" alt="" />
+              </div>
+              <div class="flex-shrink-0 w-20 h-20 p-4 bg-blue-200 rounded-lg">
+                <img src="./img/spring.svg" alt="" />
               </div>
               <div class="flex-shrink-0 w-20 h-20 p-4 bg-red-200 rounded-lg">
                 <img src="./img/html.svg" alt="" />
               </div>
               <div class="flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-sky-200">
-                <img src="./img/css.svg" alt="" />
+                <img src="./img/mysql.svg" alt="" />
               </div>
-              <div
-                class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-slate-200"
-              >
-                <img src="./img/tailwind.svg" alt="" />
-              </div>
-              <div
-                class="flex justify-center w-20 h-20 p-4 flex-shrink-0 rounded-lg bg-[#f7cb4f]"
-              >
-                <img class="rounded-lg" src="./img/js.webp" alt="" />
-              </div>
-              <div
-                class="flex justify-center flex-shrink-0 w-20 h-20 p-4 bg-red-400 rounded-lg"
-              >
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 bg-red-400 rounded-lg">
                 <img class="rounded-lg" src="./img/git.svg" alt="" />
               </div>
-              <div
-                class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-slate-200"
-              >
-                <img class="rounded-lg" src="./img/python.svg" alt="" />
-              </div>
-              <div
-                class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-rose-200"
-              >
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-rose-200">
                 <img class="rounded-lg" src="./img/npm.svg" alt="" />
               </div>
-              <div
-                class="flex justify-center flex-shrink-0 w-20 h-20 p-4 bg-indigo-200 rounded-lg"
-              >
-                <img class="rounded-lg" src="./img/eslint.svg" alt="" />
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-gray-200">
+                <img class="rounded-lg" src="./img/kafka.svg" alt="" />
               </div>
-              <div
-                class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-emerald-200"
-              >
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-yellow-200">
+                <img src="./img/tomcat.svg" alt="vue.js" />
+              </div>
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-emerald-200">
                 <img src="./img/vue.svg" alt="vue.js" />
+              </div>
+              <div class="flex-shrink-0 w-20 h-20 p-4 bg-gray-200 rounded-lg">
+                <img src="./img/java.svg" alt="" />
+              </div>
+              <div class="flex-shrink-0 w-20 h-20 p-4 bg-blue-200 rounded-lg">
+                <img src="./img/spring.svg" alt="" />
               </div>
               <div class="flex-shrink-0 w-20 h-20 p-4 bg-red-200 rounded-lg">
                 <img src="./img/html.svg" alt="" />
               </div>
               <div class="flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-sky-200">
-                <img src="./img/css.svg" alt="" />
+                <img src="./img/mysql.svg" alt="" />
               </div>
-              <div
-                class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-slate-200"
-              >
-                <img src="./img/tailwind.svg" alt="" />
-              </div>
-              <div
-                class="flex justify-center w-20 h-20 p-4 flex-shrink-0 rounded-lg bg-[#f7cb4f]"
-              >
-                <img class="rounded-lg" src="./img/js.webp" alt="" />
-              </div>
-              <div
-                class="flex justify-center flex-shrink-0 w-20 h-20 p-4 bg-red-400 rounded-lg"
-              >
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 bg-red-400 rounded-lg">
                 <img class="rounded-lg" src="./img/git.svg" alt="" />
               </div>
-              <div
-                class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-slate-200"
-              >
-                <img class="rounded-lg" src="./img/python.svg" alt="" />
-              </div>
-              <div
-                class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-rose-200"
-              >
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-rose-200">
                 <img class="rounded-lg" src="./img/npm.svg" alt="" />
               </div>
-              <div
-                class="flex justify-center flex-shrink-0 w-20 h-20 p-4 bg-indigo-200 rounded-lg"
-              >
-                <img class="rounded-lg" src="./img/eslint.svg" alt="" />
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-gray-200">
+                <img class="rounded-lg" src="./img/kafka.svg" alt="" />
+              </div>
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-yellow-200">
+                <img src="./img/tomcat.svg" alt="vue.js" />
+              </div>
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-emerald-200">
+                <img src="./img/vue.svg" alt="vue.js" />
+              </div>
+              <div class="flex-shrink-0 w-20 h-20 p-4 bg-gray-200 rounded-lg">
+                <img src="./img/java.svg" alt="" />
+              </div>
+              <div class="flex-shrink-0 w-20 h-20 p-4 bg-blue-200 rounded-lg">
+                <img src="./img/spring.svg" alt="" />
+              </div>
+              <div class="flex-shrink-0 w-20 h-20 p-4 bg-red-200 rounded-lg">
+                <img src="./img/html.svg" alt="" />
+              </div>
+              <div class="flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-sky-200">
+                <img src="./img/mysql.svg" alt="" />
+              </div>
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 bg-red-400 rounded-lg">
+                <img class="rounded-lg" src="./img/git.svg" alt="" />
+              </div>
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-rose-200">
+                <img class="rounded-lg" src="./img/npm.svg" alt="" />
+              </div>
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-gray-200">
+                <img class="rounded-lg" src="./img/kafka.svg" alt="" />
+              </div>
+              <div class="flex justify-center flex-shrink-0 w-20 h-20 p-4 rounded-lg bg-yellow-200">
+                <img src="./img/tomcat.svg" alt="vue.js" />
               </div>
             </div>
           </div>
@@ -197,12 +191,11 @@
         <div
           class="bg-stripe w-full md:w-[50%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
         >
-          <p class="text-[12px]">荣誉墙</p>
-          <h1 class="mt-2 text-4xl font-bold">追风赶月</h1>
+          <p class="text-[20px]">🌀 博客</p>
           <div class="mt-4 md:text-base lg:text-xl">
-            <p class="py-1">🏅 "创新创意创业"挑战赛省一等奖</p>
-            <p class="py-1">🥉 蓝桥杯 Web 开发组国家三等奖</p>
-            <p class="py-1">🥉 字节跳动前端青训大项目三等奖</p>
+            <p class="py-1 text-[15px]">🏅 后端技术、行业视野、技巧总结</p>
+            <p class="py-1 text-[15px]">🥉 个人生活，养成记录和分享的习惯</p>
+            <p class="py-1 text-[15px]">🥉 字节跳动前端青训大项目三等奖</p>
           </div>
         </div>
       </div>
@@ -232,9 +225,9 @@
           ></div>
           <div class="relative z-10 flex flex-col justify-between h-full p-4">
             <p class="text-[12px] text-slate-50">电子竞技</p>
-            <h1 class="flex-1 mt-2 text-4xl font-bold text-white">赛博种田 / FPS</h1>
+            <h1 class="flex-1 mt-2 text-4xl font-bold text-white">英雄联盟 / 王者荣耀</h1>
             <p class="self-end mt-2 text-sm text-right text-slate-100">
-              守望先锋 / FarmTogether
+              确实比较男 / LOL
             </p>
           </div>
         </div>
@@ -252,7 +245,7 @@
           <div class="relative z-10 flex flex-col justify-between h-full p-4">
             <p class="text-[12px] text-slate-50">兴趣爱好</p>
             <h1 class="flex-1 mt-2 text-4xl font-bold text-white">
-              科幻 / <br />动漫影视剧
+              漫威 、 <br />  科幻 、 <br />动漫影视剧
             </h1>
             <p class="self-end mt-2 text-sm text-right text-slate-100">
               “不作恶,不快活！” ——《坏蛋联盟》
