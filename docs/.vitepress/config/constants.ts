@@ -1,4 +1,4 @@
-const site = 'https://blog.herman.top';
+const site = 'https://silently9527.github.io/';
 
 export const metaData = {
   lang: 'zh-CN',
@@ -6,5 +6,5 @@ export const metaData = {
   title: 'Herman\'s Notes',
   description: '个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。',
   site,
-  image: `${site}/logo.jpg`,
+  image: `${site}/logo.png`,
 };

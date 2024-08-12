@@ -46,8 +46,8 @@ export const themeConfig: DefaultTheme.Config = {
   },
   // 自定义扩展: 文章版权配置
   copyrightConfig: {
-    license: '署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)',
-    licenseLink: 'http://creativecommons.org/licenses/by-sa/4.0/'
+    // license: '署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)',
+    // licenseLink: 'http://creativecommons.org/licenses/by-sa/4.0/'
   },
   // 自定义扩展: 评论配置
   commentConfig: {

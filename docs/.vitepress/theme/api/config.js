@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const createBaseInstance = () => {
   const instance = axios.create({
-    baseURL: 'https://api.charles7c.top/blog',
+    baseURL: 'https://silently9527.github.io/',
     timeout: 3000,
   });
   instance.interceptors.request.use(handleRequest, handleError);
