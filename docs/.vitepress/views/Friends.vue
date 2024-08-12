@@ -13,13 +13,24 @@
         ></FriendsCard>
       </div>
     </div>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <Comment :commentConfig="theme.commentConfig" :key="md5(page.relativePath)" />
+
   </VPTeamPage>
 </template>
 
 <script setup>
+import md5 from 'blueimp-md5';
+import { useData } from 'vitepress';
 import { VPTeamPage, VPTeamPageTitle } from "vitepress/theme";
 import { friendsInfo } from "../userConfig/friendsInfo";
+const { page, theme, frontmatter } = useData();
 import FriendsCard from "./FriendsCard.vue";
+import Comment from '../components/Comment.vue';
 </script>
 
 <style scoped>
