@@ -9,6 +9,14 @@
         <ProjectCard v-for="(item, index) in projectsInfo" :key="index" v-bind="item" />
       </div>
     </div>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <div class="px-6 md:px-12 lg:px-16" style="max-width: 1200px; margin: 0 auto;">
+      <Comment :commentConfig="theme.commentConfig" :key="md5(page.relativePath)" />
+    </div>
   </VPTeamPage>
 </template>
 
@@ -16,6 +24,10 @@
 import { VPTeamPage, VPTeamPageTitle } from "vitepress/theme";
 import ProjectCard from "./ProjectCard.vue";
 import { projectsInfo } from "../userConfig/projectsInfo";
+import { useData } from 'vitepress';
+const { page, theme, frontmatter } = useData();
+import md5 from 'blueimp-md5';
+import Comment from '../components/Comment.vue';
 </script>
 
 <style scoped>

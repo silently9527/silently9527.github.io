@@ -27,12 +27,12 @@
 </template>
 
 <script setup>
-import md5 from 'blueimp-md5';
-import { useData } from 'vitepress';
 import { VPTeamPage, VPTeamPageTitle } from "vitepress/theme";
 import { friendsInfo } from "../userConfig/friendsInfo";
-const { page, theme, frontmatter } = useData();
 import FriendsCard from "./FriendsCard.vue";
+import { useData } from 'vitepress';
+const { page, theme, frontmatter } = useData();
+import md5 from 'blueimp-md5';
 import Comment from '../components/Comment.vue';
 </script>
 
