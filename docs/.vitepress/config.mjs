@@ -14,10 +14,10 @@ export default defineConfig({
     logo: "/favicon.ico",
     // 顶部导航栏
     nav: [
-      { text: "👋 About", link: "AboutMe.md" },
       { text: "💭 Notes", link: "/Notes/index" },
       { text: "🦄 Projects", link: "Projects.md" },
       { text: "👫 Friends", link: "Friends.md" },
+      { text: "👋 About", link: "AboutMe.md" },
     ],
     // 文章页面左侧导航
     sidebar: {

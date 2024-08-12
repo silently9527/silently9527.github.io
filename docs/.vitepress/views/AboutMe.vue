@@ -16,29 +16,45 @@
         </div>
         <!-- Right-tags -->
         <p
-          style="top: 32%"
+          style="top: 30%"
           class="tag-bounce hidden sm:block sm:left-[69%] md:left-[66%] lg:left-[63%] xl:left-[60%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
         >
-          🎵 二进制吟游诗人
+          <a href="https://juejin.cn/user/2779199782521693" target="_blank" style="display: inline-block;">
+            <img alt="掘金个人主页" src="https://img.shields.io/badge/掘金-Herman-1E80FF" />
+          </a>&nbsp;
         </p>
         <p
           style="top: 50%"
           class="tag-bounce hidden sm:block sm:left-[69%] md:left-[66%] lg:left-[63%] xl:left-[60%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
         >
-          绿茵场最佳气氛组⚽
+          <a href="https://www.zhihu.com/people/huaan9527-57/posts" target="_blank" style="display: inline-block;">
+            <img alt="知乎个人主页" src="https://img.shields.io/badge/zhihu-知乎-purplen" />
+          </a>&nbsp;
+        </p>
+        <p
+          style="top: 70%"
+          class="tag-bounce hidden sm:block sm:left-[69%] md:left-[66%] lg:left-[63%] xl:left-[60%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
+        >
+          <a href="https://my.oschina.net/u/3230120" target="_blank" style="display: inline-block;">
+            <img alt="开源中国个人主页" src="https://img.shields.io/badge/oschina-Herman-green" />
+          </a>&nbsp;
         </p>
         <!-- Left-tags -->
         <p
           style="top: 32%"
           class="tag-bounce hidden sm:block sm:left-[8%] md:left-[13%] lg:left-[21%] xl:left-[27%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
         >
-          🌙 倒头就睡懒羊羊
+          <a style="display: inline-block;">
+            <img src="https://img.shields.io/badge/公众号-贝塔学JAVA-blue.svg" alt="公众号">
+          </a>&nbsp;
         </p>
         <p
           style="top: 50%"
           class="tag-bounce hidden sm:block sm:left-[8%] md:left-[13%] lg:left-[21%] xl:left-[27%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
         >
-          宇宙无敌暴龙战士🚀
+          <a href="https://blog.csdn.net/asdewq380303318" target="_blank" style="display: inline-block;">
+            <img alt="CSDN个人主页" src="https://img.shields.io/badge/CSDN-Herman-red?logo=C&logoColor=FC5531" />
+          </a>&nbsp;
         </p>
       </div>
       <!-- 概述与箴言 -->
