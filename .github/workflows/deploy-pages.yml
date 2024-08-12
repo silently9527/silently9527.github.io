@@ -25,23 +25,11 @@ jobs:
           git config --global core.safecrlf true
           git config --global core.ignorecase false
 
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          registry-url: https://registry.npmjs.org
-          cache: pnpm
-
       - name: Install dependencies
-        run: pnpm i --frozen-lockfile
+        run: npm install
 
       - name: Build
-        run: pnpm build
+        run: npm run docs:build
 
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

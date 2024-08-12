@@ -18,7 +18,7 @@
 
 <script setup>
 import { VPTeamPage, VPTeamPageTitle } from "vitepress/theme";
-import { friendsInfo } from "../config/friendsInfo";
+import { friendsInfo } from "../userConfig/friendsInfo";
 import FriendsCard from "./FriendsCard.vue";
 </script>
 
