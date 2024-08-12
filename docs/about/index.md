@@ -9,10 +9,7 @@ showComment: false
 <img width=100% src="../public/img/svg/about-me-header.svg" alt="头部图" />
 
 <p align="center">
-    <a href="https://silently9527.github.io/" target="_blank" style="display: inline-block;">
-        <img alt="个人主页" src="https://img.shields.io/badge/Notes-Herman-lightblue?logo=blogger&logoColor=lightblue" />
-    </a>&nbsp;
-    <a href="#微信公众号" target="_blank" style="display: inline-block;">
+    <a style="display: inline-block;">
         <img src="https://img.shields.io/badge/公众号-贝塔学JAVA-blue.svg" alt="公众号">
     </a>&nbsp;
     <a href="https://juejin.cn/user/2779199782521693" target="_blank" style="display: inline-block;">
@@ -24,7 +21,7 @@ showComment: false
     <a href="https://blog.csdn.net/asdewq380303318" target="_blank" style="display: inline-block;">
         <img alt="CSDN个人主页" src="https://img.shields.io/badge/CSDN-Herman-red?logo=C&logoColor=FC5531" />
     </a>&nbsp;
-    <a href="https://www.yuque.com/charles7c" target="_blank" style="display: inline-block;">
+    <a href="https://my.oschina.net/u/3230120" target="_blank" style="display: inline-block;">
         <img alt="开源中国个人主页" src="https://img.shields.io/badge/oschina-Herman-green" />
     </a>&nbsp;
     <a href="https://www.zhihu.com/people/huaan9527-57/posts" target="_blank" style="display: inline-block;">
