@@ -24,6 +24,11 @@ export const nav: DefaultTheme.Config['nav'] = [
     activeMatch: '/archives'
   },
   {
+    text: '👫 友链',
+    link: '/friends',
+    activeMatch: '/friends'
+  },
+  {
     text: '关于我',
     link: '/about',
     activeMatch: '/about'
