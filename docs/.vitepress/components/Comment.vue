@@ -7,8 +7,8 @@
   import { useData } from 'vitepress';
   import md5 from 'blueimp-md5';
   import $ from 'jquery';
-  import { Message } from '@arco-design/web-vue';
-  import '@arco-design/web-vue/es/message/style/css.js';
+  // import { Message } from '@arco-design/web-vue';
+  // import '@arco-design/web-vue/es/message/style/css.js';
   import Gitalk from 'gitalk';
   import '../theme/gitalk.css';
 
@@ -47,11 +47,11 @@
       let $gc = $('#comment-container');
       $gc.on('click', '.gt-comment-like', function () {
         if (!window.localStorage.getItem('GT_ACCESS_TOKEN')) {
-          Message.warning({
-            content: '点赞前，请您先进行登录',
-            closable: true
-          })
-
+          // Message.warning({
+          //   content: '点赞前，请您先进行登录',
+          //   closable: true
+          // })
+          console.log('点赞前，请您先进行登录')
           return false
         }
         return true
