@@ -6,7 +6,7 @@ lastUpdated: false
 showComment: false
 ---
 
-<img width=100% src="public/img/svg/about-me-header.svg" alt="头部图" />
+<img width=100% src="./public/img/svg/about-me-header.svg" alt="头部图" />
 
 <p align="center">
     <a style="display: inline-block;">
@@ -54,4 +54,4 @@ showComment: false
 ### 🐱 免责声明
 本站所有文章和资源仅为个人工作和学习中的记录，部分观点有一定主观性，若有不妥，欢迎斧正。
 
-<img width=100% src="public/img/svg/about-footer.svg" alt="尾部图"/>
+<img width=100% src="./public/img/svg/about-footer.svg" alt="尾部图"/>
