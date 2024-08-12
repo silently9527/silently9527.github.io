@@ -55,4 +55,9 @@ export default defineConfig({
   markdown: {
     math: true,
   },
+  // 自定义扩展: 评论配置
+  commentConfig: {
+    type: 'gitalk',
+    showComment: true // 是否显示评论
+  },
 });

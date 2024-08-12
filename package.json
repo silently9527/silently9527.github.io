@@ -1,6 +1,8 @@
 {
   "type": "module",
   "devDependencies": {
+    "@arco-design/web-vue": "^2.53.3",
+    "@types/blueimp-md5": "^2.18.2",
     "@types/node": "^20.8.8",
     "autoprefixer": "^10.4.15",
     "markdown-it-mathjax3": "^4.3.2",
@@ -19,7 +21,10 @@
     }
   },
   "dependencies": {
+    "blueimp-md5": "^2.19.0",
+    "jquery": "^3.7.1",
     "dayjs": "^1.11.9",
+    "gitalk": "^1.8.0",
     "gray-matter": "^4.0.3"
   }
 }
