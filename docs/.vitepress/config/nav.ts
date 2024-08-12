@@ -25,7 +25,7 @@ export const nav: DefaultTheme.Config['nav'] = [
   },
   {
     text: '关于我',
-    link: '/about/index',
-    activeMatch: '/about/index'
+    link: '/about',
+    activeMatch: '/about'
   },
 ];
