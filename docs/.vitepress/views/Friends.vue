@@ -18,7 +18,10 @@
     <br>
     <br>
     <hr>
-    <Comment :commentConfig="theme.commentConfig" :key="md5(page.relativePath)" />
+    <div class="px-6 md:px-12 lg:px-16" style="max-width: 1200px; margin: 0 auto;">
+      <Comment :commentConfig="theme.commentConfig" :key="md5(page.relativePath)" />
+    </div>
+
 
   </VPTeamPage>
 </template>
