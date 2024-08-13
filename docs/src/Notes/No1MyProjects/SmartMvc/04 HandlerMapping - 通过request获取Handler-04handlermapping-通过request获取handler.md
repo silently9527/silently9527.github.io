@@ -19,7 +19,7 @@ outline: deep
 
 该类的主要包含了两个对象
 1. HandlerMethod: 根据request中的path找到匹配的`HandlerMethod`，也就是控制器中的某个方法
-2. List<HandlerInterceptor> : 根据request中的path找到所有对本次请求生效的`HandlerInterceptor`
+2. `List<HandlerInterceptor>` : 根据request中的path找到所有对本次请求生效的`HandlerInterceptor`
 
 三个方法：
 1. applyPreHandle: 执行所有拦截器的preHandle方法，如果preHandle返回的是false，那么就执行triggerAfterCompletion
