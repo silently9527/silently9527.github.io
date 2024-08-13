@@ -1,5 +1,5 @@
 ---
-title: 10 ViewResolver - 视图解析器
+title: 10 ViewResolver视图解析器
 author: Herman
 updateTime: 2021-08-14 13:41
 desc: 深入解析SpringMVC核心原理：从手写简易版MVC框架开始(SmartMvc)
