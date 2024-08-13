@@ -1,0 +1,32 @@
+---
+title: Git版本控制管理（第2版）
+author: Herman
+updateTime: 2021-08-14 13:41
+desc: 书籍
+categories: 书籍
+tags: 书籍/PDF
+outline: deep
+---
+
+
+# Git版本控制管理（第2版）
+
+
+![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1gua84kl4erj607i09tjrf02.jpg)
+
+#内容简介
+Git是一款免费、开源的分布式版本控制系统，最早由LinilusTorvalds创建，用于管理Linux内核开发，现已成为分布式版本控制的主流工具。
+
+《Git版本控制管理（第2版）》是学习掌握Git的最佳教程，总共分为21章，其内容涵盖了如何在多种真实开发环境中使用Git；洞察Git的常用案例、初始任务和基本功能；如何在集中和分布式版本控制中使用Git；使用Git管理合并、冲突、补丁和差异；获得诸如重新定义变基（rebasing）、钩子（hook）以及处理子模块（子项目）等的高级技巧；Git如何与SVN版本库交互（包括SVN向Git的转换）；通过GitHub导航、使用开源项目，并对开源项目做贡献。
+
+《Git版本控制管理（第2版）》适合需要进行版本控制的开发团队成员阅读，对Git感兴趣的开发人员也可以从中获益。
+
+
+
+# 下载地址
+> [http://share.silently9527.cn/f/30732796-512349210-32a79e](http://share.silently9527.cn/f/30732796-512349210-32a79e)
+
+免责声明
+电子书书籍全部来源于网络其他人的整理，这里只是收集整理了他们的链接，只做学习和交流使用，版权归原作者所有，如有侵权，请马上联系我，我立马删除对应链接。邮箱：380303318@qq.com
+
+

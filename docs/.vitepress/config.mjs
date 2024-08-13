@@ -14,7 +14,7 @@ export default defineConfig({
     logo: "/favicon.ico",
     // 顶部导航栏
     nav: [
-      { text: "💭 Notes", link: "/Notes/index" },
+      { text: "💭 Notes", link: "/Notes/No1MyProjects/index" },
       { text: "🦄 Projects", link: "Projects.md" },
       { text: "👫 Friends", link: "Friends.md" },
       { text: "👋 About", link: "AboutMe.md" },
