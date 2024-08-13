@@ -8,7 +8,7 @@
   import md5 from 'blueimp-md5';
   import $ from 'jquery';
   import { Message } from '@arco-design/web-vue';
-  import '@arco-design/web-vue/es/message/style/css.js';
+  import '@arco-design/web-vue/dist/arco.css';
   import Gitalk from 'gitalk';
   import '../theme/gitalk.css';
 
