@@ -10,9 +10,6 @@ outline: deep
 
 # 基于拉链式和线性探测式散列表实现Map
 
-> 程序员必读书单：[https://github.com/silently9527/ProgrammerBooks](https://github.com/silently9527/ProgrammerBooks)
-> 微信公众号：贝塔学Java
-
 
 ## 前言
 前几篇我们一起学习了基于数组、链表、二叉树、红黑树来实现Map的操作，本篇我们将会一起来学习基于散列表来实现Map，这种方式对应着java里面的HashMap，这也是使用最多的一种方式
