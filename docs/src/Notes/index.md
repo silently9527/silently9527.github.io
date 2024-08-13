@@ -7,16 +7,16 @@ hero:
   subTitle: "“笔记是记录思想的过程，是思维的延伸。” ——刘佳琦"
 
 types:
-  - name: "面经分享"
-    desc: "Interview experiences"
-    link: "/Notes/Interviews/"
+  - name: "卧学算法"
+    desc: "Algorithms Notes"
+    link: "/Notes/Algorithms/"
     icon: "📝"
-  - name: "学习笔记"
-    desc: "Learning Notes"
-    link: "/Notes/Learning/"
-    icon: "🏃"
+  - name: "Mysql"
+    desc: "Mysql Notes"
+    link: "/Notes/Mysql/"
+    icon: "📊"
   - name: "随想杂文"
-    desc: "personal musings"
+    desc: "Personal Musings"
     link: "/Notes/Thoughts/"
 # flow: true
 ---
