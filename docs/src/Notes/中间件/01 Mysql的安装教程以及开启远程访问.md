@@ -3,7 +3,7 @@ title: 01 Mysql的安装及开启远程访问
 author: Herman
 updateTime: 2024-08-11 21:34
 desc: 本篇文章主要记录两种MySQL的安装方式，以及如何重置用户登陆密码，如何开启远程访问
-categories: 数据库
+categories: 中间件
 tags: mysql
 outline: deep
 ---
@@ -38,17 +38,17 @@ useradd -r -g mysql mysql
 官方下载地址：[https://downloads.mysql.com/archives/community/](https://downloads.mysql.com/archives/community/);
 
 这里可以选择不同的版本号，这里我们选择5.7.34
-![](https://tva1.sinaimg.cn/large/008i3skNgy1gtxrzg7w7wj61630h076v02.jpg)
+![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1gtxrzg7w7wj61630h076v02.jpg)
 
 #### 3. 下载完成之后就进行解压，进入到安装目录，执行以下命令初始化数据文件
-![](https://tva1.sinaimg.cn/large/008i3skNgy1gtxs38kkb3j6118038mxp02.jpg)
+![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1gtxs38kkb3j6118038mxp02.jpg)
 
 ```
 bin/mysqld --initialize --user=mysql --datadir=./data --basedir=.
 ```
 
 **注意在初始化数据完成之后会输出数据库的初始化密码，记得先保存下来**
-![](https://tva1.sinaimg.cn/large/008i3skNgy1gtxub3urkdj60qe02laar02.jpg)
+![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1gtxub3urkdj60qe02laar02.jpg)
 
 
 > 如果在安装目录下没有`data`目录就手动创建一个

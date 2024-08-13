@@ -1,5 +1,5 @@
 ---
-title: 12 基于拉链式和线性探测式散列表实现Map
+title: 12 拉链式和线性探测式散列表
 author: Herman
 updateTime: 2024-07-16 21:34
 desc: 基于拉链式和线性探测式散列表实现Map

@@ -7,6 +7,7 @@
  */
 export const fileName2Title: Record<string, string> = {
   Algorithms: "🎨 卧学算法",
-  Mysql: "📊 Mysql数据库",
+  中间件: "📊 中间件",
   Thoughts: "🔮 随想杂文",
+  Interviews: "🏃 八股面经",
 };

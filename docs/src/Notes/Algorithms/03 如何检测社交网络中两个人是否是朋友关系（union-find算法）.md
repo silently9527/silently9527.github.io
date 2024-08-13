@@ -1,8 +1,8 @@
 ---
-title: 03 如何检测社交网络中两个人是否是朋友关系（union-find算法）
+title: 03 union-find算法
 author: Herman
 updateTime: 2024-07-16 21:34
-desc: 如何检测社交网络中两个人是否是朋友关系（union-find算法）
+desc: 如何检测社交网络中两个人是否是朋友关系
 categories: 算法
 tags: 数据结构/union-find算法
 outline: deep
