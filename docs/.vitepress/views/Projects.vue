@@ -31,6 +31,9 @@ import Comment from '../components/Comment.vue';
 </script>
 
 <style scoped>
+.VPTeamPage{
+  margin: 0;
+}
 .ProjectsContent {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));

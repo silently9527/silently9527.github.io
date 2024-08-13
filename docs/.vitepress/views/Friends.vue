@@ -4,6 +4,8 @@
       <template #title>🎨 Friends 🙌</template>
       <template #lead>Awesome Friends from Diverse Fields of Expertise</template>
     </VPTeamPageTitle>
+
+
     <div class="px-6 md:px-12 lg:px-16">
       <div class="FriendsContent">
         <FriendsCard
@@ -37,6 +39,9 @@ import Comment from '../components/Comment.vue';
 </script>
 
 <style scoped>
+.VPTeamPage{
+  margin: 0;
+}
 .FriendsContent {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
