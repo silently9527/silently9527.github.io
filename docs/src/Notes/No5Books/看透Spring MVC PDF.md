@@ -25,7 +25,7 @@ Github的仓库地址：[https://github.com/silently9527/SmartMvc](https://githu
 
 相应的我还写了这个框架的开发文档：
 
-* [00 深入解析SpringMVC核心原理：从手写简易版MVC框架开始(SmartMvc)](../No1MyProjects/SmartMvc/00%20深入解析SpringMVC核心原理：从手写简易版MVC框架开始(SmartMvc)-00深入解析springmvc核心原理从手写简易版mvc框架开始smartmvc.md)
+* [00 深入解析SpringMVC核心原理：从手写简易版MVC框架开始(SmartMvc)](docs/src/Notes/No1MyProjects/02 SmartMvc/00%20深入解析SpringMVC核心原理：从手写简易版MVC框架开始(SmartMvc)-00深入解析springmvc核心原理从手写简易版mvc框架开始smartmvc.md)
 
 
 # 下载地址
