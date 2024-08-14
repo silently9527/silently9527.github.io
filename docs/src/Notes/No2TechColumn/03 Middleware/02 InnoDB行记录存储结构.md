@@ -4,7 +4,7 @@ author: Herman
 updateTime: 2024-08-11 21:34
 desc: InnoDB行记录存储结构
 categories: 中间件
-tags: MySQL | InnoDB | InnoDB行记录
+tags: MySQL/InnoDB/InnoDB行记录
 outline: deep
 ---
 

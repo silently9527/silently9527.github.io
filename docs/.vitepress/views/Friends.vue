@@ -52,8 +52,11 @@ var updateCountCallback =  function(count) {
 </script>
 
 <style scoped>
-.VPTeamPage{
+.VPTeamPage {
   margin: 0;
+}
+hr {
+  border-top: 1px solid var(--c-border);
 }
 .FriendsContent {
   display: grid;
