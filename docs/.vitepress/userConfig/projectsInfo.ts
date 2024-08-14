@@ -27,9 +27,16 @@ export const projectsInfo: Project[] = [
   },
   {
     banner: "/project-img/toolkit.png",
-    title: "Programmer Toolkit",
+    title: "Toolkit",
     description: "在开发的过程中经常会使用一些在线的工具，比如：时间戳转日期，JSON格式化等等；考虑想把这些常用的功能都做成IDEA插件，在使用的时候就不用去网上寻找工具，在IDEA中就可以快速完成提升开发人员开发效率；",
     link: "https://github.com/silently9527/Toolkit",
     tag: "intellij IDEA plugin",
+  },
+  {
+    banner: "/project-img/books.png",
+    title: "Books",
+    description: "Java程序员自我学习的书籍列表，收录书籍尽量都保证同类书籍的豆瓣评分最高，帮助想要入坑Java的同学",
+    link: "https://github.com/silently9527/ProgrammerBooks",
+    tag: "Books",
   },
 ];
