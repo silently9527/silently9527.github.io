@@ -34,7 +34,7 @@ export const friendsInfo: Friend[] = [
     title: "专注分享前端技术的博客",
     link: "https://bbchin.com",
     tag: "Frontend Developer",
-    color: "indigo",
+    color: "green",
   },
   {
     avatar: "https://www.anwei.wang/logo",

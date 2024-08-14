@@ -8,7 +8,7 @@
 export const fileName2Title: Record<string, string> = {
   No1MyProjects: "📁 MyProjects",
   No2TechColumn: "📒 专栏",
-  No3Interviews: "🏃 八股面经",
+  No3Interviews: "📝 八股面经",
   No4Thoughts: "🔮 随想杂文",
   No5Books: "📚 Books",
 };
