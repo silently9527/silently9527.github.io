@@ -35,6 +35,15 @@
       id: md5(page.value.relativePath),
       language: 'zh-CN',
       distractionFreeMode: false,
+      updateCountCallback: function(count) {
+        var commentToPin = $('.gt-comment-admin').last();
+        console.log(commentToPin)
+        if (commentToPin.length) {
+          // 将该评论元素插入到评论区的最顶部
+          var commentsContainer = $('.gt-comments>div');
+          commentsContainer.prepend(commentToPin);
+        }
+      }
     });
   }
 
@@ -71,17 +80,6 @@
           pl.addClass('hide')
         }
       })
-
-      // 设置延迟执行代码
-      setTimeout(function() {
-        var commentToPin = $('.gt-comment-admin').last();
-        console.log(commentToPin)
-        if (commentToPin.length) {
-          // 将该评论元素插入到评论区的最顶部
-          var commentsContainer = $('.gt-comments>div');
-          commentsContainer.prepend(commentToPin);
-        }
-      }, 3000);
 
     }
   })
