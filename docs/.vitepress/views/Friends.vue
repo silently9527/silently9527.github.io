@@ -21,7 +21,7 @@
     <br>
     <hr>
     <div class="px-6 md:px-12 lg:px-16" style="max-width: 1200px; margin: 0 auto;">
-      <Comment :commentConfig="theme.commentConfig" :key="md5(page.relativePath)" />
+      <Comment :updateCountCallback="updateCountCallback" :commentConfig="theme.commentConfig" :key="md5(page.relativePath)" />
     </div>
     <br>
 
@@ -36,6 +36,18 @@ import { useData } from 'vitepress';
 const { page, theme, frontmatter } = useData();
 import md5 from 'blueimp-md5';
 import Comment from '../components/Comment.vue';
+
+var updateCountCallback =  function(count) {
+  setTimeout(()=>{
+    var commentToPin = $('.gt-comment-admin').last();
+    if (commentToPin.length) {
+      // 将该评论元素插入到评论区的最顶部
+      var commentsContainer = $('.gt-comments>div');
+      commentsContainer.prepend(commentToPin);
+    }
+  }, 1000)
+}
+
 </script>
 
 <style scoped>

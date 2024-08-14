@@ -15,6 +15,7 @@
   // 定义属性
   const props = defineProps({
     commentConfig: Object,
+    updateCountCallback: null
   });
 
   const data = reactive({
@@ -35,16 +36,7 @@
       id: md5(page.value.relativePath),
       language: 'zh-CN',
       distractionFreeMode: false,
-      updateCountCallback: function(count) {
-        setTimeout(()=>{
-          var commentToPin = $('.gt-comment-admin').last();
-          if (commentToPin.length) {
-            // 将该评论元素插入到评论区的最顶部
-            var commentsContainer = $('.gt-comments>div');
-            commentsContainer.prepend(commentToPin);
-          }
-        }, 1000)
-      }
+      updateCountCallback: props.updateCountCallback
     });
   }
 
