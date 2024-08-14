@@ -29,7 +29,8 @@ Gitee仓库： [https://gitee.com/silently9527/fast-download](https://gitee.com/
 
 
 # 下载地址
-> [http://share.silently9527.cn/f/30732796-512350797-ada26d](http://share.silently9527.cn/f/30732796-512350797-ada26d)
+链接: https://pan.baidu.com/s/14XtjVDirSERsgxSuJMTIyw?pwd=9fvw 提取码: 9fvw
+
 
 免责声明
 电子书书籍全部来源于网络其他人的整理，这里只是收集整理了他们的链接，只做学习和交流使用，版权归原作者所有，如有侵权，请马上联系我，我立马删除对应链接。邮箱：380303318@qq.com

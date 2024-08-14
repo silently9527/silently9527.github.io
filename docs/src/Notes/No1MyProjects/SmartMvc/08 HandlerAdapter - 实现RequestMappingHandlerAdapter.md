@@ -174,7 +174,7 @@ public class RequestMappingHandlerAdapter implements HandlerAdapter, Initializin
 
 ```
 public String testViewName(Model model) {
-    model.addAttribute("blogURL", "http://silently9527.cn");
+    model.addAttribute("blogURL", "https://silently9527.github.io");
     return "/silently9527.jsp";
 }
 ```

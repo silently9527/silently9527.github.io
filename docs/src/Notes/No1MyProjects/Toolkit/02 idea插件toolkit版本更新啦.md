@@ -1,5 +1,5 @@
 ---
-title: 02 IDEA插件Toolkit版本更新啦
+title: 02 IDEA插件Toolkit版本更新
 author: Herman
 updateTime: 2021-08-14 13:41
 desc: 程序员常用的IDEA插件Toolkit版本更新啦
@@ -10,12 +10,6 @@ outline: deep
 
 ## 前言
 自己在开发的过程中经常会使用一些在线的工具，比如：时间戳转日期，JSON格式化等等；前几天思考了下想把这些常用的功能都做成IDEA插件，在使用的时候就不用去网上寻找工具，在IDEA中就可以快速完成提升开发人员开发效率，所以就熬夜肝了这个插件，欢迎大家都来使用。
-
-> Github地址: https://github.com/silently9527/ToolsetIdeaPlugin
->
-> Gitee地址: https://gitee.com/silently9527/ToolsetIdeaPlugin
->
-> 觉得好用的小伙伴记得小手一抖 star 哟
 
 
 ## 版本更新 
