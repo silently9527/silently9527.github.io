@@ -36,16 +36,14 @@
       language: 'zh-CN',
       distractionFreeMode: false,
       updateCountCallback: function(count) {
-        console.log(count)
         setTimeout(()=>{
           var commentToPin = $('.gt-comment-admin').last();
-          console.log(commentToPin)
           if (commentToPin.length) {
             // 将该评论元素插入到评论区的最顶部
             var commentsContainer = $('.gt-comments>div');
             commentsContainer.prepend(commentToPin);
           }
-        }, 2000)
+        }, 1000)
       }
     });
   }
