@@ -33,6 +33,7 @@ import { VPTeamPage, VPTeamPageTitle } from "vitepress/theme";
 import { friendsInfo } from "../userConfig/friendsInfo";
 import FriendsCard from "./FriendsCard.vue";
 import { useData } from 'vitepress';
+import $ from 'jquery';
 const { page, theme, frontmatter } = useData();
 import md5 from 'blueimp-md5';
 import Comment from '../components/Comment.vue';
