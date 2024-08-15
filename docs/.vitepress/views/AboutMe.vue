@@ -193,24 +193,27 @@
             <p class="py-1 text-[15px]">
               <a href="https://t.zsxq.com/lbvqm" target="_blank" style="display: inline-block;">
                 <img alt="" src="https://img.shields.io/badge/知识星球-Herman's Notes-red&logoColor=FC5531" />
-              </a>&nbsp;&nbsp;&nbsp;&nbsp;
+              </a>&nbsp;&nbsp;&nbsp;
+              <a href="https://github.com/silently9527" target="_blank" style="display: inline-block;">
+                <img alt="github个人主页" src="https://img.shields.io/badge/github-Herman-purplen" />
+              </a>&nbsp;&nbsp;&nbsp;
               <a href="https://juejin.cn/user/2779199782521693" target="_blank" style="display: inline-block;">
                 <img alt="掘金个人主页" src="https://img.shields.io/badge/掘金-Herman-1E80FF" />
-              </a>&nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="https://www.zhihu.com/people/huaan9527-57/posts" target="_blank" style="display: inline-block;">
-                <img alt="知乎个人主页" src="https://img.shields.io/badge/zhihu-知乎-purplen" />
-              </a>&nbsp;&nbsp;&nbsp;&nbsp;
+              </a>&nbsp;&nbsp;&nbsp;
               <a href="https://segmentfault.com/u/silently9527" target="_blank" style="display: inline-block;">
                 <img alt="思否个人主页" src="https://img.shields.io/badge/SegmentFault-Herman-red" />
-              </a>&nbsp;&nbsp;&nbsp;&nbsp;
+              </a>
             </p>
              <p class="py-1 text-[15px]">
+               <a href="https://www.zhihu.com/people/huaan9527-57/posts" target="_blank" style="display: inline-block;">
+                 <img alt="知乎个人主页" src="https://img.shields.io/badge/zhihu-知乎-purplen" />
+               </a>&nbsp;&nbsp;&nbsp;
                <a href="https://blog.51cto.com/u_15049004" target="_blank" style="display: inline-block;">
                  <img alt="51个人主页" src="https://img.shields.io/badge/51CTO-Herman-yellow" />
-               </a>&nbsp;&nbsp;&nbsp;&nbsp;
+               </a>&nbsp;&nbsp;&nbsp;
                <a href="https://www.jianshu.com/u/1bc9fd2b67aa" target="_blank" style="display: inline-block;">
                  <img alt="简书个人主页" src="https://img.shields.io/badge/简书-Herman-yellow" />
-               </a>&nbsp;&nbsp;&nbsp;&nbsp;
+               </a>
              </p>
           </div>
         </div>
