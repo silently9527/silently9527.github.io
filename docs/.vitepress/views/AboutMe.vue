@@ -20,7 +20,7 @@
           class="tag-bounce hidden sm:block sm:left-[69%] md:left-[66%] lg:left-[63%] xl:left-[60%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
         >
           <a href="https://juejin.cn/user/2779199782521693" target="_blank" style="display: inline-block;">
-            <img alt="掘金个人主页" src="https://img.shields.io/badge/掘金-Herman-1E80FF" />
+            <img alt="掘金个人主页" src="https://img.shields.io/badge/掘金-Herman-green" />
           </a>&nbsp;
         </p>
         <p
@@ -28,7 +28,7 @@
           class="tag-bounce hidden sm:block sm:left-[69%] md:left-[66%] lg:left-[63%] xl:left-[60%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
         >
           <a href="https://my.oschina.net/u/3230120" target="_blank" style="display: inline-block;">
-            <img alt="开源中国个人主页" src="https://img.shields.io/badge/oschina-Herman-green" />
+            <img alt="知乎个人主页" src="https://img.shields.io/badge/知乎-Herman-blue" />
           </a>&nbsp;
         </p>
         <!-- Left-tags -->
@@ -82,12 +82,10 @@
         <div
           class="bg-stripe w-full md:w-[35%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
         >
-          <p class="text-[15px]">简介</p>
+          <p class="text-[20px]">简介</p>
           <div class="mt-2">
-            <h1 class="text-xl">主修 window、macos、centos 开关机</h1>
-            <h1 class="text-xl">辅修<span class="text-pink-500">`rm -rf *` `delete from`</span></h1>
-            <h1 class="text-xl lg:text-1xl md:text-base">梦想删库跑路</h1>
-            <p></p>
+            <h1 class="text-[15px]">主修window、macos、centos开关机</h1>
+            <h1 class="text-[15px]">辅修<span class="text-pink-500">rm -rf *, delete from ;</span> 梦想删库跑路</h1>
           </div>
         </div>
         <!-- 技术栈 -->
@@ -186,17 +184,31 @@
       <!-- 图片与荣誉 -->
       <div class="flex flex-col justify-between w-full gap-5 mt-4 md:gap-0 md:flex-row">
         <!-- 图片 -->
-        <div
-          class="w-full md:w-[45%] honer-bg bg-center bg-no-repeat bg-cover rounded-xl h-52 sm:h-auto"
-        ></div>
+        <div class="w-full md:w-[45%] honer-bg bg-center bg-no-repeat bg-cover rounded-xl h-52 sm:h-auto bg-slate-50 border dark:border-slate-900"></div>
         <!-- 荣誉 -->
-        <div class="bg-stripe w-full md:w-[50%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
-        >
+        <div class="bg-stripe w-full md:w-[50%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl">
           <p class="text-[20px]">🌀 博客</p>
           <div class="mt-4 md:text-base lg:text-xl">
-            <p class="py-1 text-[15px]">🏅 后端技术、行业视野、技巧总结</p>
-            <p class="py-1 text-[15px]">🥉 个人生活，养成记录和分享的习惯</p>
-            <p class="py-1 text-[15px]">🥉 字节跳动前端青训大项目三等奖</p>
+            <p class="py-1 text-[15px]">部分文章会发布在以下平台，知识星球包含所有内容</p>
+            <p class="py-1 text-[15px]">
+              <a href="https://juejin.cn/user/2779199782521693" target="_blank" style="display: inline-block;">
+                <img alt="掘金个人主页" src="https://img.shields.io/badge/掘金-Herman-1E80FF" />
+              </a>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.zhihu.com/people/huaan9527-57/posts" target="_blank" style="display: inline-block;">
+                <img alt="知乎个人主页" src="https://img.shields.io/badge/zhihu-知乎-purplen" />
+              </a>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://segmentfault.com/u/silently9527" target="_blank" style="display: inline-block;">
+                <img alt="思否个人主页" src="https://img.shields.io/badge/SegmentFault-Herman-red" />
+              </a>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.jianshu.com/u/1bc9fd2b67aa" target="_blank" style="display: inline-block;">
+                <img alt="简书个人主页" src="https://img.shields.io/badge/简书-Herman-yellow" />
+              </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+             <p class="py-1 text-[15px]">
+               <a href="https://blog.51cto.com/u_15049004" target="_blank" style="display: inline-block;">
+                 <img alt="51个人主页" src="https://img.shields.io/badge/51CTO-Herman-yellow" />
+               </a>&nbsp;&nbsp;&nbsp;&nbsp;
+             </p>
           </div>
         </div>
       </div>
@@ -277,7 +289,7 @@
 
 <style scoped>
 .honer-bg {
-  background-image: url("./img/honer.jpg");
+  background-image: url("./img/honer.png");
 }
 .music-bg {
   background-image: url("./img/music.jpg");
