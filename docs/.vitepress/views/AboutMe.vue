@@ -32,20 +32,14 @@
           </a>&nbsp;
         </p>
         <!-- Left-tags -->
-        <p
-          style="top: 32%"
-          class="tag-bounce hidden sm:block sm:left-[8%] md:left-[13%] lg:left-[21%] xl:left-[27%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
-        >
+        <p style="top: 32%" class="tag-bounce hidden sm:block sm:left-[8%] md:left-[13%] lg:left-[21%] xl:left-[27%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]">
           <a style="display: inline-block;">
             <img src="https://img.shields.io/badge/公众号-贝塔学JAVA-blue.svg" alt="公众号">
           </a>&nbsp;
         </p>
-        <p
-          style="top: 50%"
-          class="tag-bounce hidden sm:block sm:left-[8%] md:left-[13%] lg:left-[21%] xl:left-[27%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
-        >
-          <a href="https://blog.csdn.net/asdewq380303318" target="_blank" style="display: inline-block;">
-            <img alt="CSDN个人主页" src="https://img.shields.io/badge/CSDN-Herman-red?logo=C&logoColor=FC5531" />
+        <p style="top: 50%" class="tag-bounce hidden sm:block sm:left-[8%] md:left-[13%] lg:left-[21%] xl:left-[25%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]">
+          <a href="https://t.zsxq.com/lbvqm" target="_blank" style="display: inline-block;">
+            <img alt="" src="https://img.shields.io/badge/知识星球-Herman's Notes-red&logoColor=FC5531" />
           </a>&nbsp;
         </p>
       </div>
@@ -196,8 +190,7 @@
           class="w-full md:w-[45%] honer-bg bg-center bg-no-repeat bg-cover rounded-xl h-52 sm:h-auto"
         ></div>
         <!-- 荣誉 -->
-        <div
-          class="bg-stripe w-full md:w-[50%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
+        <div class="bg-stripe w-full md:w-[50%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
         >
           <p class="text-[20px]">🌀 博客</p>
           <div class="mt-4 md:text-base lg:text-xl">
