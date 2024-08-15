@@ -189,7 +189,7 @@
         <div class="bg-stripe w-full md:w-[50%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl">
           <p class="text-[20px]">🌀 博客</p>
           <div class="mt-4 md:text-base lg:text-xl">
-            <p class="py-1 text-[15px]">部分文章会发布在以下平台，知识星球包含所有内容</p>
+            <p class="py-1 text-[15px]">知识星球包含所有内容,加微信silently9527,免费邀请加入</p>
             <p class="py-1 text-[15px]">
               <a href="https://t.zsxq.com/lbvqm" target="_blank" style="display: inline-block;">
                 <img alt="" src="https://img.shields.io/badge/知识星球-Herman's Notes-red&logoColor=FC5531" />
