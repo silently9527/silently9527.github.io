@@ -10,7 +10,7 @@ outline: deep
 
 
 # Effective Java中文版（第3版）
-![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1guanfbh1tcj607i09qjrd02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1guanfbh1tcj607i09qjrd02.jpg)
 
 # 内容简介 
 本书一共包含90个条目，每个条目讨论Java程序设计中的一条规则。这些规则反映了最有经验的优秀程序员在实践中常用的一些有益的做法。

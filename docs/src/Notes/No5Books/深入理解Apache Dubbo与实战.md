@@ -11,7 +11,7 @@ outline: deep
 # 《深入理解Apache Dubbo与实战》
 
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1guamxrv4boj607i09wjrb02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1guamxrv4boj607i09wjrb02.jpg)
 
 
 # 内容简介

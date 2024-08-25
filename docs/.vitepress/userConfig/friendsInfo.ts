@@ -13,7 +13,7 @@ interface Friend {
  */
 export const friendsInfo: Friend[] = [
   {
-    avatar: "https://cdn.jsdelivr.net/gh/silently9527/images//202408141137371.png",
+    avatar: "https://cdn.jsdelivr.net/gh/silently9527/images/202408141137371.png",
     name: "mercyblitz",
     title: "🐎 小马哥 明星项目架构师",
     link: "https://mercyblitz.github.io/",
@@ -21,7 +21,7 @@ export const friendsInfo: Friend[] = [
     color: "indigo",
   },
   {
-    avatar: "https://cdn.jsdelivr.net/gh/silently9527/images//202408141142625.png",
+    avatar: "https://cdn.jsdelivr.net/gh/silently9527/images/202408141142625.png",
     name: "zbwer",
     title: "🧐easy-vitepress-blog",
     link: "https://blog.zbwer.work/",
@@ -69,7 +69,7 @@ export const friendsInfo: Friend[] = [
     color: "gold",
   },
   {
-    avatar: "https://cdn.jsdelivr.net/gh/silently9527/images//202408141819468.png",
+    avatar: "https://cdn.jsdelivr.net/gh/silently9527/images/202408141819468.png",
     name: "一只小松徐吖",
     title: "A Good Boy",
     link: "https://blog.xaoxu.cn/",

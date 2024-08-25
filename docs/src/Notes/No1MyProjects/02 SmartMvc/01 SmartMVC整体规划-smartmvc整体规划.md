@@ -22,14 +22,14 @@ outline: deep
 
 #### 3.1 SmartMVC总体架构
 在开始撸代码之前我们需要先设计好整个框架架构，所有的设计都是先整体后局部的思想，如果上来就卷起袖子干，不经过仔细的设计是干不好框架的，所以我们先画出SmartMVC的设计图，熟悉SpringMVC的小伙伴可能看出来了，这个流程和SpringMVC的一致。
-![](https://cdn.jsdelivr.net/gh/silently9527/images//2287721208-5fbfce05acfeb_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/2287721208-5fbfce05acfeb_articlex)
 
 SpringMVC之所以如此的受欢迎，其中很重要的一个原因是轻耦合可插拔的组件设计，提供很好的扩展性和灵活性。虽然我们即将要做的SmartMVC是SpringMVC的浓缩版本，但是SpingMVC有的核心组件我们也必须的有，否则无法让小伙伴更好的理解整个过程。
 
 
 #### 3.2 项目搭建
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//896506658-5fc097c6f34e4_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/896506658-5fc097c6f34e4_articlex)
 
 smart-mvc项目中的pom.xml依赖引入
 
@@ -133,7 +133,7 @@ smart-mvc-parent项目中pom.xml配置
 #### 3.4 搭建单元测试环境
 建立如下的目录结构
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//1057935185-5fc2523435782_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/1057935185-5fc2523435782_articlex)
 
 创建JavaConfig配置主类`AppConfig`
 

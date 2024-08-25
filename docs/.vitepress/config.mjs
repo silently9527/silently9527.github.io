@@ -3,16 +3,15 @@ import { fileURLToPath, URL } from "node:url";
 import { getSidebar } from "./utils/getSidebar";
 export default defineConfig({
   title: "Herman's Notes",
-  base: "https://cdn.jsdelivr.net/gh/silently9527/silently9527.github.io@pages/",
   titleTemplate: "Herman",
   // md 文件根目录
   srcDir: "./src",
   lastUpdated: true,
   description:
     "Herman's Notes: 个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。",
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  head: [["link", { rel: "icon", href: "https://cdn.jsdelivr.net/gh/silently9527/silently9527.github.io@pages/favicon.ico" }]],
   themeConfig: {
-    logo: "/favicon.ico",
+    logo: "https://cdn.jsdelivr.net/gh/silently9527/silently9527.github.io@pages/favicon.ico",
     // 顶部导航栏
     nav: [
       { text: "💭 Notes", link: "/Notes/No1MyProjects/index" },

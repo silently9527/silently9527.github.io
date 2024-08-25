@@ -38,17 +38,17 @@ useradd -r -g mysql mysql
 官方下载地址：[https://downloads.mysql.com/archives/community/](https://downloads.mysql.com/archives/community/);
 
 这里可以选择不同的版本号，这里我们选择5.7.34
-![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtxrzg7w7wj61630h076v02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtxrzg7w7wj61630h076v02.jpg)
 
 #### 3. 下载完成之后就进行解压，进入到安装目录，执行以下命令初始化数据文件
-![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtxs38kkb3j6118038mxp02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtxs38kkb3j6118038mxp02.jpg)
 
 ```
 bin/mysqld --initialize --user=mysql --datadir=./data --basedir=.
 ```
 
 **注意在初始化数据完成之后会输出数据库的初始化密码，记得先保存下来**
-![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtxub3urkdj60qe02laar02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtxub3urkdj60qe02laar02.jpg)
 
 
 > 如果在安装目录下没有`data`目录就手动创建一个

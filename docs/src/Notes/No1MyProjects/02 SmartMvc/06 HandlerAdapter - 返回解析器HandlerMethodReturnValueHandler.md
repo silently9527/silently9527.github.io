@@ -12,7 +12,7 @@ outline: deep
 
 前一篇我们开发完成了参数的解析器，接下来我们开始开发返回值的处理器，在SpringMVC中已经内部实现了很多的返回值处理器，我们这里不可能实现那么多，我挑选了5个常用的返回值处理器来作为本篇的开发内容，首先我们一起来看下类图
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//3463514123-5fcc422c47bf0_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/3463514123-5fcc422c47bf0_articlex)
 
 本篇我们主要实现5个功能，这也是SpringMVC中常用的功能：
 - `Map`: 支持Handler返回Map值，放入到上下文中，用于页面渲染使用
@@ -346,7 +346,7 @@ public void test() throws Exception {
 
 单元测试输出的结果：
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//3815428556-5fcc56d51bf27_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/3815428556-5fcc56d51bf27_articlex)
 
 
 #### 8.3 总结
