@@ -23,7 +23,7 @@ MySQL中总共提供了四种类型的行格式：`Compact`,`Redundant`,`Dynamic
 ### Compact行格式
 在四种类型的行格式中，我们主要来学习`Compact`格式，其他格式的行记录类似；
 
-![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1gtfif7g9lfj60gm021dft02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtfif7g9lfj60gm021dft02.jpg)
 
 从图中我们可以看出行记录主要是由4部分组成：变长字段长度、Null值列表，行记录头信息以及列的真实数据
 
@@ -65,7 +65,7 @@ MySQL中总共提供了四种类型的行格式：`Compact`,`Redundant`,`Dynamic
 2. 如果表中的字段都不能为空，那么就不存在null值列表；如果存在允许为null的字段，那么就按照字段的顺序为每个字段对应一个二进制位，当二进制位为1时表示该列值为空；当二进制位位0时表示该列值不为空
 3. Null值列表必须有整数个字节来表示，所以对应没有占用的位使用0补位
 
-![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1gtfkjbzya1j60be064wen02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtfkjbzya1j60be064wen02.jpg)
 
 #### 行记录的头信息
 头信息中主要包含了6个字段，其中5个字段也是在面试中经常被问到的，为了方便记忆，我们把5个字段对应到手的5根指头：
@@ -96,7 +96,7 @@ MySQL中所有的行记录都会被存储在数据页中，每个数据页的大
 
 Compact行格式针对这种情况的处理方式是在真实的数据处记录该列的一部分数据（768字节），其他多余的数据会存储到新的数据页中（溢出页），然后在该记录中使用20个字节存储这些数据页的地址
 
-![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1gtggjr01nbj60br0633yo02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtggjr01nbj60br0633yo02.jpg)
 
 溢出页与溢出页之间使用的链表相连接
 

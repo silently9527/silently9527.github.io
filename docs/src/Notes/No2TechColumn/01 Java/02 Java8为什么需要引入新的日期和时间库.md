@@ -8,7 +8,7 @@ tags: Java8新特性
 outline: deep
 ---
 
-![](https://raw.githubusercontent.com/silently9527/images/main/3970086690-5fafd0c6e2df8_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//3970086690-5fafd0c6e2df8_articlex)
 ---- 
 
 #### Java8为什么需要引入新的日期和时间库
@@ -28,7 +28,7 @@ outline: deep
 
 #### Java8中提供了哪些日期和时间类
 在java.time包中提供了很多新的类，通常主要使用到的是`LocalDate`, `LocalTime`, `LocalDateTime`, `ZoneId`, `ZoneDateTime`; 关系图如下：
-![](https://raw.githubusercontent.com/silently9527/images/main/1999023484-5faf611315cae_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//1999023484-5faf611315cae_articlex)
 
 
 - LocaDate这个类本身不包含时间和时区信息，只包含了日期信息；提供了很多方法来获取常用的值：星期几，几月 ...

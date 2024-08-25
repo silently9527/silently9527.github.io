@@ -15,7 +15,7 @@ outline: deep
 
 在我们享受SpringMVC给我带来的便利的时候，不知道大家有没有想过，Controller中方法的参数是如何完成自动注入的，在添加上注解`@PathVariable`、`@RequestParam`、`@RequestBody`就能够把请求中的参数主动注入，甚至在方法参数任意位置写`HttpServletRequest`、`HttpSession`等类型的参数，它自动就有值了便可直接使用；现在我们就开始来逐步实现这个功能，本节主要实现参数的解析。首先还是需要先看看类图
 
-![](https://raw.githubusercontent.com/silently9527/images/main/819027688-5fcba2e425b21_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//819027688-5fcba2e425b21_articlex)
 
 本节我们简单实现解析`HttpServletRequest`、`HttpServletResponse`、`Model`以及注解`@RequestParam`、`@RequestBody`的功能，SpringMVC提供其他参数解析器实现类似，可以自行查看SpringMVC源码
 
@@ -429,7 +429,7 @@ public void test1() throws NoSuchMethodException {
 
 最后打印出解析出来的参数名字、值、类型
 
-![](https://raw.githubusercontent.com/silently9527/images/main/276501005-5fcb7c433e81d_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//276501005-5fcb7c433e81d_articlex)
 
 2. 编写单元测试验证用例2
 
@@ -468,7 +468,7 @@ public void test2() throws NoSuchMethodException {
 
 执行的结果如下：
 
-![](https://raw.githubusercontent.com/silently9527/images/main/2140052655-5fcb7cf7bba5b_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//2140052655-5fcb7cf7bba5b_articlex)
 
 
 #### 7.3 总结

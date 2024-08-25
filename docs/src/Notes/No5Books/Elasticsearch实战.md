@@ -11,7 +11,7 @@ outline: deep
 
 # Elasticsearch实战
 
-![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1guv7uqo0nej607i09f74i02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1guv7uqo0nej607i09f74i02.jpg)
 
 
 ##内容简介

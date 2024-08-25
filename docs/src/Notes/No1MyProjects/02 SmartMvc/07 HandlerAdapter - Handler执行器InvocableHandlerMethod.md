@@ -16,7 +16,7 @@ outline: deep
 - `HandlerMethod` 在容器在启动过程中搜集控制器的方法，用于定义每个控制器方法
 - `InvocableHandlerMethod` 用于处理用户的请求调用控制器方法，包装处理所需的各种参数和执行处理逻辑
 
-![](https://raw.githubusercontent.com/silently9527/images/main/454993797-5fce2d5be2fd8_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//454993797-5fce2d5be2fd8_articlex)
 
 
 
@@ -195,7 +195,7 @@ public void test1() throws Exception {
 
 该单元测试的结果如下：
 
-![](https://raw.githubusercontent.com/silently9527/images/main/250316949-5fce36f464910_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//250316949-5fce36f464910_articlex)
 
 2. 测试控制器的方法testViewName
 
@@ -231,7 +231,7 @@ public void test2() throws Exception {
 
 解析的结果如下：
 
-![](https://raw.githubusercontent.com/silently9527/images/main/4219761408-5fce386947159_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//4219761408-5fce386947159_articlex)
 
 
 #### 9.3 总结

@@ -10,7 +10,7 @@ outline: deep
 
 # 图解Http pdf彩绘版
 
-![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1gua8qpb19hj607i0b2dfv02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gua8qpb19hj607i0b2dfv02.jpg)
 
 好书不一定要厚，本书就是一本短小精干的一本好书，严谨细致地剖析了HTTP协议的结构；通过本书快速了解并掌握HTTP协议的基础，前端工程师分析抓包数据，后端工程师实现REST API
 

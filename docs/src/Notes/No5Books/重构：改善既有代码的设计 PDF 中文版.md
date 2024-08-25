@@ -13,7 +13,7 @@ outline: deep
 
 给大家带来的一篇关于代码设计相关的电子书资源，介绍了关于重构、代码设计方面的内容，本书是由人民邮电出版社出版，格式为PDF，资源大小31 MB，马丁·福勒（Martin Fowler）编写，目前豆瓣、亚马逊、当当、京东等电子书综合评分为：8.9分
 
-![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1gu4y98a0n8j60im0cewel02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gu4y98a0n8j60im0cewel02.jpg)
 
 # 内容介绍
 1. 开发软件大師的不朽經典

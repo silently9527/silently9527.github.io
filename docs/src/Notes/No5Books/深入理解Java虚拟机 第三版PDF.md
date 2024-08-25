@@ -10,7 +10,7 @@ outline: deep
 
 # 《深入理解Java虚拟机 第三版》
 
-![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1gu9kh2ydsij614g0e8tas02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gu9kh2ydsij614g0e8tas02.jpg)
 
 搞Java的人，如果不了解JVM是不行的；如果学习JVM不看这本书是更不行的；
 

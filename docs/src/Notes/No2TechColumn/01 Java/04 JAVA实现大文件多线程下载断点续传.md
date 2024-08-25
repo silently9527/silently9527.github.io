@@ -24,7 +24,7 @@ outline: deep
 
 测试结果，**提速46倍**，我还是太谦虚了，只说提速30倍，此处我们觉得应该有掌声（我听不到，还是点赞实在）
 
-![](https://raw.githubusercontent.com/silently9527/images/main/493d14ff0c574b5fb5e047c480264a6e~tplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//493d14ff0c574b5fb5e047c480264a6e~tplv-k3u1fbpfcp-watermark.image)
 
 > 源码地址： [https://gitee.com/silently9527/fast-download](https://gitee.com/silently9527/fast-download) 
 >
@@ -56,30 +56,30 @@ Range: bytes=5001-
 本文我们使用的SpringMVC中的`RestTemplate`；由于百度云的链接是Https，所以我们需要设置`RestTemplate`绕过证书验证
 1. pom.xml
 
-![](https://raw.githubusercontent.com/silently9527/images/main/d2f569f9b9824b6ea6932db430f63b3a~tplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//d2f569f9b9824b6ea6932db430f63b3a~tplv-k3u1fbpfcp-watermark.image)
 
 2. 编写`RestTemplate`的构造器，以及绕过https的证书验证
 
-![](https://raw.githubusercontent.com/silently9527/images/main/61638a49bff74a7ba5584b1f88c4c44f~tplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//61638a49bff74a7ba5584b1f88c4c44f~tplv-k3u1fbpfcp-watermark.image)
 
 3. 在下载的过程中，我们需要知道当前下载的速度是多少，所以需要定义一个显示下载速度的接口
 
-![](https://raw.githubusercontent.com/silently9527/images/main/3e1bbd2b1b53465bb4900db9398573dd~tplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//3e1bbd2b1b53465bb4900db9398573dd~tplv-k3u1fbpfcp-watermark.image)
 
 因为计算下载速度，我们需要知道每秒传输的字节数是多少，为了监控传输数据的过程，我们需要了解SpringMVC中的接口`ResponseExtractor`
 
-![](https://raw.githubusercontent.com/silently9527/images/main/40f848e9486c4057968cc6e7b5388db5~tplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//40f848e9486c4057968cc6e7b5388db5~tplv-k3u1fbpfcp-watermark.image)
 
 该接口只有一个方法，当客户端和服务器端连接建立之后，会调用这个方法，我们可以在这个方法中监控下载的速度。
 
 4. `DisplayDownloadSpeed`接口的抽象实现 `AbstractDisplayDownloadSpeedResponseExtractor`
  
-![](https://raw.githubusercontent.com/silently9527/images/main/d8dbffd1c6424141b2b75b4058534812%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//d8dbffd1c6424141b2b75b4058534812%7Etplv-k3u1fbpfcp-watermark.image)
 
 
 5. 整个项目主要涉及到的类图
 
-![](https://raw.githubusercontent.com/silently9527/images/main/5c7b104a394d45ab864ef3e0858a64c3%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//5c7b104a394d45ab864ef3e0858a64c3%7Etplv-k3u1fbpfcp-watermark.image)
 
 
 ### 简单的文件下载器
@@ -89,17 +89,17 @@ Range: bytes=5001-
 
 1. 创建`ByteArrayResponseExtractor`类继承`AbstractDisplayDownloadSpeedResponseExtractor`
 
-![](https://raw.githubusercontent.com/silently9527/images/main/702e4e40f5b3447daab436a502b46fd3%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//702e4e40f5b3447daab436a502b46fd3%7Etplv-k3u1fbpfcp-watermark.image)
 
 2. 调用`restTemplate.execute`执行下载，保存字节数据到文件中
 
-![](https://raw.githubusercontent.com/silently9527/images/main/5aacdab2c5b945c1b663e3d6fcd50b17%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//5aacdab2c5b945c1b663e3d6fcd50b17%7Etplv-k3u1fbpfcp-watermark.image)
 
 3. 测试下载819M的idea
 
-![](https://raw.githubusercontent.com/silently9527/images/main/953f94ccd50042e5a33f9832ba61c25a%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//953f94ccd50042e5a33f9832ba61c25a%7Etplv-k3u1fbpfcp-watermark.image)
 
-![](https://raw.githubusercontent.com/silently9527/images/main/0e2f810c53bf4fb195a5fede7cef899d%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//0e2f810c53bf4fb195a5fede7cef899d%7Etplv-k3u1fbpfcp-watermark.image)
 
 执行一段时间之后，我们可以看到内存已经使用了800M左右，所以这种方式只能使用于小文件的下载，如果我们下载几G的大文件，内存肯定是不够用的。至于下载时间，因为文件太大也没有等下载完成就结束了程序。
 
@@ -108,21 +108,21 @@ Range: bytes=5001-
 
 1. 创建`FileResponseExtractor`类继承`AbstractDisplayDownloadSpeedResponseExtractor`，把流输出到文件中
 
-![](https://raw.githubusercontent.com/silently9527/images/main/5a3d2615f4c14486b731bfa6d10851b1%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//5a3d2615f4c14486b731bfa6d10851b1%7Etplv-k3u1fbpfcp-watermark.image)
 
 2. 文件下载器，先把流输出到临时下载文件（xxxxx.download），下载完成后在重命名文件
 
-![](https://raw.githubusercontent.com/silently9527/images/main/b9795bf6e87d422db15109296d4a17fb%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//b9795bf6e87d422db15109296d4a17fb%7Etplv-k3u1fbpfcp-watermark.image)
 
 3. 测试下载819M的idea
 
-![](https://raw.githubusercontent.com/silently9527/images/main/d5d7afab8b984537b9b40a58b78a979d%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//d5d7afab8b984537b9b40a58b78a979d%7Etplv-k3u1fbpfcp-watermark.image)
 
 执行一段时间之后，我们再看看下内存的使用情况，发现这种方式内存消耗较少，效果比较理想，下载时间：199s
 
-![](https://raw.githubusercontent.com/silently9527/images/main/a251e16205ff42c48398d2ed23bae41d%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//a251e16205ff42c48398d2ed23bae41d%7Etplv-k3u1fbpfcp-watermark.image)
 
-![](https://raw.githubusercontent.com/silently9527/images/main/1f059cf322c34fdca989b6741aa6f185%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//1f059cf322c34fdca989b6741aa6f185%7Etplv-k3u1fbpfcp-watermark.image)
 
 ### 多线程文件下载
 如果服务器不限速的话，通常能够把自己本地的带宽给跑满，那么使用单线程下载就够了，但是如果遇到服务器限速，下载速度远小于自己本地的带宽，那么可以考虑使用多线程下载。多线程我们使用`CompletableFuture`（可以参考文章 [CompletableFuture让你的代码免受阻塞之苦](https://juejin.cn/post/6897844374093496328)）。
@@ -135,16 +135,16 @@ Range: bytes=5001-
 
 完成代码如下：
 
-![](https://raw.githubusercontent.com/silently9527/images/main/17adbd3981034f859dc3515b0df65720%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//17adbd3981034f859dc3515b0df65720%7Etplv-k3u1fbpfcp-watermark.image)
 
 
 3. 开启30个线程测试下载819M的idea
 
-![](https://raw.githubusercontent.com/silently9527/images/main/e30c46ebb99848d9b457d83f78764e6a%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//e30c46ebb99848d9b457d83f78764e6a%7Etplv-k3u1fbpfcp-watermark.image)
 
-![](https://raw.githubusercontent.com/silently9527/images/main/94bfdc0e3a3c4f87b365f42d2ff26501%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//94bfdc0e3a3c4f87b365f42d2ff26501%7Etplv-k3u1fbpfcp-watermark.image)
 
-![](https://raw.githubusercontent.com/silently9527/images/main/5926281c63cf49e69f90f0ffd6796c31%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//5926281c63cf49e69f90f0ffd6796c31%7Etplv-k3u1fbpfcp-watermark.image)
 
 从执行的结果上来看，因为开启了30个线程同时在下载，内存的占用要比单线程消耗的多，但是也在接受范围内，下载时间：81s，速度提升2.5倍，这是因为idea的下载服务器没有限速，本次多线程速度的提升仅仅是在充分的压榨本地的带宽，所以提示的幅度不大。
 
@@ -155,7 +155,7 @@ Range: bytes=5001-
 
 2. 获取文件的下载地址
 
-![](https://raw.githubusercontent.com/silently9527/images/main/b3f7cbfefcb04009ba3dea480ad4247c%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//b3f7cbfefcb04009ba3dea480ad4247c%7Etplv-k3u1fbpfcp-watermark.image)
 
 > 注意：从浏览器中获取的链接需要先使用URLDecode解码，否则下载会失败，并且百度云盘文件的下载链接是有时效性的，过期后就不能在下载，需要重新生成下载链接
 

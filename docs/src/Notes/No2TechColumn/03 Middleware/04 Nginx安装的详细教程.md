@@ -37,7 +37,7 @@ yum -y install nginx
 
 官方下载地址：[http://nginx.org/en/download.html](http://nginx.org/en/download.html)
 
-![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1gty2hqgoxwj60lf07kwf002.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gty2hqgoxwj60lf07kwf002.jpg)
 
 ```
 wget http://nginx.org/download/nginx-1.21.1.tar.gz
@@ -68,7 +68,7 @@ install
 sbin/nginx
 ```
 
-![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1gty2v8oyw1j60ez05174q02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gty2v8oyw1j60ez05174q02.jpg)
 
 
 5. nginx的常用命令

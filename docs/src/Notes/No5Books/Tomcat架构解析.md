@@ -10,7 +10,7 @@ outline: deep
 
 # Tomcat架构解析
 
-![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1guana97qzmj607i09e3yg02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1guana97qzmj607i09e3yg02.jpg)
 
 做Java的兄弟基本上离不开Tomcat，90%的公司应用服务都是使用的Tomcat，所以本书我们必须的看看； 这里我重点推荐第2、3、4、6章，其他章节可以简单了解，其
 对本书我印象比较深的是递推式的对各个组件进行分解来阐述tomcat整体架构，这样更容易理解每个组件的实际作用；以及Tomcat在设计时考虑的扩张性。

@@ -12,7 +12,7 @@ outline: deep
 
 本篇我们来完成`HandlerAdapter`的实现类`RequestMappingHandlerAdapter`，这也是`HandlerAdpater`的最后一节。先看看类图
 
-![](https://raw.githubusercontent.com/silently9527/images/main/1181981758-5fcf8588e5f60_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//1181981758-5fcf8588e5f60_articlex)
 
 `RequestMappingHandlerAdapter`本身在SpringMVC中占有重要的地位，虽然它只是`HandlerAdapter`的一种实现，但是它是使用最多的一个实现类，主要用于将某个请求适配给`@RequestMapping`类型的Handler处理
 
@@ -213,7 +213,7 @@ public void handle() throws Exception {
 
 输出的结果如下：
 
-![](https://raw.githubusercontent.com/silently9527/images/main/1016234010-5fcf8c48aea95_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//1016234010-5fcf8c48aea95_articlex)
 
 #### 10.3 总结
 本节通过开发`RequestMappingHandlerAdapter`，把我们之前开发的多个组件都组合起来了，并且能够正确的工作。

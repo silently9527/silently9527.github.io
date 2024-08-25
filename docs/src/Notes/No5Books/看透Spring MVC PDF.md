@@ -11,7 +11,7 @@ outline: deep
 
 ## 看透Spring MVC
 
-![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1guamhskvuaj607i0amdfv02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1guamhskvuaj607i0amdfv02.jpg)
 
 # 内容简介
 

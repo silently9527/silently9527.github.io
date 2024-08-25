@@ -8,7 +8,7 @@ tags: Java8新特性
 outline: deep
 ---
 
-![](https://raw.githubusercontent.com/silently9527/images/main/1566169983-5fb3c5b67966e_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//1566169983-5fb3c5b67966e_articlex)
 
 #### null在Java中带来的麻烦
 我相信所有的Java程序猿一定都遇到过`NullPointerException`，空指针在Java程序中是最常见的，也是最烦人的；它让我们很多程序猿产生了根深蒂固的感觉，所有可能产生空指针的地方都的加上`if-else`检查，但是这带给我们很多麻烦
@@ -77,7 +77,7 @@ public String getPhoneProducerName(Person person) {
 #### Optional的简单介绍
 吐槽了那么多现状的不好，现在可以祭出我们的解决方案了 `Optional`；千呼万唤始出来，犹抱琵琶半遮面；那`Optional`到底是个什么东西，我们一起来逐步解开它的面纱。
 
-![](https://raw.githubusercontent.com/silently9527/images/main/1883051154-5fb2773078853_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//1883051154-5fb2773078853_articlex)
 
 `Optional`本身只是对对象的简单包装，如果对象为空，那么会构建一个空的`Optional`；这样一来`Optional`就包含了存在和不存在两个情况, 接下来可以看下上面的例子改过之后
 

@@ -106,7 +106,7 @@ public int hashCode() {
 
 这里我们就采用简单的链表来实现拉链式散列表，数据结构使用在前几篇中已经实现的`LinkedMap`，可以参考前面的文章[《基于数组或链表实现Map》](https://juejin.cn/post/6940442429229105183)。
 
-![](https://raw.githubusercontent.com/silently9527/images/main/ff76067884aa4aa78b3221f598104621%7Etplv-k3u1fbpfcp-zoom-1.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//ff76067884aa4aa78b3221f598104621%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 ```
 public class SeparateChainingHashMap<K, V> implements Map<K, V> {

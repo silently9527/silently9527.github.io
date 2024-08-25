@@ -11,7 +11,7 @@ outline: deep
 
 上一篇由于篇幅问题，在DispatcherServlet中还留了一个方法未实现，主要是处理出现异常情况该如何处理，本篇我们将来完成这个功能，本篇内容稍多，我们先来看看类图：
 
-![](https://raw.githubusercontent.com/silently9527/images/main/0a8d9afddb9d498abb22f55cb123c4ed%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//0a8d9afddb9d498abb22f55cb123c4ed%7Etplv-k3u1fbpfcp-watermark.image)
 
 本篇我们主要需要实现框架的全局异常处理器，通过注解`ControllerAdvice`标注的类表示支持处理异常，在这个类中通过注解`ExceptionHandler`标识出支持处理哪些异常。
 
@@ -482,7 +482,7 @@ public void test2() throws ServletException, IOException {
 
 执行结果如下：
 
-![](https://raw.githubusercontent.com/silently9527/images/main/e5c5e7536cb84053b715fbbe0c1a5384%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//e5c5e7536cb84053b715fbbe0c1a5384%7Etplv-k3u1fbpfcp-watermark.image)
 
 
 #### 14.3 总结

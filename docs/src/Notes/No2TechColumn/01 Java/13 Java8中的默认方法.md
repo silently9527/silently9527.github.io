@@ -8,7 +8,7 @@ tags: Java8新特性
 outline: deep
 ---
 
-![](https://raw.githubusercontent.com/silently9527/images/main/3217296966-5fbe6dfa8fb3d_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//3217296966-5fbe6dfa8fb3d_articlex)
 
 #### 背景
 在Java8之前，定义在接口中的所有方法都需要在接口实现类中提供一个实现，如果接口的提供者需要升级接口，添加新的方法，那么所有的实现类都需要把这个新增的方法实现一遍，如果说所有的实现类能够自己控制的话，那么还能接受，但是现实情况是实现类可能不受自己控制。比如说Java中的集合框架中的List接口添加一个方法，那么Apache Commons这种框架就会很难受，必须修改所有实现了List的实现类
@@ -77,7 +77,7 @@ public interface WebMvcConfigurer {
 继承是面向对象的特性之一，在Java中一直以来都是单继承的原则，Java8中默认方法为实现多继承提供了可能（由于接口中不能有实例对象，所以能够抽象的到接口中的行为一般都是比较小的模块）；从个人的经历来看，做游戏是训练自己面向对象思维的最好方式（以后有机会分享一下小游戏的制作），因为现在大部分学Java的同学学完Java基础后就直接进入JavaWeb的学习，整合各种框架，只能在通用的三层架构（Controller、Service、Dao）中写自己的逻辑。
 
 相信很多人在都做个坦克大战的游戏，如果用Java8中的默认方法如何设计好多继承呢？
-![](https://raw.githubusercontent.com/silently9527/images/main/4068385045-5fbe60ba6f485_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//4068385045-5fbe60ba6f485_articlex)
 
 这里我们举个简单的例子，定义了三个接口：
 1. `Moveable`：允许移动的物体，把移动的逻辑放入到这个接口中的默认方法
@@ -107,7 +107,7 @@ public class C implements A, B  {
 #### 菱形继承问题
 为了说明上面的三个原则，我们直接来看看最复杂的菱形继承问题
 
-![](https://raw.githubusercontent.com/silently9527/images/main/3184243228-5fbe63c6ed8f9_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//3184243228-5fbe63c6ed8f9_articlex)
 
 ```
 public interface A {

@@ -10,7 +10,7 @@ outline: deep
 
 
 # Tomcat内核设计剖析
-![](https://raw.githubusercontent.com/silently9527/images/main/008i3skNgy1guankil8hnj607i09dwej02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1guankil8hnj607i09dwej02.jpg)
 
 # 内容简介
 Tomcat是一款免费的开源应用服务器，因其性能稳定、体积小巧、扩展性好等特点而被传统和互联网行业广泛应用。
