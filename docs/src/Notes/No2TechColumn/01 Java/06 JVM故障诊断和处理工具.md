@@ -18,7 +18,7 @@ outline: deep
 ## 命令行工具
 在安装完JDK之后在JAVA_HOME/bin目录下JDK已经提供了很多命令行的工具
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//1921805616-5ff98132e67e9_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/1921805616-5ff98132e67e9_articlex)
 
 可能我们最常用的就是`java`、`javac`这两个命令，除了这两个命令之外还有提供很多其他的实用工具，本文主要来一起学习对JVM监控诊断工具
 
@@ -35,7 +35,7 @@ outline: deep
 - `-l` : 显示出主类的全名，包括jar包路径
 - `-v` : 输出虚拟机进程启动时的JVM参数
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//2909510064-5ff983209a1d2_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/2909510064-5ff983209a1d2_articlex)
 
 
 #### 虚拟机统计信息监控工具（jstat）
@@ -49,7 +49,7 @@ interval表示间隔多久时间查询一次，count表示查询多少次，比�
 jstat -gc 52412 2s 5
 ```
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//3357602985-5ff988b3e88d9_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/3357602985-5ff988b3e88d9_articlex)
 
 常用的选项：
 - `-class`: 监控类装载，卸载次数和总空间以及加载类的耗时
@@ -61,7 +61,7 @@ jstat -gc 52412 2s 5
 
 查看堆空间的使用百分比: `jstat -gcutil 52412 2s 5`
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//2486125884-5ff98c0ae7508_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/2486125884-5ff98c0ae7508_articlex)
 
 
 #### java配置信息工具（jinfo）
@@ -72,7 +72,7 @@ jstat -gc 52412 2s 5
 jinfo -flag CMSInitiatingOccupancyFraction 52412
 ```
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//3247812341-5ff98ecabf29b_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/3247812341-5ff98ecabf29b_articlex)
 
 jinfo除了可以查看参数以外，还可以在运行时修改一些允许被修改的参数
 
@@ -109,21 +109,21 @@ VisualVM本身是基于Netbean开发的，所以具备了插件扩展功能，�
 - 插件安装
 默认情况VisualVM提供的功能很少，需要我们在菜单栏->工具->插件里面安装插件，我这是全部插件都安装了
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//2457906903-5ff9b307c095d_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/2457906903-5ff9b307c095d_articlex)
 
 
 ### 功能演示
 - 应用程序、概述、监视
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//3062129011-5ff9b5fbaaa2e_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/3062129011-5ff9b5fbaaa2e_articlex)
 
 显示出当前本机所有的JVM进程，这里显示的内容和前面说的命令行`jps`显示的内容一样
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//189450313-5ff9b67e66599_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/189450313-5ff9b67e66599_articlex)
 
 当前虚拟机启动信息的展示，比如：JVM启动参数、系统参数
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//3196895080-5ff9b74a64a05_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/3196895080-5ff9b74a64a05_articlex)
 
 这个页面相当于命令jstat的功能，显示出了CPU, 内存，线程，类装载当前处于什么情况
 
@@ -133,7 +133,7 @@ VisualVM本身是基于Netbean开发的，所以具备了插件扩展功能，�
 - Visual GC
 此页主要展示了GC相关的信息，这是在性能调优时常用的页面之一
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//19093410-5ff9bc393bfa4_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/19093410-5ff9bc393bfa4_articlex)
 
 我们可以写个程序来观看下这个截图各个内存区域的变化情况，为了让图的效果明显需要修改JVM的启动参数
 
@@ -164,7 +164,7 @@ static class DataTest {
 }
 ```
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//2920321350-5ffa69dc242b1_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/2920321350-5ffa69dc242b1_articlex)
 
 
 - 线程
@@ -186,11 +186,11 @@ public static void main(String[] args) throws IOException {
 ```
 选中main线程，右侧会看到当前线程运行到了readBytes，等待键盘输入
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//1280102571-5ffa6c4037c12_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/1280102571-5ffa6c4037c12_articlex)
 
 当我们在控制台输入之后再次查看main线程的状态，此时进入了TIME_WAIT状态
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//3185550591-5ffa6d2baec4b_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/3185550591-5ffa6d2baec4b_articlex)
 
 **锁等待**
 
@@ -216,7 +216,7 @@ public static Thread createLockThread(final Object lock) {
 }
 ```
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//3433413024-5ffa71ef869c2_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/3433413024-5ffa71ef869c2_articlex)
 
 lockThread线程在等待lock对象的notify方法被调用，此时处于WAITING状态，在被唤醒之前是不会再分配执行时间
 
@@ -229,7 +229,7 @@ public static void main(String[] args) throws IOException, InterruptedException 
 }
 ```
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//3596376279-5ffa742eb325a_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/3596376279-5ffa742eb325a_articlex)
 
 线程一直处于运行状态，从堆栈追踪里可以看出代码一直停留在了191行，在空循环上用尽分配的执行时间
 

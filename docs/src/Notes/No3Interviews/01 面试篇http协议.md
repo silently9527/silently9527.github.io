@@ -12,7 +12,7 @@ outline: deep
 ### 前言
 我被Hr领进了一个小黑屋，让我在这里等面试官，过来一会，一位穿着拖鞋的中年男子走了进来，看着他绝顶聪明的发际线，知道这肯定是位大佬，我心里倍感到了压力；
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//b5881831a4ac4d36bfa88ffe5f438afc%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/b5881831a4ac4d36bfa88ffe5f438afc%7Etplv-k3u1fbpfcp-watermark.image)
 
 面试官果然不是盖的，刚坐下后就开始立即暴力输出了
 
@@ -24,7 +24,7 @@ outline: deep
 
 首先浏览器会去访问DNS服务器，查询到域名对应的ip地址是多少，然后浏览器再去访问这个ip地址；如果还要往底层在说的话，就会涉及到tcp/ip的分层，我还是来画张图吧。
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//49bb9105f7fe4ba3b2e4fb3f4e38a5c4%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/49bb9105f7fe4ba3b2e4fb3f4e38a5c4%7Etplv-k3u1fbpfcp-watermark.image)
 
 服务器返回资源的过程也是类似的方式
 
@@ -43,7 +43,7 @@ outline: deep
 ---
 ### 面试官：在tcp/ip的分层里面，当客户端发起http请求到达服务端的过程中，数据包的封装以及解包的过程是怎样的？
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//bcfc91c5d7b3463dae8790339edba94c%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/bcfc91c5d7b3463dae8790339edba94c%7Etplv-k3u1fbpfcp-watermark.image)
 
 我：在这个分层中，每次网络请求都会按照分层的顺序与对方进行通信，发送端从应用层往下走，接收端从数据链路层往上走；以Http来举例的话：
 1. 客户端在应用层（Http协议）发起一个HTTP请求
@@ -51,7 +51,7 @@ outline: deep
 3. 网络层（IP协议）收到数据包后选择发送路径
 4. 服务器收到数据后按照顺序往上发送，直到应用层收到数据
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//9dd5b5f4ad5644ef838e642e3bc8da80%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/9dd5b5f4ad5644ef838e642e3bc8da80%7Etplv-k3u1fbpfcp-watermark.image)
 
 在发送方每经过一层，就会被加上该层的首部信息，当接收方接受到数据后，在每一个层会去掉对应的首部信息
 
@@ -62,9 +62,9 @@ outline: deep
 - 第二次握手：服务器收到 syn 包，必须确认客户的 SYN（ack=j+1），同时自己也发送一个 SYN 包（syn=k），即 SYN+ACK 包，此时服务器进入 SYN_RECV 状态； 
 - 第三次握手：客户端收到服务器的 SYN＋ACK 包，向服务器发送确认包 ACK(ack=k+1)，此包发送完毕，客户端和服务器进入 ESTABLISHED 状态，完成三次握手。
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//d3d89a2a1c5846d28febbe5468b070d5%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/d3d89a2a1c5846d28febbe5468b070d5%7Etplv-k3u1fbpfcp-watermark.image)
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//69633dc236984a92ac417217b2d45237%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/69633dc236984a92ac417217b2d45237%7Etplv-k3u1fbpfcp-watermark.image)
 
 
 ---
@@ -76,7 +76,7 @@ outline: deep
 ---
 ### 面试官：竟然都到说了三次握手，那就说说四次挥手吧？
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//0ab02387a9ab4252a0d2cb652c3c0c35%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/0ab02387a9ab4252a0d2cb652c3c0c35%7Etplv-k3u1fbpfcp-watermark.image)
 
 我：
 - 客户端向服务器发送FIN希望断开连接请求。
@@ -84,7 +84,7 @@ outline: deep
 - 服务器向客户端发送一个FIN表示希望断开连接。
 - 客户端向服务器返回一个ACK表示同意释放连接。
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//1e0bd85658c14590a77083ba08abecf0%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/1e0bd85658c14590a77083ba08abecf0%7Etplv-k3u1fbpfcp-watermark.image)
 
 ---
 ### 面试官：为什么断开连接需要四次而不是三次呢？
@@ -93,11 +93,11 @@ outline: deep
 ---
 ### 面试官：为什么说Http协议无状态协议？怎么解决Http协议无状态？
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//81e638e8e69a47c98178f91258d5217b~tplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/81e638e8e69a47c98178f91258d5217b~tplv-k3u1fbpfcp-watermark.image)
 
 我：本身HTTP协议是不保存状态的，自身不对请求和响应直接的通信状态进行保存，所以是无状态的协议。因为在有些场景下我们需要保存用户的登录信息，所以引入了cookie来管理状态。客户端第一次请求服务器的时候，服务器会生成cookie添加在响应头里面，以后客户端的每次请求都会带上这个cookie信息。
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//6e7dc580962148ca9936b300d238c916%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/6e7dc580962148ca9936b300d238c916%7Etplv-k3u1fbpfcp-watermark.image)
 
 ---
 ### 面试官：Cookie与Session有什么区别？
@@ -123,19 +123,19 @@ outline: deep
 
 ---
 ### 面试官：Http如何实现持久连接的呢？
-![](https://cdn.jsdelivr.net/gh/silently9527/images//619fc50e679e4194bc9f79442537b41a%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/619fc50e679e4194bc9f79442537b41a%7Etplv-k3u1fbpfcp-watermark.image)
 
 我：（毛线啊，我只是个来面试Java的初级程序员，干嘛要反复拿Http来摩擦我呢？！不过没事，我皮的很，这道题我又会）
 我：在HTTP协议的早期，每进行一次HTTP通信就要断开一次tcp连接，当时传输的内容少还能接受，现在每个网页一般的会包含大量的图片，每次请求都会造成TCP连接的连接和断开，增加通信的开销。
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//9cd827ba85a64f67ab3ac0525ae5a03c%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/9cd827ba85a64f67ab3ac0525ae5a03c%7Etplv-k3u1fbpfcp-watermark.image)
 
 为了解决这个问题所以想出了持久连接的方法，也叫做keep-alive，只要一端没有提出断开连接就会一直保持TCP连接的状态。持久化连接使的客户端可以同时并发发送多个请求，不用一个接着一个的等待响应。
 
 ---
 ### 面试官：大文件的断点续传是如何实现的呢？
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//4702e3f3bc5f4289b40382b743730724%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/4702e3f3bc5f4289b40382b743730724%7Etplv-k3u1fbpfcp-watermark.image)
 
 我：HTTP请求头有个Range字段；我们下载文件的时候如果遇到网络中断，如果重头开始下载会浪费时间，所以我们可以从上一次中断处继续开始下载；具体的操作：
 
@@ -154,7 +154,7 @@ Range: bytes=5001-
 ### 面试官：刚才你有提到状态码，那常见Http协议状态码有哪些？
 我：（面试官我简历上忘记写了，我曾经是学霸，记忆力好，背书没输过）
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//9d69204b913447a4a8f674878814d6e3%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/9d69204b913447a4a8f674878814d6e3%7Etplv-k3u1fbpfcp-watermark.image)
 
 我：HTTP的状态码主要分为了四类：
 - 2xx: 成功状态码，表示请求正常处理完毕
@@ -170,7 +170,7 @@ Range: bytes=5001-
 ---
 ### 面试官：HTTP报文由哪些部分组成？
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//314120a0c9aa44a8aad9564863c1bb63%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/314120a0c9aa44a8aad9564863c1bb63%7Etplv-k3u1fbpfcp-watermark.image)
 
 我：报文的类型分为了请求报文和响应报文两种；
 - 请求报文包含三部分：
@@ -194,7 +194,7 @@ HTTPS就是HTTP加上SSL加密处理（一般是SSL安全通信线路）+认证+
 ---
 ### 面试官：HTTPS是如何保证数据安全的？
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//9dd5b5f4ad5644ef838e642e3bc8da80%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/9dd5b5f4ad5644ef838e642e3bc8da80%7Etplv-k3u1fbpfcp-watermark.image)
 
 我：首先需要说到两种加密机制
 - 对称加密：客户端和服务器都使用了同一个密钥加密，效率较高
@@ -208,7 +208,7 @@ HTTPS就是HTTP加上SSL加密处理（一般是SSL安全通信线路）+认证+
 3. 如果证书合法浏览器生成随机串，使用公钥加密发送给服务器，服务器使用私钥解密出随机串，服务器使用随机串加密内容返回给客户端
 4. 之后客户端和服务器端都将通过随机串进行对称加密
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//cbcfad028ba948fa87aad54cc9ec9c33%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/cbcfad028ba948fa87aad54cc9ec9c33%7Etplv-k3u1fbpfcp-watermark.image)
 
 ---
 ### 面试官：为什么需要证书认证机构，不要https就不安全了吗？
@@ -217,7 +217,7 @@ HTTPS就是HTTP加上SSL加密处理（一般是SSL安全通信线路）+认证+
 ---
 ### 面试官：那浏览器是如何保证证书验证的过程是安全的呢？
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//3ff1a71ab5004320b0294db95d698a56%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/3ff1a71ab5004320b0294db95d698a56%7Etplv-k3u1fbpfcp-watermark.image)
 
 我：浏览器在向证书认证中心验证证书的过程使用的也是非对称加密，这里想要让公钥能够安全的转交给客户端，是非常困难的，所以浏览器的开发商通常会在浏览器内部植入常用认证机构的公开密钥
 

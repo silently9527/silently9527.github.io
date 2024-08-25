@@ -10,7 +10,7 @@ outline: deep
 
 
 # Redis 深度历险：核心原理与应用实践
-![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1guan6hk342j607i09jaa202.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1guan6hk342j607i09jaa202.jpg)
 
 《Redis 深度历险：核心原理与应用实践》分为基础和应用篇、原理篇、集群篇、拓展篇、源码篇共 5 大块内容。
 基础和应用篇讲解对读者来说最有价值的内容， 可以直接应用到实际工作中；
@@ -20,7 +20,7 @@ outline: deep
 
 这本书强烈建议准备想要换工作面试的同学看看，redis的面试题基本上逃不出本书。本书依然有写读书笔记
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gu9mjebvqoj61dl0lmgov02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gu9mjebvqoj61dl0lmgov02.jpg)
 
 
 

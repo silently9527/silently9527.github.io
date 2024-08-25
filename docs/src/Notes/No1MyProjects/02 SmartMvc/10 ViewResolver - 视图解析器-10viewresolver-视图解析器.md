@@ -10,7 +10,7 @@ outline: deep
 
 在SpringMVC中ViewResolver组件会将viewName解析成View对象，View对象再调用render完成结果的渲染。在上一篇已经完成了View的开发，本篇来完成ViewResolver研发。
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//309bc21a52834936aaa26f27229b932e%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/309bc21a52834936aaa26f27229b932e%7Etplv-k3u1fbpfcp-watermark.image)
 
 我们主要开发两个视图的解析器`InternalResourceViewResolver`和`ContentNegotiatingViewResolver`；
 
@@ -249,7 +249,7 @@ public void resolveViewName() throws Exception {
 
 执行的结果如下：
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//338a80ee712d4e589f3b5e4175c1dfd4%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/338a80ee712d4e589f3b5e4175c1dfd4%7Etplv-k3u1fbpfcp-watermark.image)
 
 #### 12.3 总结
 本篇我们完成了`ViewResolver`，相信大家对springmvc的视图解析过程也有了一定的了解，下篇我们将开始研发`DispatcherServlet`，把我们之前开发完成的HandlerMapping、HandlerAdapter等组件串联起来使用。

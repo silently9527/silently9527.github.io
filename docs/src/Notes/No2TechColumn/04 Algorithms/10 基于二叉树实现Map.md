@@ -23,7 +23,7 @@ outline: deep
 二叉树的每个节点都包含了一个Key, 并且每个节点的Key都大于其左子树中的任意节点，小于右子树中的任意节点。
 
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//28f4367ecbfb422bb9ff087cc681126e%7Etplv-k3u1fbpfcp-zoom-1.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/28f4367ecbfb422bb9ff087cc681126e%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 节点的数据结构定义：
 
@@ -148,7 +148,7 @@ protected Node max(Node node) {
 
 插入操作的实现思路： 与查询操作类似，依然是递归，如果put的key值比当前节点大就需要去右子树递归，如果较小就去左子树递归，如果相等就直接更新节点的值。如果递归结束后还未找到值就新建一个节点并返回
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//0e00781c357b415c9ca57fd9f5d56025%7Etplv-k3u1fbpfcp-zoom-1.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/0e00781c357b415c9ca57fd9f5d56025%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 ```
 private Node put(Node node, K key, V value) {
@@ -185,7 +185,7 @@ private int size(Node node) {
 
 删除最小值：和前面实现查找最小值有些相似，沿着左边路径一直深入，直到遇到一个节点的左子树为null, 那么这个当前节点就是最小值，在递归中把当前节点的右子树返回即可；
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//52396f43b7234025916a10859f10ee8d%7Etplv-k3u1fbpfcp-zoom-1.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/52396f43b7234025916a10859f10ee8d%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 最大值实现思路类似
 
@@ -232,7 +232,7 @@ public Node deleteMax(Node node) {
 3. 调用删除最大值或者删除最小值
 
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//569e327806bf4e668a8a19e18c14219a%7Etplv-k3u1fbpfcp-zoom-1.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/569e327806bf4e668a8a19e18c14219a%7Etplv-k3u1fbpfcp-zoom-1.image)
 
 代码实现
 

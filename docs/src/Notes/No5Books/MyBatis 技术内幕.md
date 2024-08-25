@@ -12,7 +12,7 @@ outline: deep
 
 # MyBatis 技术内幕 PDF
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1guokoq461fj607i09eaa702.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1guokoq461fj607i09eaa702.jpg)
 
 
 # 内容简介

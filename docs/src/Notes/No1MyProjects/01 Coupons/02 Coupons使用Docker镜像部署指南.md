@@ -24,10 +24,10 @@ Github地址：
             <td align="center">Web站点</td>
         </tr>
         <tr style="background-color: white;">
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEgy1gn4esj3uutj30b40b4jsx.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEgy1gn4et70ft2j30g40g4gm6.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEgy1gn4etut7d1j3076076aa2.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEgy1gn4euhcqonj30b40b43yt.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEgy1gn4esj3uutj30b40b4jsx.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEgy1gn4et70ft2j30g40g4gm6.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEgy1gn4etut7d1j3076076aa2.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEgy1gn4euhcqonj30b40b43yt.jpg"></td>
         </tr>
     </tbody>
 </table>
@@ -40,16 +40,16 @@ Web站点(用手机访问，PC端未适配)：[http://m.szjx.top](http://m.szjx.
 <table>
     <tbody>
         <tr style="background-color: white;">
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hfiqyqoj30ku11240m.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hggo8thj30ku112aba.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hge5bwuj30ku112my9.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hgbc1e2j30ku112dhz.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hfiqyqoj30ku11240m.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hggo8thj30ku112aba.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hge5bwuj30ku112my9.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hgbc1e2j30ku112dhz.jpg"></td>
         </tr>
         <tr style="background-color: white;">
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hg8p7uhj30ku112acg.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hg5kj8lj30ku112tc6.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hg10sibj30ku112acs.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hft8rzcj30ku1123yt.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hg8p7uhj30ku112acg.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hg5kj8lj30ku112tc6.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hg10sibj30ku112acs.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hft8rzcj30ku1123yt.jpg"></td>
         </tr>
     </tbody>
 </table>
@@ -102,11 +102,11 @@ docker ps
 docker log -f xxx
 ```
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gu2or68as9j61vs07840102.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gu2or68as9j61vs07840102.jpg)
 
 当看在日志中如下内容表示启动成功
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gu2ov30ps9j62ke0b0wmi02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gu2ov30ps9j62ke0b0wmi02.jpg)
 
 
 # 二、 Nginx安装
@@ -175,12 +175,12 @@ systemctl restart nginx
 
 2. 修改发送短信的模版id（只有需要打包app才需要），文件的路径`pages/public/login.vue`中92行配置短信模板的id，这里的模版id需要在短信平台mob上面申请
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtz7l1dcw0j60pc0gbaao02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtz7l1dcw0j60pc0gbaao02.jpg)
 
 3. 在uniapp的插件中心购买集成mob的插件；MobTech短信原生插件 [https://ext.dcloud.net.cn/plugin?id=2189](https://ext.dcloud.net.cn/plugin?id=2189)
 
 4. 之后在HBuilder中配置appkey
-   ![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtz7mq0h7tj60u00ktq3s02.jpg)
+   ![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtz7mq0h7tj60u00ktq3s02.jpg)
 
 5. 配置后台api的请求地址，编辑`client/config.js`输入自己服务器的域名地址
 

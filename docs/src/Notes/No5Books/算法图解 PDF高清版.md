@@ -17,7 +17,7 @@ outline: deep
 
 # 内容介绍
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gu3urtyvuhj6078097t8y02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gu3urtyvuhj6078097t8y02.jpg)
 
 像小说集一样趣味的算法新手入门书。
 算法是解决困难的一步步步骤，都是电子信息科学行业的关键主题。现如今程序员*常见的算法早已历经了古人的探索、检测及证实。假如你要搞明白这种算法，又不愿困在在繁杂的证实中，这书更是你的不二选择。这部图例丰富多彩、扣人心弦的好用手册将给你轻轻松松懂得怎样在自身的程序流程中高效率应用关键的算法。

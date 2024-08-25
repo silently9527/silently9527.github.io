@@ -11,7 +11,7 @@ outline: deep
 
 上一篇我们结束了`HandlerAdapter`各个组件的开发任务，本篇我们将开始研发视图的渲染；先看看类图
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//71c3c04a7b9941e6970489ac1fa3c0ab%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/71c3c04a7b9941e6970489ac1fa3c0ab%7Etplv-k3u1fbpfcp-watermark.image)
 
 本篇我们先完成jsp视图的渲染以及重定向视图的渲染；在整个项目开发完成之后，我们再通过自定义视图的方式开发Excel视图和JSON视图。
 
@@ -204,7 +204,7 @@ public void test() throws Exception {
 
 输出结果：
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images//fc647a07ac884d6b9f990c1a1ffc900d%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images/fc647a07ac884d6b9f990c1a1ffc900d%7Etplv-k3u1fbpfcp-watermark.image)
 
 #### 11.3 总结
 本篇我们完成了`RedirectView`、`InternalResourceView`视图，后期通过自定义视图的方式实现excel视图；下一篇我们将开始开发视图的解析器`ViewResolver`
