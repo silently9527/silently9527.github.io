@@ -16,7 +16,7 @@ outline: deep
 #### 原始配置内容
 要查询idea原始配置文件的路径可以在VisualVM中的概述中查看
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/1501084898-5ffa9ba34629c_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//1501084898-5ffa9ba34629c_articlex)
 
 原始配置内容：
 
@@ -68,9 +68,9 @@ plugin.xml中添加如下代码：
 
 
 #### 优化前的启动信息与时间消耗
-![](https://cdn.jsdelivr.net/gh/silently9527/images/1944701285-5ff963ad53209_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//1944701285-5ff963ad53209_articlex)
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/3138964108-5ff963b712c68_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//3138964108-5ff963b712c68_articlex)
 
 根据VisualGC和IDEA启动插件收集到的信息：
 - IDEA启动耗时 15s
@@ -88,7 +88,7 @@ plugin.xml中添加如下代码：
 
 重新启动之后查看VisualGC，新生代gc次数从 17次 降低到了 7次，耗时从 324ms 降低到了 152ms。
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/2096888164-5ffaa67ed24a9_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//2096888164-5ffaa67ed24a9_articlex)
 
 在调整内存前发生了5次Full GC，调整内存后的依然还是有4次Full GC，但是从两张图我们可以看出，老年代的空间还有很多剩余，是不应该发生Full GC的；考虑是否是代码中有地方手动调用`System.gc()`出发了Full GC，所以添加了参数`-XX:+DisableExplicitGC`，再次重新启动IDEA，结果很失望，依然还有4次Full GC；
 
@@ -111,7 +111,7 @@ plugin.xml中添加如下代码：
 
 重新启动idea，查看gc.log
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/231035044-5ffaac2dd7591_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//231035044-5ffaac2dd7591_articlex)
 
 > 其中`PSYoungGen:`表示新生代使用的ParallelScavenge垃圾收集器，`31416K->0K(181248K)`表示 gc前已使用的内存大小 -> gc后已使用内存大小（该区域的总内存大小）
 
@@ -123,7 +123,7 @@ plugin.xml中添加如下代码：
 
 再次重启Idea之后，发现Full GC没有了，心情很爽
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/153848056-5ffaaf7c61f9e_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//153848056-5ffaaf7c61f9e_articlex)
 
 
 测试打开大项目点击编译代码，发现自己的idea卡死了，查看VisualGC之后发现堆内存都还有空闲，只有Metaspace被全部占满了，所以是自己给的最大空间设置太小，所以直接去掉了`-XX:MaxMetaspaceSize=256m`
@@ -141,7 +141,7 @@ plugin.xml中添加如下代码：
 
 重启IDEA之后查看VisualGC
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/3999595044-5ffab5934d5c3_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//3999595044-5ffab5934d5c3_articlex)
 
 很尴尬，同样发生了6次gc，`ParallelScavenge + Parallel Old`的组合耗时197ms，而`ParNew + CMS`的组合耗时379ms；虽然是这个结果，但是我们需要考虑当前只发生了MinorGC，如果发生FullGC了结果又会如何了，大家可以自己测试一下
 
@@ -152,7 +152,7 @@ plugin.xml中添加如下代码：
 -XX:+UseG1GC
 ```
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/2208506516-5ffab8d02829c_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//2208506516-5ffab8d02829c_articlex)
 
 这个结果好像也还是要慢一点点，自己多次测试过这两个垃圾回收器，虽然每次结果都不一样，相差不远，所以垃圾回收器可以自己选择，这里我们选择的是G1
 
@@ -162,7 +162,7 @@ plugin.xml中添加如下代码：
 
 重启IDEA
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/902843037-5ffabd81ecc38_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//902843037-5ffabd81ecc38_articlex)
 
 耗时下降到了11s，效果还是比较明显的
 
@@ -171,7 +171,7 @@ plugin.xml中添加如下代码：
 
 做完了所有优化之后，经过多次重启测试，平均的启动时间下降到了11s，为了安慰我本次操作没有白辛苦，搞一张11s以下的图
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/3483679517-5ff971f5860d8_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//3483679517-5ff971f5860d8_articlex)
 
 
 

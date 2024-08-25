@@ -31,7 +31,7 @@ IntelliJ IDEA是目前最好用的JAVA开发IDE，它本身的功能已经非常
 
 #### 1. 创建Gradle的插件工程
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/b286f47138c04292b7540083f73f8f95%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//b286f47138c04292b7540083f73f8f95%7Etplv-k3u1fbpfcp-watermark.image)
 
 创建完成项目之后，我们可以看一下`resource/META-INF/plugin.xml`
 
@@ -65,9 +65,9 @@ IntelliJ IDEA是目前最好用的JAVA开发IDE，它本身的功能已经非常
 #### 2. 创建一个Action
 在IDEA的插件开发中，基本都会使用到Action，Action其实就是事件的处理器，就好比JS中的onClick方法。在IDEA中创建一个Action十分简单，通过图形化界面就可以完成
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/36437979ca7c4c16ab3de02271aef163%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//36437979ca7c4c16ab3de02271aef163%7Etplv-k3u1fbpfcp-watermark.image)
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/08e2963bbd094c6a9783ec9a0297c68f%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//08e2963bbd094c6a9783ec9a0297c68f%7Etplv-k3u1fbpfcp-watermark.image)
 
 创建完成后就可以看到Action类
 
@@ -128,7 +128,7 @@ protected ValidationInfo doValidate() {
 
 最终界面完成后的效果
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/e55674d0d57a4cf1b6eac653c9972fee%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//e55674d0d57a4cf1b6eac653c9972fee%7Etplv-k3u1fbpfcp-watermark.image)
 
 #### 4. 在FastDownloadAction中获取弹窗输入的下载信息
 
@@ -195,20 +195,20 @@ ProgressManager.getInstance().run(new Task.Backgroundable(project, "File Downloa
 });
 ```
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/e91f510f11524ae7b31ada55c3556364%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//e91f510f11524ae7b31ada55c3556364%7Etplv-k3u1fbpfcp-watermark.image)
 
 
 ## 测试多线程下载文件
 
 测试下载820M的idea ，地址：https://download.jetbrains.8686c.com/idea/ideaIU-2020.3.dmg
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/e7fba4ca172443ce9b92a7e8c5d089d3%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//e7fba4ca172443ce9b92a7e8c5d089d3%7Etplv-k3u1fbpfcp-watermark.image)
 
 
 ## 插件安装
 下载插件之后，选择本地安装
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/2a12851f10d146bfac988193c1b1c0a8%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//2a12851f10d146bfac988193c1b1c0a8%7Etplv-k3u1fbpfcp-watermark.image)
 
 
 ## 总结

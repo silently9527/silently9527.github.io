@@ -77,7 +77,7 @@ redis-server redis.conf
 
 当看到如下界面就表示启动成功
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtxxr1rmg0j61j00o4dk402.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtxxr1rmg0j61j00o4dk402.jpg)
 
 
 ## 使用客户端程序连接到redis服务器
@@ -89,7 +89,7 @@ redis-cli -h localhost -p 6379
 
 如果我们在redis.conf中有设置密码(默认是没有设置密码的)，虽然能够连接成功，但依然不会使用redis的命令，比如
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtxxzoqyt2j60lq05idg802.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtxxzoqyt2j60lq05idg802.jpg)
 
 这时候需要我们通过如下命令认证：
 ```
@@ -103,7 +103,7 @@ AUTH 123456
 
 十分的简单，把redis.conf中的配置项 `daemonize` 改为 yes
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtxy6kb07xj612i06odh002.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtxy6kb07xj612i06odh002.jpg)
 
 修改完成之后在重启redis
 
@@ -117,5 +117,5 @@ pkill redis
 
 也可以通过客户端连接工具，连接上之后使用shutdown命令
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtxybnouqhj60hc09s0tf02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtxybnouqhj60hc09s0tf02.jpg)
 

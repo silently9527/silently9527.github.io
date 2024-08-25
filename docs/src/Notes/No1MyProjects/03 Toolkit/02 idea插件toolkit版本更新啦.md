@@ -18,9 +18,9 @@ outline: deep
 - 新增了生成二维码，下载二维码，插入logo功能
 - 弹窗位置从右侧改到了下边
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEgy1gnxbmtzi3kj31hc0u0dhh.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEgy1gnxbmtzi3kj31hc0u0dhh.jpg)
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEgy1gnxbnkbcqaj31hc0u0gn5.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEgy1gnxbnkbcqaj31hc0u0gn5.jpg)
 
 
 ## 已实现功能

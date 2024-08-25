@@ -40,7 +40,7 @@ export const projectsInfo: Project[] = [
     tag: "Books",
   },
   {
-    banner: "https://cdn.jsdelivr.net/gh/silently9527/images/202408161141541.png",
+    banner: "https://cdn.jsdelivr.net/gh/silently9527/images//202408161141541.png",
     title: "ExchangeSdk",
     description: "作为长期混迹在合约市场的老韭菜来说，已不能满足与手动下单来亏钱，必须得通过脚本来加速，为了达到这个目的就产生了项目。目前封装的主要是合约的API接口，不支持现货交易。" ,
     link: "https://github.com/silently9527/exchange-sdk",

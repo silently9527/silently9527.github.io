@@ -67,7 +67,7 @@ public void testSync() {
 }
 ```
 不出所料，因为调用的两个接口都是延迟了 1s ，所以结果大于2秒
-![](https://cdn.jsdelivr.net/gh/silently9527/images/462092667-5fb92e076071d_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//462092667-5fb92e076071d_articlex)
 
 ---
 
@@ -102,7 +102,7 @@ public void testFuture() {
 }
 ```
 这次我们采用多线程的方式来改造了我们这个例子，结果还是比较满意的，时间大概花费了1s多一点
-![](https://cdn.jsdelivr.net/gh/silently9527/images/1730588490-5fb9317d21529_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//1730588490-5fb9317d21529_articlex)
 
 > 注意：这里我分成了两个Stream，如何合在一起用同一个Stream，那么在用`future.get()`的时候会导致阻塞，相当于提交一个任务执行完后才提交下一个任务，这样达不到异步的效果
 
@@ -126,7 +126,7 @@ public void testParallelStream() {
 }
 ```
 运行的结果还是相当的满意，花费时间 1s 多点
-![](https://cdn.jsdelivr.net/gh/silently9527/images/1092883515-5fb9e2210d779_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//1092883515-5fb9e2210d779_articlex)
 
 和Java8之前的实现对比，我们发现整个代码会更加的简洁；
 
@@ -178,7 +178,7 @@ public void testParallelStream2() {
 ```
 
 但是这次运行的结果不是太理想，花费时间超过了2秒
-![](https://cdn.jsdelivr.net/gh/silently9527/images/1480299383-5fb9e56464af9_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//1480299383-5fb9e56464af9_articlex)
 
 ---
 
@@ -290,7 +290,7 @@ public void testCompletableFuture3() throws ExecutionException, InterruptedExcep
 
 这里依然是采用的两个Stream来完成的，执行的结果如下：
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/830895141-5fb9fce3659c5_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//830895141-5fb9fce3659c5_articlex)
 
 这个结果不太满意，和并行流的结果差不多，消耗时间 2秒多点；在这种场景下我们用`CompletableFuture`做了这么多工作，但是效果不理想，难道就有没有其他的方式可以让它在快一点吗？
 
@@ -333,7 +333,7 @@ public void testCompletableFuture4() throws ExecutionException, InterruptedExcep
 ```
 
 我们使用自定义线程池，设置最大的线程池数量50，来看下执行的结果
-![](https://cdn.jsdelivr.net/gh/silently9527/images/1005772194-5fba03262a97f_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//1005772194-5fba03262a97f_articlex)
 
 这下执行的结果比较满意了，1秒多点；理论上来说这个结果可以一直持续，直到达到线程池的大小50
 

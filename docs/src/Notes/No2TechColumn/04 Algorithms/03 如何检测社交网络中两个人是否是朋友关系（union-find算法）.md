@@ -43,7 +43,7 @@ outline: deep
 #### 连通分量
 将整数对称为连接，将等价类称作连通分量或者简称分量
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/51cd832609504204877bdcf3b52e0292~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//51cd832609504204877bdcf3b52e0292~tplv-k3u1fbpfcp-zoom-1.image)
 
 #### 动态连通性
 union-find算法的目标是当程序从输入中读取了整数对p q时，如果已知的所有整数对都不能说明p q是相连的，那么将这一对整数输出，否则忽略掉这对整数；我们需要设计数据结构来保存已知的所有整数对的信息，判断出输入的整数对是否是相连的，这种问题叫做动态连通性问题。
@@ -134,11 +134,11 @@ public class QuickFindImpl extends AbstractUF {
 ## quick-union算法
 为了提高union方法的速度，我们需要考虑另外一种算法；使用同样的数据结构，只是重新定义id[]表示的意义，每个触点所对应的id[]值都是在同一分量中的另一个触点的名称
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/8f670253330f40c0a814047c7d5807fb~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//8f670253330f40c0a814047c7d5807fb~tplv-k3u1fbpfcp-zoom-1.image)
 
 在数组初始化之后，每个节点的链接都指向自己；id[]数组用`父链接`的形式表示了`森林`，每一次union操作都会找出每个分量的`根节点`进行归并。
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/433b359264384730971733bf2959f22a~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//433b359264384730971733bf2959f22a~tplv-k3u1fbpfcp-zoom-1.image)
 
 
 ```
@@ -176,7 +176,7 @@ public class QuickUnionImpl extends AbstractUF {
   考虑最佳情况下，find方法只需要访问一次数组就可以得到根触点，那么union方法的时间复杂度O(n)；
   考虑到最糟糕的输入情况，如下图：
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/17496e49c2a94903a42501b0d99e1ba2~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//17496e49c2a94903a42501b0d99e1ba2~tplv-k3u1fbpfcp-zoom-1.image)
 
 find方法需要访问数组n-1次，那么union方法的时间复杂度是O(n²)
 
@@ -228,7 +228,7 @@ public class WeightedQuickUnionImpl extends AbstractUF {
 - 算法分析：
   最坏的情况下，每次union归并的树都是大小相等的，他们都包含了2的n次方个节点，高度都是n，合并之后的高度变成了n+1，由此可以得出union方法的时间复杂度是O(lgN)
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/8c67501200314cc1855255eff1b2c2c1~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//8c67501200314cc1855255eff1b2c2c1~tplv-k3u1fbpfcp-zoom-1.image)
 
 
 ## 总结

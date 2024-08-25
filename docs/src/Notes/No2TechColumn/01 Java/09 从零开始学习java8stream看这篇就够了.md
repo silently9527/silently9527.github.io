@@ -166,7 +166,7 @@ allCustomers.stream()
 ```
 执行结果：
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/4db2aa4e3dcb4360975595e51d1097c4%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//4db2aa4e3dcb4360975595e51d1097c4%7Etplv-k3u1fbpfcp-watermark.image)
 
 ##### sorted
 对所有的元素进行排序

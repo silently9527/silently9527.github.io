@@ -25,10 +25,10 @@ Github地址：
             <td align="center">Web站点</td>
         </tr>
         <tr style="background-color: white;">
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEgy1gn4esj3uutj30b40b4jsx.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEgy1gn4et70ft2j30g40g4gm6.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEgy1gn4etut7d1j3076076aa2.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEgy1gn4euhcqonj30b40b43yt.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEgy1gn4esj3uutj30b40b4jsx.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEgy1gn4et70ft2j30g40g4gm6.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEgy1gn4etut7d1j3076076aa2.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEgy1gn4euhcqonj30b40b43yt.jpg"></td>
         </tr>
     </tbody>
 </table>
@@ -41,16 +41,16 @@ Web站点(用手机访问，PC端未适配)：[http://m.szjx.top](http://m.szjx.
 <table>
     <tbody>
         <tr style="background-color: white;">
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hfiqyqoj30ku11240m.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hggo8thj30ku112aba.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hge5bwuj30ku112my9.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hgbc1e2j30ku112dhz.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hfiqyqoj30ku11240m.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hggo8thj30ku112aba.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hge5bwuj30ku112my9.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hgbc1e2j30ku112dhz.jpg"></td>
         </tr>
         <tr style="background-color: white;">
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hg8p7uhj30ku112acg.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hg5kj8lj30ku112tc6.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hg10sibj30ku112acs.jpg"></td>
-            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images/008eGmZEly1gn4hft8rzcj30ku1123yt.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hg8p7uhj30ku112acg.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hg5kj8lj30ku112tc6.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hg10sibj30ku112acs.jpg"></td>
+            <td align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/silently9527/images//008eGmZEly1gn4hft8rzcj30ku1123yt.jpg"></td>
         </tr>
     </tbody>
 </table>
@@ -61,7 +61,7 @@ Web站点(用手机访问，PC端未适配)：[http://m.szjx.top](http://m.szjx.
 
 ### Java
 1. 使用yum来搜索安装包 `yum search openjdk`
-   ![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gty1ttcjeej61kq0hitgf02.jpg)
+   ![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gty1ttcjeej61kq0hitgf02.jpg)
 
 2. 这里我们选择安装Java8的开发环境,执行如下命令
 ```
@@ -100,7 +100,7 @@ MallCoupons后端项目中使用的商品数据都是由大淘客API提供 ;
 首先需要注册大淘客账号[https://www.dataoke.com/](https://www.dataoke.com/) 
 
 进入到大淘客开放平台创建一个应用，为应用一键添加所有的API接口
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtz7w4jxowj60u00fkmxm02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtz7w4jxowj60u00fkmxm02.jpg)
 
 ### 2. 开通MobTech免费短信服务(非必须，需要打包app应用才是需要使用)
 MallCoupons在App中是通过手机号和验证码的方式登录，MobTech提供了免费的短信验证码服务。
@@ -108,7 +108,7 @@ MallCoupons在App中是通过手机号和验证码的方式登录，MobTech提�
 注册MobTech账号 [https://www.mob.com/](https://www.mob.com/)
 
 进入到开发者平台，创建应用
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtz7we5u64j60u00893yh02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtz7we5u64j60u00893yh02.jpg)
 
 ### 3. 注册QQ小程序(非必须，根据个人需要)
 ### 4. 注册微信小程序(非必须，根据个人需要)
@@ -188,11 +188,11 @@ mvn clean package -DskipTests
 
 当出现了Build Success的时候就表示打包完成
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtz6iv61w1j61fu0lan4702.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtz6iv61w1j61fu0lan4702.jpg)
 
 打包完成之后当前目录会生成`target`目录，`cd target`进入到目录，查看是否有生成文件`mall-coupons-server-0.0.1-SNAPSHOT.jar`
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtz6i0q7n3j619e08umzr02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtz6i0q7n3j619e08umzr02.jpg)
 
 4. 启动运行`mall-coupons-server-0.0.1-SNAPSHOT.jar`
 
@@ -262,12 +262,12 @@ systemctl restart nginx
 
 2. 修改发送短信的模版id（只有需要打包app才需要），文件的路径`pages/public/login.vue`中92行配置短信模板的id，这里的模版id需要在短信平台mob上面申请
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtz7l1dcw0j60pc0gbaao02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtz7l1dcw0j60pc0gbaao02.jpg)
 
 3. 在uniapp的插件中心购买集成mob的插件；MobTech短信原生插件 [https://ext.dcloud.net.cn/plugin?id=2189](https://ext.dcloud.net.cn/plugin?id=2189)
 
 4. 之后在HBuilder中配置appkey
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gtz7mq0h7tj60u00ktq3s02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gtz7mq0h7tj60u00ktq3s02.jpg)
 
 5. 配置后台api的请求地址，编辑`client/config.js`输入自己服务器的域名地址
 

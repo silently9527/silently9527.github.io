@@ -9,7 +9,7 @@ outline: deep
 ---
 
 本节我们开始来开发`HandlerMapping`接口中主要的方法`getHandler`，通过请求request找到需要执行Handler，涉及到的新类不多
-![](https://cdn.jsdelivr.net/gh/silently9527/images/3942105762-5fc3aaaa3277e_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//3942105762-5fc3aaaa3277e_articlex)
 
 #### 6.1 开发步骤讲解
 
@@ -303,7 +303,7 @@ public void testGetHandler() throws Exception {
 
 运行结果如下：
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/2812054056-5fc3a45a25449_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//2812054056-5fc3a45a25449_articlex)
 
 #### 6.3 总结
 本节完成了获取Handler的开发，其中主要的对象是`HandlerExecutionChain`，它包含了具体执行业务逻辑的`HandlerMethod`以及匹配的拦截器；到此`HandlerMapping`的大部分开发工作都已完成，下一节我开始研发`HandlerAdapter`

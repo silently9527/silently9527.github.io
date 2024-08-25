@@ -11,7 +11,7 @@ outline: deep
 不知道大家有没有好奇过，SpringMVC是如何通过request就可以找到我们写的Controller中的一个方法，它是怎么做到的，什时候做的呢？
 本节我们就来开发HandlerMapping的初始化过程，把Controller中的方法转换成我们定义的`HandlerMethod`对象（也就是架构图中画的Handler），根据注解`RequestMapping`来映射url和`HandlerMethod`的对应关系。首先我们先来看下本节中涉及到的类
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/2805161289-5fc25a04be986_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//2805161289-5fc25a04be986_articlex)
 
 #### 4.1 研发步骤讲解
 
@@ -412,7 +412,7 @@ public class RequestMappingHandlerMappingTest extends BaseJunit4Test {
 ```
 单元测试运行结果正常通过：
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/2431648666-5fc340a9c54e1_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//2431648666-5fc340a9c54e1_articlex)
 
 
 

@@ -8,7 +8,7 @@ tags: SpringMvc/MVC
 outline: deep
 ---
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/17c04f0ceefb408d83840f858f9e1741~tplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//17c04f0ceefb408d83840f858f9e1741~tplv-k3u1fbpfcp-watermark.image)
 
 由于SpringBoot默认的web框架就是SpringMVC，如果我们需要完成与SpringBoot的集成，就需要在IOC容器的基础上定制开发Web容器，
 其次，SpringBoot使用的是嵌入式Web服务器，所以我们还需要开发驱动嵌入式Web服务器的容器；本篇主要就来完成这两个功能

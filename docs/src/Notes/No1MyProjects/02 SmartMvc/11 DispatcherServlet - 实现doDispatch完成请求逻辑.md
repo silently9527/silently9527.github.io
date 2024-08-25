@@ -11,7 +11,7 @@ outline: deep
 
 本篇我们将开始研发SpringMVC中核心组件DispatcherServlet
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/5a0276884f1b4a63bdee4fb9f3096607%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//5a0276884f1b4a63bdee4fb9f3096607%7Etplv-k3u1fbpfcp-watermark.image)
 
 #### 13.1 开发步骤讲解
 
@@ -344,7 +344,7 @@ public class DispatcherServletTest extends BaseJunit4Test {
 
 执行结果如下：
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/842675a13bbd4b23bafde501ad9dfe07%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//842675a13bbd4b23bafde501ad9dfe07%7Etplv-k3u1fbpfcp-watermark.image)
 
 #### 13.3 总结
 我们完成了 DispatcherServlet 正常的处理请求的逻辑，如果在处理请求的过程中出现了异常，该怎么处理呢？下篇我们将会来解决这个问题

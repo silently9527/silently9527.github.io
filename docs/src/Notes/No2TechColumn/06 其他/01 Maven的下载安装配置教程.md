@@ -17,7 +17,7 @@ Maven是基于项目对象模型(POM project object model)，可以通过一小�
 
 官网下载地址：[https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi)
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gty0yhdps3j6153091mzj02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gty0yhdps3j6153091mzj02.jpg)
 
 在这里我们下载的版本是3.8.2，输入以下命令下载
 
@@ -33,7 +33,7 @@ tar -zxvf apache-maven-3.8.2-bin.tar.gz
 
 进入到bin目录执行命令`mvn -v`,看到如下界面表示安装正确
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gty0uxgzg4j61ok04udhk02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gty0uxgzg4j61ok04udhk02.jpg)
 
 ---
 
@@ -75,7 +75,7 @@ drwxr-xr-x@ 3 herman  staff     96  8  4 18:57 logging
 
 1. 首先来配置maven下载jar包存放到什么目录，如果没有配置的话默认是在`${user.home}/.m2/repository`
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1gty1e6ttpwj61io0jyaer02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1gty1e6ttpwj61io0jyaer02.jpg)
 这里我设置的目录是`/data/maven/repository`，你可以根据你自己的情况来设置
 
 ```

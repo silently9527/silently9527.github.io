@@ -11,7 +11,7 @@ outline: deep
 
 # Java并发编程的艺术
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/008i3skNgy1guann4114kj607i0at74b02.jpg)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//008i3skNgy1guann4114kj607i0at74b02.jpg)
 
 并发编程领域的扛鼎之作，作者是阿里和1号店的资深Java技术专家，对并发编程有非常深入的研究，《Java并发编程的艺术》是他们多年一线开发经验的结晶。
 

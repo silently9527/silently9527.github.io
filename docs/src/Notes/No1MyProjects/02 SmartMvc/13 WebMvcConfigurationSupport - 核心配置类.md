@@ -11,7 +11,7 @@ outline: deep
 
 从前面的单元测试我们已经发现，要想要使用SmartMVC框架，我们需要构建很多的对象，比如：`HandlerMapping`、`HandlerAdapter`、`HandlerInterceptor`等等；为了让我们的框架能够更加方便的使用，我们需要开发一个配置器`WebMvcConfigurationSupport`，能把大部分的配置都封装起来，把个别的扩展点暴露给框架的使用者，并且用户如果没有需求扩展，直接使用注解`@EnableWebMvc`就可以完成SmartMVC框架的配置工作，现在我们就开始来开发这个功能。
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/b5286fbb11cd4d919eba5b2d1b857df5%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//b5286fbb11cd4d919eba5b2d1b857df5%7Etplv-k3u1fbpfcp-watermark.image)
 
 
 #### 15.1 开发步骤讲解
@@ -305,7 +305,7 @@ public class AppConfig {
 
 直接运行之前我们开发好的`DispatcherServletTest`中的两个单元测试方法，执行结果如下：
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/bdaf2c983b874466a62166dd506346b9%7Etplv-k3u1fbpfcp-watermark.image)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//bdaf2c983b874466a62166dd506346b9%7Etplv-k3u1fbpfcp-watermark.image)
 
 
 #### 15.3 总结

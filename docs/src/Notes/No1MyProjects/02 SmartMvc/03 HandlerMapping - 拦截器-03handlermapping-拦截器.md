@@ -10,7 +10,7 @@ outline: deep
 
 上一节的内容稍多，所以本小节的内容设置相对简单，主要来实现SmartMVC中的拦截器部分，首先我还是来看下本小节涉及到的类图，以及这些类需要提供的方法
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/2056813523-5fc35eb3cd06c_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//2056813523-5fc35eb3cd06c_articlex)
 
 #### 4.1 开发步骤讲解
 
@@ -218,7 +218,7 @@ public class HandlerInterceptorTest {
 
 运行的结果：
 
-![](https://cdn.jsdelivr.net/gh/silently9527/images/2823792745-5fc36b8194b78_articlex)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//2823792745-5fc36b8194b78_articlex)
 
 
 #### 4.3 本节小结
