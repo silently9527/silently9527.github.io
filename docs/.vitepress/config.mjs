@@ -3,6 +3,7 @@ import { fileURLToPath, URL } from "node:url";
 import { getSidebar } from "./utils/getSidebar";
 export default defineConfig({
   title: "Herman's Notes",
+  base: "https://cdn.jsdelivr.net/gh/silently9527/silently9527.github.io@pages/",
   titleTemplate: "Herman",
   // md 文件根目录
   srcDir: "./src",
