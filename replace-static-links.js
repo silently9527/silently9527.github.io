@@ -7,6 +7,7 @@ const BASE_URL = 'https://cdn.jsdelivr.net/gh/silently9527/silently9527.github.i
 function replaceLinks(filePath) {
     let content = fs.readFileSync(filePath, 'utf-8');
     content = content.replace(/"\/assets\//g, `"${BASE_URL}assets/`);
+    content = content.replace(/\(\/assets\//g, `(${BASE_URL}assets/`);
     fs.writeFileSync(filePath, content, 'utf-8');
 }
 
