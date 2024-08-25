@@ -26,5 +26,10 @@
     "dayjs": "^1.11.9",
     "gitalk": "^1.8.0",
     "gray-matter": "^4.0.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "vitepress": "npm:@cononico/vitepress@1.2.2-beta"
+    }
   }
 }
