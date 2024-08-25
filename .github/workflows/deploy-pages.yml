@@ -50,16 +50,3 @@ jobs:
           folder: docs/.vitepress/dist
           token: ${{ secrets.WORKFLOW_TOKEN }}
           clean: true
-
-      - name: Replace static resource links with jsDelivr CDN links
-        run: |
-          find ./docs/.vitepress/dist -name "*.html" -exec sed -i 's|/assets/|https://cdn.jsdelivr.net/gh/silently9527/${{ github.repository }}@pages/assets/|g' {} +
-
-      - name: Commit changes to gh-pages branch
-        run: |
-          git config --global user.email "380303318@qq.com"
-          git config --global user.name "Herman"
-          git checkout pages
-          git add .
-          git commit -m "Replace static resource links with jsDelivr CDN"
-          git push origin pages

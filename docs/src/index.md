@@ -9,7 +9,7 @@ hero:
   text: 专注 & 洞察 & 分享
   tagline: 个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。
   image:
-    src: /logo.png
+    src: https://cdn.jsdelivr.net/gh/silently9527/silently9527.github.io@pages/logo.png
     alt: Logo
   actions:
     - theme: brand
