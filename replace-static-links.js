@@ -16,7 +16,7 @@ function traverseDir(dir) {
         const fullPath = path.join(dir, file);
         if (fs.statSync(fullPath).isDirectory()) {
             traverseDir(fullPath);
-        } else if (fullPath.endsWith('.html')) {
+        } else if (fullPath.endsWith('.html') || fullPath.endsWith('.css') || fullPath.endsWith('.js')) {
             replaceLinks(fullPath);
         }
     });
