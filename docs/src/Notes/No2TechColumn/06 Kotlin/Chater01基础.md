@@ -1,0 +1,207 @@
+#### 变量
+Kotlin声明变量的关键字有两个
+
+* val: 不可变引用，相当于java中final修饰的变量
+* var: 可变引用
+
+举例：
+```
+val name:String = "Herman";
+val age = 20;
+```
+在这个例子中，变量name明确指定了类型是String，变量age没有指定类型，这两种方式都正确，Kotlin的编译器可以根据初始化的值推断出age的类型，所以在定义变量的时候可以不用指定变量的类型
+
+再看下面这个例子：
+```
+val age = 20
+age = “Herman”
+```
+这里存在两个问题导致编译不通过：第一，由于变量会被改变，需要改成var；第二，在第一次赋值的时候编译器推断出age的类型应该是Int，在修改的是时候就不能被赋值String
+
+
+#### 枚举
+
+枚举的定义需要使用关键字 `enum class`, Kotlin中的枚举和Java一样可以拥有属性和构造方法
+
+```
+enum class Color(val r: Int = 0, val g: Int = 0, val b: Int = 0) {
+    RED(255, 0, 0), GREEN(g = 255), BLUE(b = 255);
+
+    fun sum() = r + g + b
+
+    fun sum2(): Int {
+        return r + g + b
+    }
+}
+```
+这里的枚举Color的构造方法有三个参数`r,g,b`，如果参数没有传默认是0，然后再构建对象的时候可以指定变量的名字赋值（在后面类相关的部分会再次出现）；
+
+定义了两个方法sum，两种写法都支持
+
+
+
+#### when
+when语句类似于Java中的switch语句，但用法会更多一些
+
+```
+fun getWarmth(color: Color) =
+    when (color) {
+        Color.RED, Color.GREEN -> "warm"
+        Color.BLUE -> "cold"
+    }
+println(getWarmth(Color.BLUE))
+```
+
+> 与java中的switch只能支持枚举，数字，字符串，而when支持任意类型
+
+上面的例子还可以改写成不带参数的写法，这种写法每个分支条件就是布尔表达式（类似于java中的if-elseif）
+
+```
+fun getWarmth(color: Color) =
+    when {
+        color == Color.RED || color == Color.GREEN -> "warm"
+        color == Color.BLUE -> "cold"
+        else -> throw IllegalArgumentException()
+    }
+```
+
+
+
+#### 迭代
+
+while的用法和Java相同
+
+```
+while(condition){
+
+}
+
+do{
+
+}while(condition)
+```
+
+---
+
+在Kotlin中引入了区间,`var oneToTen=1..10`这个表示1到10的区间,这个区间是闭合的,也就是说包含10
+
+```
+fun testFor() {
+    for (i in 1..10) {
+        print("$i,")
+    }
+}
+```
+
+![](https://raw.githubusercontent.com/silently9527/images/main/202408161913878.png)
+
+由于区间是闭合的, 包含了10, 在实际情况下我们更常用是不包含, 可以使用`until`
+
+```
+fun testForUtil() {
+    for (i in 'A' until 'F') {
+        print("$i,")
+    }
+}
+```
+
+输出结果: `A,B,C,D,E,`
+
+上面的例子如果我们可以想要倒序输出,步长2,可以是使用 `downTo`, `step`实现
+```
+fun testForDownTo() {
+    for (i in 10 downTo 1 step 2) {
+        print("$i,")
+    }
+}
+```
+![](https://raw.githubusercontent.com/silently9527/images/main/202408161918697.png)
+
+---
+
+下面我们想要迭代一个List, 同时还需要访问List的index, for循环改如何写
+```
+fun testForList() {
+    val list = listOf("Herman", "herman7z.site")
+    for ((index, value) in list.withIndex()) {
+        println("index:$index, value:$value")
+    }
+}
+```
+
+![](https://raw.githubusercontent.com/silently9527/images/main/202408161933380.png)
+
+
+迭代map, 同时访问key,value
+
+```
+fun testForMap() {
+    val map = TreeMap<Char, Int>();
+    for (i in 'A' until 'F') {
+        map[i] = i.code;
+    }
+
+    for ((key, value) in map) {
+        println("key:$key, value:$value")
+    }
+}
+```
+
+> `in`还可以用来判断元素在集合和区间是否存在,`println(1 in 1..10)`
+
+
+
+#### 异常处理
+在Java中需要区分受检异常和不受检异常, 比如IO操作的方法通过都会抛出IOException, 应用程序必须要处理,这导致了很多模式代码, 所以在Kotlin中不在区分受检异常和不受检异常,无需在方法后面trhow 异常.
+
+另外try-catch语句依然可以像if-else语句一样作为一个表达式, 最后一行就是表达式的返回值
+
+```
+fun testTryCatch() {
+    val result = try {
+        val i = 5 / 0;
+    } catch (e: Exception) {
+        0;
+    }
+
+    println(result)
+}
+```
+
+上面的代码运行时遇到了异常进入到了catch分支, 最后一行是0, 所以result的结果就是0
+
+
+
+#### 字符串
+在Java中我们想要使用字符串模版是通过String.format来实现，接下来看Kotlin如何的字符串模版
+
+```
+val name = "Herman"
+println("Hello, $name")
+```
+从上面的我们可以看出Kotlin的模版确实要更简洁，直接使用`$`来引用变量，如果想要在模版中输出$字符，需要使用转义：`\$`; 不仅如此，在模版中来可以写入一下逻辑判断
+
+```
+val age = 10;
+println("Hello, ${if(age>20) "Herman" else "Kotlin"}")
+```
+
+
+在Java中的`String.split`方法的参数是正则表达式,所以在执行特殊的分隔符时主要转义, Kotlin重载了这个方法
+```
+println("123.abc".split(".")) //这里的. 作为了普通字符串
+```
+输出的结果
+```
+[1231, 12312]
+```
+
+当我们需要使用正则表达式来分割是可以通过一下方式调用
+```
+println("123.abc".split("\\.".toRegex()))
+```
+
+这里使用了双斜杠转义操作, 也可以是三重引号来去掉转义,看起来会更加直接
+```
+println("123.abc".split("""\.""".toRegex()))
+```
