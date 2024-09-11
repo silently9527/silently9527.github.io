@@ -1,3 +1,13 @@
+---
+title: ExchangeSdk使用指南
+author: Herman
+updateTime: 2024-09-05 21:34
+desc: 交易所SDK
+categories: Trader
+tags: Trader/ExchangeSdk
+outline: deep
+---
+
 作为长期混迹在合约市场的老韭菜来说，已不能满足与手动下单来亏钱，必须得通过脚本来加速，为了达到这个目的就产生了项目。目前封装的主要是合约的API接口，不支持现货交易。
 
 

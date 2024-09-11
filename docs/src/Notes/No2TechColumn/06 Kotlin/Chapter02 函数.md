@@ -1,0 +1,253 @@
+---
+title: Chapter02 函数
+author: Herman
+updateTime: 2024-09-11 21:34
+desc: Kotlin 基础入门
+categories: Kotlin
+tags: Kotlin
+outline: deep
+---
+
+#### 定义函数
+
+在上一节中其实已经使用到了函数,这里来正式看看Kotlin中定义一个函数,包含返回类,以及参数
+
+```
+fun max(a: Int, b: Int): Int {
+    return if (a > b) a else b;
+}
+```
+> 注意，max方法中的if没有使用return,这需要提一下,Kotlin中的if是表达式,有返回值，默认表达式的最后一行就是返回值；
+> try-catch也是表达式,例子在上一节中已经展示了
+
+Kotlin没有再新写集合类,依旧使用的是Java的集合类,只是对Java的集合类进行了增强,
+
+```
+fun testFun() {
+    val siteInfo = listOf("Herman", "http://herman7z.site")
+    println(siteInfo)
+}
+```
+
+![](https://raw.githubusercontent.com/silently9527/images/main/202408162107863.png)
+
+> listOf方法就是Kotlin的增强,具体如何实现的后面在来看, kotlin也对不同类型的集合实现了toString, 输出更能够看的懂
+
+#### 命名参数、默认值参数
+
+对上面的函数testFun添加两个参数, 代码如下:
+
+```
+fun testFun(a: String = "None", b: String = "None") {
+    val siteInfo = listOf("Herman", "http://herman7z.site", a, b)
+    println(siteInfo)
+}
+```
+
+在Java中是不能够给函数的参数指定默认值的, Kotlin实现了这点, 上面的函数a、b如果在调用方没有传入参数时就使用默认值
+
+接下来我们看看调用这个函数
+1. 由于有默认值,所以我们可以不需要传入参数 `testFun()`
+   输出的结果:
+
+```
+[Herman, http://herman7z.site, None, None]
+```
+
+2. 常规方式调用必须按照参数的顺序 ` testFun("aaa", "bbb")`
+
+```
+[Herman, http://herman7z.site, aaa, bbb]
+```
+
+3. 可以指定给某个参数赋值,比如 `testFun(b = "123")`
+
+```
+[Herman, http://herman7z.site, None, 123]
+```
+
+> 注意:参数的默认值是被编译到被调用的函数中的,而不是调用方.
+
+
+#### 顶层函数
+Java是面向对象的语言,所有的方法都必须存在在某个类中作为成员方法,但是在实际的使用过程中会发现有些方法不适合作为任何类的成员方法,所以才有了很多的Utils
+
+在Kotlin中可以不再需要使用Utils, 可以把这些函数直接放在代码文件(文件名:Chapter02.kt)的顶层, 如下:
+
+```
+class Chapter02 {
+}
+
+fun testFun(a: String = "None", b: String = "None") {
+    val siteInfo = listOf("Herman", "http://herman7z.site", a, b)
+    println(siteInfo)
+}
+```
+
+在实际编译后会更具文件名称生产一个Java类 `Chapter02Kt`, 其中`testFun`会被编译出这个Java类的静态方法, 所以如果在Java类中需要调用Kotlin的Chapter02
+
+```
+
+public class Test {
+    public static void main(String[] args) {
+        Chapter02Kt.testFun("aaa","bbb");
+    }
+}
+
+```
+
+#### 顶层属性
+与函数一样,属性也可以放在顶层,最终也会被编译成类的静态属性, 如果属性使用的`val`那么就只有一个getter方法, 如果使用的`var`就会有getter、setter;
+
+在Java中使用`public static final`来定义一个常量, Kotlin中使用 `const`来实现
+
+```
+const val HERMAN_BLOG = "http://herman7z.site"
+class Chapter02 {
+}
+```
+
+在Java中调用
+```
+public class Test {
+    public static void main(String[] args) {
+        System.out.println(Chapter02Kt.HERMAN_BLOG);
+    }
+}
+```
+
+
+#### 扩展函数
+Kotlin的另一个特点就是可以给现有的类创建扩展函数和属性,无需修改原来的类,这里我们定一个类Chapter02
+```
+class Chapter02 {
+}
+```
+
+然后我们通过扩展函数的方式来给Chapter02添加一个`getAddress`方法
+
+```
+fun Chapter02.getAddress():String ="http://herman7z.site"
+```
+这里可以看到扩展函数和普通函数的定义唯一不同就是多了个前缀`Chapter02`,指定是给哪个类添加扩展函数
+```
+fun main() {
+   println(Chapter02().getAddress())
+}
+```
+
+
+接下来把这个例子在稍微改动一点点,我们在`Chapter02`类中添加一个方法`buildAddress`, 然后在扩展函数中可以使用`this`直接调用这个方法,所以扩展函数可以使用`this`来引用类的原来的属性或者方法.
+
+```
+class Chapter02 {
+    fun buildAddress(): String {
+        return "http://herman7z.site";
+    }
+}
+
+fun Chapter02.getAddress(): String = this.buildAddress();
+
+fun main() {
+    println(Chapter02().getAddress())
+}
+```
+
+> 注意:
+> 1. 扩展函数不能够引用类的私有和受保护的成员
+> 2. 扩展函数是Kotlin提供的高级语法糖,实质上扩展函数会被编译成Java类的静态函数,他会把调用对象作为静态函数第一个参数;所以如果在Java中调用扩展函数需要把目标对象传入到静态函数
+> 3. 扩展函数的静态性质导致扩展函数是不能够被继承, 不能够被重写
+
+
+对于我们定义的扩展函数,Kotlin不会自动全局导入,需要我们在使用的时候导入
+```
+import org.herman.kotlin.getAddress
+
+fun main() {
+    Chapter02().getAddress()
+}
+```
+
+由于项目会定义很多扩展函数,所以可能会出现命名冲突,出现这种情况的时候可以是用 `as` 关键字
+
+```
+import org.herman.kotlin.getAddress as addr
+
+fun main() {
+    Chapter02().addr()
+}
+```
+
+
+#### 扩展属性
+扩展属性可以为现有的类添加属性, 使用的属性语法来访问, 尽管被称为属性,但是不会有任何状态,不会初始值,因为静态的性质,没有合适的地方来存储值.
+
+依旧是对Chapter02类进行扩展, 在使用时与访问普通属性没有区别
+```
+val Chapter02.name: String
+    get() = "Herman"
+    
+fun main() {
+    println(Chapter02().name)
+}
+```
+
+
+#### 可变参数
+函数的参数可以是任意个数, 使用关键字`vararg`, 来看看kotlin库函数listOf如何使用的可变参数
+
+```
+public fun <T> listOf(vararg elements: T): List<T> = if (elements.size > 0) elements.asList() else emptyList()
+```
+
+使用的方式很简单
+
+```
+fun main(args: Array<String>) {
+    val col = listOf("a", "b", "c", *args)
+}
+```
+
+> 这里使用了展开运算符`*`, 这个功能Java没有
+
+
+
+#### 中辍调用
+在中辍调用中,没有添加额外的分隔符,函数名后面直接给参数,什么的函数需要使用关键字`infix`修饰
+
+
+我们先来给Int类添加一个扩展函数`add`, 使用关键字`infix`修饰这个函数使之支持中辍调用
+
+```
+infix fun Int.add(value: Int): Int = this.plus(value)
+
+fun main() {
+    println(10.add(5)) //普通调用
+    println(10 add 5) //中辍调用
+}
+```
+
+
+#### 局部函数
+在Java类中,可以抽离很多的小的函数,但是可能这些函数的作用域可以更小, 在Kotlin中就可以使用局部函数来处理
+
+```
+class User(val name: String, val address: String)
+
+fun save(user: User) {
+    fun validate(value: String, field: String) {
+        if (Objects.isNull(value) || value.isEmpty()) {
+            throw IllegalArgumentException("$field can not empty")
+        }
+    }
+
+    validate(user.name,"name")
+    validate(user.address,"address")
+    //save user
+}
+```
+
+在这个例子中`validate`就是一个局部函数,作用域只在save方法中; 如果使用Java来实现`validate`函数就只能放到类级别,与save同级, 但是这个`validate`方法只会save方法调用,就放大了函数的作用域
+
+
+

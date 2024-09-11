@@ -1,3 +1,14 @@
+---
+title: Chapter01 基础
+author: Herman
+updateTime: 2024-09-10 21:34
+desc: Kotlin 基础入门
+categories: Kotlin
+tags: Kotlin
+outline: deep
+---
+
+
 #### 变量
 Kotlin声明变量的关键字有两个
 
