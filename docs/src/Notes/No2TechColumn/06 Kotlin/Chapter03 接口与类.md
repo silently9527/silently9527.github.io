@@ -1,0 +1,240 @@
+---
+title: Chapter03 接口与类
+author: Herman
+updateTime: 2024-09-18 12:34
+desc: Kotlin 基础入门
+categories: Kotlin
+tags: Kotlin
+outline: deep
+---
+
+
+#### 接口
+
+Kotlin接口定义依旧使用`interface`
+
+```
+interface Animal {
+    fun say()
+}
+
+class Dog : Animal {
+    override fun say() {
+        println("汪汪...")
+    }
+}
+
+```
+> 1. Kotlin使用冒号来替代Java中的extend,implements
+> 2. Kotlin中override关键字是强制要求的,不能省略
+
+Java中的接口允许拥有默认实现,Kotlin中也是同样支持的
+
+```
+interface Animal {
+    fun say() = println("Animal say:^%&**&&")
+}
+```
+
+现在让我们假设同样存在定义了一个`say`的实现Human,然后定义Man来实现这两个接口,默认Man会调用哪个say方法呢? 代码如下:
+```
+interface Human {
+    fun say() = println("Human say:Hello")
+}
+
+class Man : Human, Animal {
+
+}
+```
+
+测试后的接口过是任何一个都不会被调用,编译阶段就会报错,Man必须实现自己的say,
+```
+class Man : Human, Animal {
+    override fun say() {
+        super<Animal>.say();
+        super<Human>.say();
+    }
+}
+```
+
+#### open,final,abstract
+Java中只有显示的指定了final,才能够控制类和方法不被重写,这就有可能导致脆弱基类的问题(对基类的方法重写导致行为不正常),所以Kotlin中方法默认都是final, 如果需要支持重写需要使用手动使用open修饰
+
+```
+open class Man : Human, Animal {
+    override fun say() {
+        super<Animal>.say();
+        super<Human>.say();
+    }
+
+    open fun walkSpeed() {
+        println("walk quick")
+    }
+}
+
+class OldMan : Man() {
+    override fun say() {
+        println("OldMan say:Hello, girl")
+    }
+
+    override fun walkSpeed() {
+        println("walk slow")
+    }
+}
+
+```
+
+其中`Man`需要被继承所有需要使用`open`修饰, `walkSpeed`需要被重写也需要使用`open`修饰; 接口中的方法和抽象类中的抽象方法默认是open,无需在指定
+
+#### 可见性修饰符
+
+Kotlin与Java中的可见性修饰符一样,使用`public`, `private`, `protected`, 但是默认值不同, Kotlin中默认值是public
+
+#### 内部类
+与Java中的内部类区别在于Kotlin中的内部类默认情况下是不能够访问外部类的实例, 这和Java中的静态内部类很相似
+
+```
+class Woman : Human {
+    override fun say() {
+        val info = Info("Taomm", 21)
+        println("Woman say: My name is ${info.name}, age is ${info.age}")
+    }
+
+    class Info(val name: String, val age: Int)
+}
+```
+
+这里抽象出了个人信息的内部类Info, 但是在这个Info中是没有办法访问Woman中的成员,如果需要访问时需要使用关键字`inner`
+
+
+```
+class Woman : Human {
+    val address: String = "Beijing";
+
+    override fun say() {
+        val info = Info("Taomm", 21)
+        println("Woman say: My name is ${info.name}, age is ${info.age}, address is ${info.getAddress()}")
+    }
+
+
+    inner class Info(val name: String, val age: Int) {
+        fun getAddress(): String = this@Woman.address
+    }
+}
+
+```
+
+访问外部类的时候需要通过`this@Woman`去操作
+
+#### 密封类
+有时候需要把子类限制在父类中, 作为父类的内部类, 方便管理,这时候就需要使用关键字`sealed`修饰父类, `sealed`关键字隐含了这个类是open, 所以无需在显式添加open关键字
+
+
+
+
+#### 构造方法
+Kotlin中构造方法使用关键字`constructor`, 如果需要调用重载的构造方法可以使用`this()`, 如果需要调用父类的构造方法可以使用`supper()`
+
+```
+class Person {
+    var name: String
+    var age: Int
+
+    constructor(_name: String) {
+        this(_name, 20)
+    }
+
+    constructor(_name: String, _age: Int) {
+        name = _name
+        age = _age
+    }
+}
+```
+在Java中经常会出现多个重载的构造方法, 与上面的两个构造方法类似, 在Kotlin中其实可以通过参数默认值以及参数命名替代掉,优化后的代码
+```
+class Person {
+    var name: String
+    var age: Int
+
+    constructor(_name: String, _age: Int = 20) {
+        name = _name
+        age = _age
+    }
+}
+
+fun main(args: Array<String>) {
+    Person(_name = "Herman") //根据参数名字设置值
+}
+```
+
+当我们的类只有一个构造函数的时候,可以继续简化,把成员属性和构造函数合并到一起
+
+```
+class Person (var name: String, var age: Int = 20) 
+```
+
+类的初始化工作除了在构造函数中进行,还可以使用初始化语句块 `init`
+```
+class Person (var name: String, var age: Int = 20){
+    init {
+        //todo 初始化工作
+    }
+}
+```
+
+如果你想要自己的类不能够被其他代码创建,需要把构造方法标记为private
+```
+class Person private constructor(var name: String, var age: Int = 20) 
+```
+
+> 1. Kotlin中创建对象的时候不需要使用new关键字,直接调用构造方法即可.
+> 2. 如果一个类没有任何构造方法,与Java一样Kotlin默认也会生成一个无参的构造方法
+
+
+
+#### 接口中声明属性
+Kotlin允许在接口中什么属性, 由于接口本身是不存储状态的,所以这个属性需要在子类来实现,具体是通过一个字段来存储,还是通过其他方式来获取就需要靠子类来实现
+
+```
+interface Human {
+    val email:String
+    val name:String
+        get() = email.substringBefore("@")
+}
+```
+这个接口可以看到,接口中的属性依然可以拥有`getter/setter`, `name`给了默认的getter, 那子类应该如何实现email属性呢?
+
+1. 直接通过一个变量来存储
+
+```
+class Man(override val email: String) : Human 
+```
+
+2. 提供getter
+
+```
+class Man : Human{
+    override val email: String
+        get() = getEmailFromDb()
+
+    private fun getEmailFromDb(): String {
+        TODO("database query")
+    }
+}
+```
+
+#### 属性访问器(getter/setter)
+Kotlin中类的属性默认都提供了getter/setter, 然后在使用的时候可以直接访问属性,无需像Java一样去调用getter、setter方法;
+
+```
+class Counter{
+    var count:Int=0
+        private set
+
+    fun inc(){
+        count++;
+    }
+}
+```
+
+这里定义了一个计数器,如果需要获取当前的计数可以直接访问属性`Counter().count`, 而count字段不能够被直接修改,只能调用`inc`方法,所以把这个setter设置成了`private`
