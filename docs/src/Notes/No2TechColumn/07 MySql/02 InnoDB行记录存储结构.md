@@ -114,5 +114,5 @@ Compact行格式针对这种情况的处理方式是在真实的数据处记录�
 `Dynamic`,`Compressed`与`Compact`很像，只是在溢出列的处理有些差异，他们只会在真实数据列中使用20个字节存储溢出页的地址
 
 
+原文链接: [http://herman7z.site](http://herman7z.site)
 
-欢迎大家在评论区留言讨论
