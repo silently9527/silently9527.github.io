@@ -64,8 +64,7 @@ public class ReceiveAgent implements Agent, MessageHandler{
 ##### 1. 消息的结构
 消息结构和OneToOneRingBuffer中相同
 
-![b7386ae826c42923f823ff1016fb611f.png](evernotecid://6FF9FFB1-4418-4BC7-B513-008A9C1B4B1C/appyinxiangcom/27568155/ENResource/p36)
-
+![](https://cdn.jsdelivr.net/gh/silently9527/images//202510212054895.png)
 
 * MsgLength: 消息的长度，占用4个字节
 * MsgTypeId: 消息的类型，占用4个字节，
@@ -76,7 +75,7 @@ public class ReceiveAgent implements Agent, MessageHandler{
 
 ##### 2. 核心指针
 
-![f984d2ab88be1f055624a27243f175fb.png](evernotecid://6FF9FFB1-4418-4BC7-B513-008A9C1B4B1C/appyinxiangcom/27568155/ENResource/p35)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//202510212054701.png)
 
 capacity = dataCapacity + trailerLength, BroadcastTransmitter会在构造方法中计算出实际存放数据大小的空间dataCapacity，所以在AtomicBuffer创建的时候需要考虑
 ```
@@ -94,7 +93,7 @@ public BroadcastTransmitter(final AtomicBuffer buffer){
 
 ##### 3. 发送消息 BroadcastTransmitter
 
-![1621de6a42a3d6105d1e93985ab11e1d.png](evernotecid://6FF9FFB1-4418-4BC7-B513-008A9C1B4B1C/appyinxiangcom/27568155/ENResource/p37)
+![202510212054007](https://cdn.jsdelivr.net/gh/silently9527/images//202510212054007.png)
 
 当需要发送的消息长度大于剩余的空间大小后会写入填充消息(type=PADDING_MSG_TYPE_ID)，
 
@@ -165,7 +164,7 @@ public boolean receiveNext(){
 
 消费者的速度是否能够跟上生产者, `cursor + capacity > tail` 表示消费者能跟上
 
-![e29849860d7824c00d9ca6237b5c9b6f.png](evernotecid://6FF9FFB1-4418-4BC7-B513-008A9C1B4B1C/appyinxiangcom/27568155/ENResource/p38)
+![202510212051106](https://cdn.jsdelivr.net/gh/silently9527/images//202510212051106.png)
 
 如果生产者的速度大于消费者，那么最终tail会比cursor快一圈，这时候 `BroadcastReceiver` 会重新更新cursor，然后从新的cursor开始读取数据，因此agrona的广播模式会出现丢数据的情况。
 

@@ -3,7 +3,7 @@ Agrona 使用sun.misc.Unsafe和 ，sun.nio.ch.SelectorImpl.selectedKeys这将导
 Agrona 默认情况下将使用系统字节顺序。如果您的组件以不同的字节序运行，则应指定在使用 DirectBuffer 进行读取或写入时使用的字节序。
 
 
-![f8e73896979596c78e2a7078e6601b8a.png](evernotecid://6FF9FFB1-4418-4BC7-B513-008A9C1B4B1C/appyinxiangcom/27568155/ENResource/p26)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//202510212058902.png)
 
 Agrona提供了三种实现：
 * UnsafeBuffer: 固定大小缓冲区。你首先分配给定大小的 ByteBuffer。提供尽可能最佳的性能，但如果所需容量超过可用容量，则不会调整自动大小，将抛出异常`IndexOutOfBoundsException`。

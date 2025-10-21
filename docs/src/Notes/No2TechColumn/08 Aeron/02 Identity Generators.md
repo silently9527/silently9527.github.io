@@ -1,7 +1,7 @@
 #### Snowflake概要
 Snowflake是一种分布式全局唯一ID的算法，最初是由Twitter创建，看图：
 
-![5363f0db689819b1c93c9d08ecdc0965.png](evernotecid://6FF9FFB1-4418-4BC7-B513-008A9C1B4B1C/appyinxiangcom/27568155/ENResource/p25)
+![](https://cdn.jsdelivr.net/gh/silently9527/images//202510212059170.png)
 
 Snowflake由64bit组成，共有4部分组成：
 
