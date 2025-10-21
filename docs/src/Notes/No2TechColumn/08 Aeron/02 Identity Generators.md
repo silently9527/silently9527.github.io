@@ -1,3 +1,14 @@
+---
+title: 02 Identity Generators
+author: Herman
+updateTime: 2025-10-20 12:34
+desc: Aeron
+categories: Aeron
+tags: Aeron
+outline: deep
+---
+
+
 #### Snowflake概要
 Snowflake是一种分布式全局唯一ID的算法，最初是由Twitter创建，看图：
 

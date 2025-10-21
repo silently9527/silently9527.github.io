@@ -1,3 +1,14 @@
+---
+title: 01 Agents & Idle Strategies
+author: Herman
+updateTime: 2025-10-20 12:34
+desc: Aeron
+categories: Aeron
+tags: Aeron
+outline: deep
+---
+
+
 考虑实现一个简单的功能：一个线程每隔1s打印 `Hello Agrona Agent`, 使用Java Runnable实现代码如下：
 
 ```

@@ -1,3 +1,13 @@
+---
+title: 04 RingBuffer
+author: Herman
+updateTime: 2025-10-20 12:34
+desc: Aeron
+categories: Aeron
+tags: Aeron
+outline: deep
+---
+
 Agrona提供了环形缓冲区工具类，本篇主要从基本使用和源码的角度来学习OneToOneRingBuffer、ManyToOneRingBuffer
 
 

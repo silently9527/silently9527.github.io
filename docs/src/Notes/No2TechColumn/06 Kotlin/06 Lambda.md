@@ -1,3 +1,15 @@
+---
+title: 06 Lambda
+author: Herman
+updateTime: 2024-09-18 12:34
+desc: Kotlin 基础入门
+categories: Kotlin
+tags: Kotlin
+outline: deep
+---
+
+
+
 在前面的内容中我们曾用匿名内部类的形式实现了按钮button的点击事件监听,其实还有一种更加简单的方式,就是使用lambda表达式.
 lambda就是允许把函数当作值来对待,可以直接传递函数,而不需要声明一个类再传递这个类的实例
 

@@ -1,3 +1,13 @@
+---
+title: 05 Broadcast
+author: Herman
+updateTime: 2025-10-20 12:34
+desc: Aeron
+categories: Aeron
+tags: Aeron
+outline: deep
+---
+
 #### BroadcastTransmitter、BroadcastReceiver使用
 
 `OneToOneRingBuffer`和`ManyToOneRingBuffer`支持一个或多个生产者，但只有一个消费者。我们有时候可能需要一个生产者对多消费者 - Agrona为此提供了`BroadcastTransmitter`和`BroadcastReceiver`

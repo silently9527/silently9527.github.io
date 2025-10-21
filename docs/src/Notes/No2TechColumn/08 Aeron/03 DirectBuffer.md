@@ -1,3 +1,13 @@
+---
+title: 03 Direct Buffer
+author: Herman
+updateTime: 2025-10-20 12:34
+desc: Aeron
+categories: Aeron
+tags: Aeron
+outline: deep
+---
+
 Agrona 使用sun.misc.Unsafe和 ，sun.nio.ch.SelectorImpl.selectedKeys这将导致 JVM 在启动时引发一些有关非法反射访问的警告日志条目。要删除警告，请添加以下 JVM 参数：--add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens jdk.unsupported/sun.misc=ALL-UNNAMED
 
 Agrona 默认情况下将使用系统字节顺序。如果您的组件以不同的字节序运行，则应指定在使用 DirectBuffer 进行读取或写入时使用的字节序。
