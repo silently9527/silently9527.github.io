@@ -10,6 +10,7 @@ outline: deep
 
 ### 前言
 我们平时在向MySQL数据库表中插入数据时，实际数据是以行记录的格式存储在磁盘上的，本篇我们就一起来详细的了解下MySQL的行记录格式，理解了行记录的格式有助于我们后面了解MySQL如何快速在页中定位出行记录，以及MySQL的版本控制链，事务隔离级别等等，行记录格式是许多MySQL核心知识的基础。
+![](https://cdn.jsdelivr.net/gh/silently9527/images//202510221153746.png)
 
 ### InnoDB行记录类型
 MySQL中总共提供了四种类型的行格式：`Compact`,`Redundant`,`Dynamic`,`Compressed`。

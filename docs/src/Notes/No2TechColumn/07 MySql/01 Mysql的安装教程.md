@@ -1,5 +1,5 @@
 ---
-title: 01 Mysql的安装及开启远程访问
+title: 01 Mysql的安装教程
 author: Herman
 updateTime: 2024-08-11 21:34
 desc: 本篇文章主要记录两种MySQL的安装方式，以及如何重置用户登陆密码，如何开启远程访问
