@@ -1,5 +1,5 @@
 ---
-title: 04 Nginx安装的详细教程
+title: 04 Nginx安装教程
 author: Herman
 updateTime: 2024-08-11 21:34
 desc: Nginx安装的详细教程

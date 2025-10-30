@@ -6,4 +6,4 @@ showComment: false
 
 # Hi😃
 
-这里记录了笔者学习中间件相关的笔记、Redis
+这里记录了笔者学习Redis相关的笔记
