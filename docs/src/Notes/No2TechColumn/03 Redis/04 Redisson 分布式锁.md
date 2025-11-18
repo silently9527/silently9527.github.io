@@ -23,63 +23,64 @@ Redisson 的分布式锁是基于 Redis 的 Lua 脚本和一系列封装良好�
 #### 1. 加锁的 Lua 脚本
    核心的加锁逻辑是通过一段 Lua 脚本完成的，这保证了原子性。
 
-```java
--- KEYS[1]: 锁的Key名称，比如 "myLock"
--- ARGV[1]: 锁的超时时间（毫秒）
--- ARGV[2]: 客户端唯一标识（UUID + 线程ID）
+```lua
+# KEYS[1]: 锁的Key名称，比如 "myLock"
+# ARGV[1]: 锁的超时时间（毫秒）
+# ARGV[2]: 客户端唯一标识（UUID + 线程ID）
 
--- 情况1：锁不存在（第一次加锁）
+# 情况1：锁不存在（第一次加锁）
 if (redis.call('exists', KEYS[1]) == 0) then
-    -- 创建Hash结构，field为客户端ID，value为1（重入次数）
+    # 创建Hash结构，field为客户端ID，value为1（重入次数）
     redis.call('hincrby', KEYS[1], ARGV[2], 1);
-    -- 设置锁的过期时间
+    # 设置锁的过期时间
     redis.call('pexpire', KEYS[1], ARGV[1]);
-    return nil; -- 加锁成功
+    return nil; # 加锁成功
 end;
 
--- 情况2：锁已存在，且是当前客户端持有的（重入）
+# 情况2：锁已存在，且是当前客户端持有的（重入）
 if (redis.call('hexists', KEYS[1], ARGV[2]) == 1) then
-    -- 重入次数 +1
+    # 重入次数 +1
     redis.call('hincrby', KEYS[1], ARGV[2], 1);
-    -- 重置过期时间
+    # 重置过期时间
     redis.call('pexpire', KEYS[1], ARGV[1]);
-    return nil; -- 重入成功
+    return nil; # 重入成功
 end;
 
--- 情况3：锁被其他客户端持有
--- 返回锁的剩余存活时间（毫秒）
+# 情况3：锁被其他客户端持有
+# 返回锁的剩余存活时间（毫秒）
 return redis.call('pttl', KEYS[1]);
 ```
 
 #### 2. 解锁的 lua 脚本
 
-```java
--- KEYS[1]: 锁的Key名称，比如 "myLock"
--- KEYS[2]: 发布订阅的频道名称，用于通知其他等待的客户端
--- ARGV[1]: 发布的消息内容（通常是锁释放的通知）
--- ARGV[2]: 锁的超时时间（毫秒）
--- ARGV[3]: 客户端唯一标识（UUID + 线程ID）
+```lua
+# KEYS[1]: 锁的Key名称，比如 "myLock"
+# KEYS[2]: 发布订阅的频道名称，用于通知其他等待的客户端
+# ARGV[1]: 发布的消息内容（通常是锁释放的通知）
+# ARGV[2]: 锁的超时时间（毫秒）
+# ARGV[3]: 客户端唯一标识（UUID + 线程ID）
 
--- 步骤1：验证锁的所有权
+# 步骤1：验证锁的所有权
 if (redis.call('hexists', KEYS[1], ARGV[3]) == 0) then
-    return nil;  -- 当前客户端不持有该锁，返回nil表示操作无效
+    return nil;  # 当前客户端不持有该锁，返回nil表示操作无效
 end;
 
--- 步骤2：减少重入计数
+# 步骤2：减少重入计数
 local counter = redis.call('hincrby', KEYS[1], ARGV[3], -1);
 
--- 步骤3：判断是否完全释放锁
+# 步骤3：判断是否完全释放锁
 if (counter > 0) then
-    -- 情况1：还有重入次数，未完全释放
-    redis.call('pexpire', KEYS[1], ARGV[2]);  -- 刷新锁的过期时间
-    return 0;  -- 返回0表示重入计数减1，但锁仍被持有
+    # 情况1：还有重入次数，未完全释放
+    redis.call('pexpire', KEYS[1], ARGV[2]);  # 刷新锁的过期时间
+    return 0;  # 返回0表示重入计数减1，但锁仍被持有
 else
-    -- 情况2：重入次数为0，完全释放锁
-    redis.call('del', KEYS[1]);  -- 删除锁键
-    return 1;  -- 返回1表示锁已完全释放
+    # 情况2：重入次数为0，完全释放锁
+    redis.call('del', KEYS[1]);  # 删除锁键
+    redis.call('publish', KEYS[2], ARGV[1]); # 发布锁释放通知
+    return 1;  # 返回1表示锁已完全释放
 end;
 
-return nil;  -- 默认返回（理论上不会执行到这里）
+return nil;  # 默认返回（理论上不会执行到这里）
 ```
 
 ### 三、可重入锁实现
@@ -111,7 +112,7 @@ Redisson 提供了一个优雅的解决方案：看门狗机制。
 
 优点：只要 JVM 进程没有崩溃，即使业务执行时间很长，锁也不会因为超时而被意外释放，极大地增强了安全性。
 
-```java
+```lua
 private RFuture<Boolean> tryAcquireOnceAsync(long waitTime, long leaseTime, TimeUnit unit, long threadId) {
     RFuture<Boolean> acquiredFuture;
     if (leaseTime > 0) {
