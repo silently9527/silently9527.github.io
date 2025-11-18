@@ -23,7 +23,7 @@ Redisson 的分布式锁是基于 Redis 的 Lua 脚本和一系列封装良好�
 #### 1. 加锁的 Lua 脚本
    核心的加锁逻辑是通过一段 Lua 脚本完成的，这保证了原子性。
 
-```lua
+```java
 -- KEYS[1]: 锁的Key名称，比如 "myLock"
 -- ARGV[1]: 锁的超时时间（毫秒）
 -- ARGV[2]: 客户端唯一标识（UUID + 线程ID）
@@ -53,7 +53,7 @@ return redis.call('pttl', KEYS[1]);
 
 #### 2. 解锁的 lua 脚本
 
-```lua
+```java
 -- KEYS[1]: 锁的Key名称，比如 "myLock"
 -- KEYS[2]: 发布订阅的频道名称，用于通知其他等待的客户端
 -- ARGV[1]: 发布的消息内容（通常是锁释放的通知）
