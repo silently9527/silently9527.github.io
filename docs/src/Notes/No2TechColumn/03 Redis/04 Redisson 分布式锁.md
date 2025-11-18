@@ -21,7 +21,7 @@ Redisson 的分布式锁是基于 Redis 的 Lua 脚本和一系列封装良好�
 ### 二、加锁流程与解锁
 
 #### 1. 加锁的 Lua 脚本
-   核心的加锁逻辑是通过一段 Lua 脚本完成的，这保证了原子性。
+核心的加锁逻辑是通过一段 Lua 脚本完成的，这保证了原子性。
 
 ```lua
 # KEYS[1]: 锁的Key名称，比如 "myLock"
@@ -66,14 +66,19 @@ if (redis.call('hexists', KEYS[1], ARGV[3]) == 0) then
 end;
 
 # 步骤2：减少重入计数
-local counter = redis.call('hincrby', KEYS[1], ARGV[3], -1);
+local counter1 = redis.call('hincrby', KEYS[1], ARGV[3], -1);
 
 # 步骤3：判断是否完全释放锁
-if (counter > 0) then
+if (counter1 > 0) then
     # 情况1：还有重入次数，未完全释放
     redis.call('pexpire', KEYS[1], ARGV[2]);  # 刷新锁的过期时间
     return 0;  # 返回0表示重入计数减1，但锁仍被持有
-
+else
+    # 情况2：重入次数为0，完全释放锁
+    redis.call('del', KEYS[1]);  # 删除锁键
+    redis.call('publish', KEYS[2], ARGV[1]); # 发布锁释放通知
+    return 1;  # 返回1表示锁已完全释放
+end;
 
 return nil;  # 默认返回（理论上不会执行到这里）
 ```
