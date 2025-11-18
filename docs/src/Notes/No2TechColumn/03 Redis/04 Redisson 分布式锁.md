@@ -73,9 +73,7 @@ if (counter > 0) then
     # 情况1：还有重入次数，未完全释放
     redis.call('pexpire', KEYS[1], ARGV[2]);  # 刷新锁的过期时间
     return 0;  # 返回0表示重入计数减1，但锁仍被持有
-else
-  
-end;
+
 
 return nil;  # 默认返回（理论上不会执行到这里）
 ```
