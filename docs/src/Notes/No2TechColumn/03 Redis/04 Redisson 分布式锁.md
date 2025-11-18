@@ -76,7 +76,6 @@ if (counter > 0) then
 else
     -- 情况2：重入次数为0，完全释放锁
     redis.call('del', KEYS[1]);  -- 删除锁键
-<!--    redis.call('publish', KEYS[2], ARGV[1]); -->  -- 发布锁释放通知
     return 1;  -- 返回1表示锁已完全释放
 end;
 
