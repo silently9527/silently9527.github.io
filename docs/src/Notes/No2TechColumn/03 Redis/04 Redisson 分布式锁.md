@@ -168,6 +168,36 @@ protected CompletionStage<Boolean> renewExpirationAsync(long threadId) {
 
 > 注意：如果你在加锁时显式指定了超时时间（例如 lock.lock(10, TimeUnit.SECONDS)），看门狗机制将不会生效。锁会在 10 秒后自动释放，无论你的业务是否执行完毕。这适用于你能够准确预估业务执行时间的场景。
 
+### 六、Redlock 算法概述
+Redlock 是 Redis 官方提出的分布式锁算法，用于在多个独立的 Redis 节点上实现更安全的分布式锁。
+
+核心思想：在 N 个独立的 Redis 主节点 上同时获取锁，当从大多数（N/2 + 1）节点上成功获取锁时，才算真正获取到锁。需要大多数节点确认，避免单点故障、即使部分节点宕机，锁仍然有效
+
+> Redisson 的 RedLock 实现提供了生产级别的分布式锁解决方案，特别适合对数据一致性要求极高的场景。
+
+### 七、读写锁 RedissonReadLock、RedissonWriteLock
+
+#### 读写锁规则
+* 读锁（共享锁）：多个线程可以同时持有读锁
+* 写锁（排他锁）：同一时间只能有一个线程持有写锁
+* 互斥规则：
+  * 读锁与写锁互斥
+  * 写锁与写锁互斥
+  * 读锁与读锁不互斥
+
+#### 数据结构
+Redisson 使用 Redis 的 Hash 结构来管理读写锁：
+
+```
+Key: "myLock" (锁名称)
+Type: Hash
+Fields:
+  "mode": "read"/"write"          # 锁模式
+  "UUID:threadId:write": 1         # 写锁持有者（可重入次数）
+  "UUID:threadId:read": 2          # 读锁持有者（重入次数）
+  "latch": "信号量值"              # 用于同步
+```
+
 
 原文链接: [http://herman7z.site](http://herman7z.site)
 
