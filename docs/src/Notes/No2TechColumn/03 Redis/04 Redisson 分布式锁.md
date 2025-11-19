@@ -53,35 +53,6 @@ return redis.call('pttl', KEYS[1]);
 
 #### 2. 解锁的 lua 脚本
 
-```lua
-# KEYS[1]: 锁的Key名称，比如 "myLock"
-# KEYS[2]: 发布订阅的频道名称，用于通知其他等待的客户端
-# ARGV[1]: 发布的消息内容（通常是锁释放的通知）
-# ARGV[2]: 锁的超时时间（毫秒）
-# ARGV[3]: 客户端唯一标识（UUID + 线程ID）
-
-# 步骤1：验证锁的所有权
-if (redis.call('hexists', KEYS[1], ARGV[3]) == 0) then
-    return nil;  # 当前客户端不持有该锁，返回nil表示操作无效
-end;
-
-# 步骤2：减少重入计数
-local counter1 = redis.call('hincrby', KEYS[1], ARGV[3], -1);
-
-# 步骤3：判断是否完全释放锁
-if (counter1 > 0) then
-    # 情况1：还有重入次数，未完全释放
-    redis.call('pexpire', KEYS[1], ARGV[2]);  # 刷新锁的过期时间
-    return 0;  # 返回0表示重入计数减1，但锁仍被持有
-else
-    # 情况2：重入次数为0，完全释放锁
-    redis.call('del', KEYS[1]);  # 删除锁键
-    redis.call('publish', KEYS[2], ARGV[1]); # 发布锁释放通知
-    return 1;  # 返回1表示锁已完全释放
-end;
-
-return nil;  # 默认返回（理论上不会执行到这里）
-```
 
 ### 三、可重入锁实现
 可重入锁意味着同一个线程可以多次获取同一把锁而不会造成死锁。Redisson 通过 Redis 的 Hash 结构轻松实现了这一点。
