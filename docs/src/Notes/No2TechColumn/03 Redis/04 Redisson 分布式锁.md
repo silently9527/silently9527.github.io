@@ -24,35 +24,64 @@ Redisson 的分布式锁是基于 Redis 的 Lua 脚本和一系列封装良好�
 核心的加锁逻辑是通过一段 Lua 脚本完成的，这保证了原子性。
 
 ```lua
-# KEYS[1]: 锁的Key名称，比如 "myLock"
-# ARGV[1]: 锁的超时时间（毫秒）
-# ARGV[2]: 客户端唯一标识（UUID + 线程ID）
+-- KEYS[1]: 锁的Key名称，比如 "myLock"
+-- ARGV[1]: 锁的超时时间（毫秒）
+-- ARGV[2]: 客户端唯一标识（UUID + 线程ID）
 
-# 情况1：锁不存在（第一次加锁）
+-- 情况1：锁不存在（第一次加锁）
 if (redis.call('exists', KEYS[1]) == 0) then
-    # 创建Hash结构，field为客户端ID，value为1（重入次数）
+    -- 创建Hash结构，field为客户端ID，value为1（重入次数）
     redis.call('hincrby', KEYS[1], ARGV[2], 1);
-    # 设置锁的过期时间
+    -- 设置锁的过期时间
     redis.call('pexpire', KEYS[1], ARGV[1]);
-    return nil; # 加锁成功
+    return nil; -- 加锁成功
 end;
 
-# 情况2：锁已存在，且是当前客户端持有的（重入）
+-- 情况2：锁已存在，且是当前客户端持有的（重入）
 if (redis.call('hexists', KEYS[1], ARGV[2]) == 1) then
-    # 重入次数 +1
+    -- 重入次数 +1
     redis.call('hincrby', KEYS[1], ARGV[2], 1);
-    # 重置过期时间
+    -- 重置过期时间
     redis.call('pexpire', KEYS[1], ARGV[1]);
-    return nil; # 重入成功
+    return nil; -- 重入成功
 end;
 
-# 情况3：锁被其他客户端持有
-# 返回锁的剩余存活时间（毫秒）
+-- 情况3：锁被其他客户端持有
+-- 返回锁的剩余存活时间（毫秒）
 return redis.call('pttl', KEYS[1]);
 ```
 
 #### 2. 解锁的 lua 脚本
 
+```lua
+-- KEYS[1]: 锁的Key名称，比如 "myLock"
+-- KEYS[2]: 发布订阅的频道名称，用于通知其他等待的客户端
+-- ARGV[1]: 发布的消息内容（通常是锁释放的通知）
+-- ARGV[2]: 锁的超时时间（毫秒）
+-- ARGV[3]: 客户端唯一标识（UUID + 线程ID）
+
+-- 步骤1：验证锁的所有权
+if (redis.call('hexists', KEYS[1], ARGV[3]) == 0) then
+    return nil;  -- 当前客户端不持有该锁，返回nil表示操作无效
+end;
+
+-- 步骤2：减少重入计数
+local counter1 = redis.call('hincrby', KEYS[1], ARGV[3], -1);
+
+-- 步骤3：判断是否完全释放锁
+if (counter1 > 0) then
+    -- 情况1：还有重入次数，未完全释放
+    redis.call('pexpire', KEYS[1], ARGV[2]);  -- 刷新锁的过期时间
+    return 0;  -- 返回0表示重入计数减1，但锁仍被持有
+else
+    -- 情况2：重入次数为0，完全释放锁
+    redis.call('del', KEYS[1]);  -- 删除锁键
+    redis.call('publish', KEYS[2], ARGV[1]); -- 发布锁释放通知
+    return 1;  -- 返回1表示锁已完全释放
+end;
+
+return nil;  -- 默认返回（理论上不会执行到这里）
+```
 
 ### 三、可重入锁实现
 可重入锁意味着同一个线程可以多次获取同一把锁而不会造成死锁。Redisson 通过 Redis 的 Hash 结构轻松实现了这一点。
@@ -62,8 +91,8 @@ return redis.call('pttl', KEYS[1]);
 * Value: 一个整数值，代表该线程重入的次数。
 
 工作流程：
-* 第一次加锁：hset myLock <clientId> 1。value 被设置为 1。
-* 同一线程再次加锁：在 Lua 脚本中，通过 hexists 发现 field 已存在，于是执行 hincrby myLock <clientId> 1。value 变为 2。
+* 第一次加锁：hset myLock [clientId] 1。value 被设置为 1。
+* 同一线程再次加锁：在 Lua 脚本中，通过 hexists 发现 field 已存在，于是执行 hincrby myLock [clientId] 1。value 变为 2。
 * 释放锁：释放锁时，并不是直接删除 Key，而是通过 hincrby 将 value 减 1。
 * 只有当 value 减到 0 时，才会执行 del 命令真正删除这个锁 Key。
 * 如果 value 减后大于 0，说明还有嵌套的锁没有释放，只会重置一下过期时间。
@@ -99,7 +128,7 @@ private RFuture<Boolean> tryAcquireOnceAsync(long waitTime, long leaseTime, Time
             if (leaseTime > 0) {
                 internalLockLeaseTime = unit.toMillis(leaseTime);
             } else {
-                scheduleExpirationRenewal(threadId);   #未设置leaseTime的时候启用 watchdog
+                scheduleExpirationRenewal(threadId);   //未设置leaseTime的时候启用 watchdog
             }
         }
         return acquired;
@@ -114,8 +143,8 @@ private RFuture<Boolean> tryAcquireOnceAsync(long waitTime, long leaseTime, Time
 ```java
 protected CompletionStage<Boolean> renewExpirationAsync(long threadId) {
     return evalWriteAsync(getRawName(), LongCodec.INSTANCE, RedisCommands.EVAL_BOOLEAN,
-            "if (redis.call('hexists', KEYS[1], ARGV[2]) == 1) then " + # 判断当前的锁是否已经释放
-                    "redis.call('pexpire', KEYS[1], ARGV[1]); " +  # 没有释放就重新设置锁的过期时间 internalLockLeaseTime=30s
+            "if (redis.call('hexists', KEYS[1], ARGV[2]) == 1) then " + // 判断当前的锁是否已经释放
+                    "redis.call('pexpire', KEYS[1], ARGV[1]); " +  // 没有释放就重新设置锁的过期时间 internalLockLeaseTime=30s
                     "return 1; " +
                     "end; " +
                     "return 0;",
@@ -135,11 +164,6 @@ protected CompletionStage<Boolean> renewExpirationAsync(long threadId) {
    * 这个过程中也有超时机制，如果等待时间超过 waitTime 参数，则会放弃加锁。
 
 这种方式比简单的循环 tryLock（自旋）要高效得多，因为它利用了 Redis 的 Pub/Sub 功能，避免了无用的网络请求和 CPU 消耗。
-
-
-
-
-
 
 
 > 注意：如果你在加锁时显式指定了超时时间（例如 lock.lock(10, TimeUnit.SECONDS)），看门狗机制将不会生效。锁会在 10 秒后自动释放，无论你的业务是否执行完毕。这适用于你能够准确预估业务执行时间的场景。
