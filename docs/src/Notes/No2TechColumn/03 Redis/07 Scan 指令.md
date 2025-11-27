@@ -20,6 +20,25 @@ outline: deep
 7. 单次返回的结果是空的并不意味着遍历结束，而要看返回的游标值是否为零;
 
 
+##### 指令： scan [cursor] match [key] count [number]
+* cursor: 整数值，scan指令的结果会返回cursor
+* key: 查询的key，支持正则模式
+* number: 指定扫描多少个slot
+
+> eg: scan 0 match key99* count 1000
+
+#### 字典的结构
+在redis中所有的key都存放在一张很大的哈希表中，结构与Java中的HashMap结构一样, 数组的大小是 2^n, 每次扩容是扩容原来的2倍。scan指令返回的cursor就是数组的位置索引（slot）。
+
+#### 字典扩容
+哈希字典的扩容过程和Java中HashMap的方式相同，当 loadFactor 达到阈值时，需要重新分配一个新的 2 倍大小的数组，然后将所有的元素全部 rehash 挂到新的数组下面。rehash 就是将元素的 hash 值对数组长度进行取模运算，因为长度变了，所以每个元素挂接的槽位可能也发生了变化。又因为数组的长度是 2^n 次方，所以取模运算等价于位与操作。
+当进行扩容的时候，原来slot下链表的全部元素会被拆分成两个链表，一个链表依旧放到原来的slot，一个链表会放到 oldCapacity + oldIndex;
+
+举例：
+
+
+#### scan遍历顺序
+
 
 
 
