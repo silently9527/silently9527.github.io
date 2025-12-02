@@ -1,0 +1,24 @@
+---
+title: 12 淘汰策略
+author: Herman
+updateTime: 2024-08-11 21:34
+desc: 淘汰策略
+categories: 中间件
+tags: redis
+outline: deep
+---
+
+当redis内存超出了物理内存限制时，内存中的数据就会和磁盘开始频繁的交换（swap），交换会让redis的性能急剧下降。为了限制最大使用内存，提供了参数：`maxmemory`， 当实际内存超过了配置的maxmemory，redis就会采用策略来腾出新的空间。
+
+* noeviction: 不会继续写请求（del除外），只提供读情况，这也是默认的策略
+* volatile-lru: 尝试淘汰设置了过期时间的key，最少使用的key优先淘汰，没有设置过期时间不会被淘汰
+* volatile-ttl: ttl越小越优先被淘汰, 没有设置过期时间不会被淘汰
+* volatile-random: 不过淘汰的 key 是过期 key 集合中随机的 key
+* allkeys-lru: 这个策略要淘汰的 key 对象是全体的 key 集合，而不只是过期的 key 集合。这意味着没有设置过期时间的 key 也会被淘汰
+* allkeys-random: 这个策略要淘汰的 key 对象是全体的 key 集合, 不过淘汰的策略是随机的 key。
+
+
+
+
+
+原文链接: [http://herman7z.site](http://herman7z.site)
